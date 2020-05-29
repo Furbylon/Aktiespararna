@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import test from './Huvudmeny/Hem/Hem.js';
+import Hem from './Huvudmeny/Hem/Hem'
 
-function App() {
+const Main = () => {
   return (
     <div className="App">
-    <test></test>
+    <Hem></Hem>
     </div>
   );
 }
 
-export default App;
+export default Main;
