@@ -19,6 +19,9 @@
 }
 body{
     background-color: rgba(238, 232, 232, 0.651);
+    max-width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 #hem{
     background-color: rgb(207, 171, 146);
@@ -30,26 +33,26 @@ body{
 #välkomstMeddelande{
     background-color: rgb(233, 215, 136);
 }
+.profilOchInnehav{
+    margin: 10px 20px 30px 40px;
+}
 #hemProfil{
     background-color: white;
     float: left;
     position: absolute;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    padding-right: 40%;
-    padding-bottom: 200px;
+    padding-right: 10%;
+    margin-bottom: 100px;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.15),
     0 10px 0 -5px #eee;
 }
+
 #mittInnehav{
     background-color: white;
     float: left;
-    position: absolute;
-    margin-right: 10px;
+    padding-right: 30%;
+    padding-bottom: 20%;
     margin-left: 10px;
-    padding-right: 20%;
-    margin-bottom: 20px;
-    padding-bottom: 305px;
+    position: absolute;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.15),
     0 10px 0 -5px #eee;
 }
@@ -59,4 +62,12 @@ body{
     border: 1px solid #ddd;
     border-radius: 10%;
     padding: 5px;
+}
+.hemprofilHeader{
+    float: left;
+  padding: 5px;
+}
+#profileButton{
+    position: relative;
+    left: 100px;
 }
