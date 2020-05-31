@@ -1,24 +1,65 @@
-import React from 'react';  
-import SideBar from '../Components/SideBar'
+import React from 'react'; 
+import Ior from '../images/Ior.jpg'
 
+
+class HemHeader extends React.Component {
+  render() {
+    return (
+      <div id = "hemHeader">
+      <p>Hem</p>
+      </div>
+    )
+  }
+}
+
+class HemProfil extends React.Component {
+  render(){
+    return(
+      <div id = "hemProfil" style = {{position: "relative"}}>
+      <p>Min Profil</p>
+      <img src={Ior} alt="profilePic" id= "profilePic"></img>
+      <h1>Namn</h1>
+      <p>Föredragna Industrier</p>
+      <p>Inga industrier valda än</p>
+      <p>Kontaktuppgifter</p>
+      <p>Telefon: 000 000 000</p>
+      <p>Mail: </p>
+      <p>Adress:</p>
+      <p>Postnummer:</p>
+      <p>Postort:</p>
+      </div>
+    )
+  }
+}
+class MittInnehav extends React.Component {
+  render(){
+    return(
+      <div id = "mittInnehav" style = {{position: "relative"}}>
+      <p>Mitt Innehav</p>
+      <h1>0 SEK</h1>
+      <h2>Inget innehav tillagt ännu</h2>
+      </div>
+    )
+  }
+}
+class VälkomstMeddelande extends React.Component {
+  render(){
+    return(
+      <div id = "välkomstMeddelande">
+      <p>Välkommen!</p>
+      </div>
+    )
+  }
+}
 const Hem = () => {
-
-  const OpenNavigation = (e) => {
-    let sideButton = document.getElementById("sidebarButton");
-    if (sideButton.innerHTML == "Open sidebar") {
-      document.getElementById("mySideBar").style.width = "250px";
-      document.getElementById("hem").style.marginLeft = "250px";
-      document.getElementById("sidebarButton").innerHTML = "close";
-    } else {
-      document.getElementById("mySideBar").style.width = "0px";
-      document.getElementById("hem").style.marginLeft = "0px";
-      document.getElementById("sidebarButton").innerHTML = "Open sidebar";
-    }
-    }
     return (
       <div id = "hem">
-      <button id="sidebarButton" onClick={OpenNavigation}>Open sidebar</button>
-      <SideBar></SideBar>
+      <HemHeader/>
+      <VälkomstMeddelande/>
+      <ul>
+      <HemProfil/>
+      <MittInnehav/>
+      </ul>
       </div>
     );
   }
