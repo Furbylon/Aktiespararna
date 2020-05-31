@@ -8,7 +8,7 @@ const Hem = () => {
       <div id = "hem">
       <HemHeader/>
       <VälkomstMeddelande/>
-      <div className = "profilOchInnehav">
+      <div id = "profilOchInnehav">
       <HemProfil/>
       <MittInnehav/>
       </div>

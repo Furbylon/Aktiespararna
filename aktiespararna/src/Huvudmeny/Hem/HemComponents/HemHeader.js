@@ -5,7 +5,7 @@ class HemHeader extends React.Component {
     render() {
       return (
         <div id = "hemHeader">
-        <p>Hem</p>
+        <header>Hem</header>
         </div>
       )
     }
