@@ -1,11 +1,13 @@
 import React from 'react'; 
-import HemProfil from './HemComponents/HemProfil'
-import MittInnehav from './HemComponents/MittInnehav'
-import VälkomstMeddelande from './HemComponents/VälkomstMeddelande'
-import HemHeader from './HemComponents/HemHeader'
+import HemProfil from './Hem Components/HemProfil'
+import MittInnehav from './Hem Components/MittInnehav'
+import VälkomstMeddelande from './Hem Components/VälkomstMeddelande'
+import HemHeader from './Hem Components/HemHeader'
+import './Hem css/Hem.css'
+
 const Hem = () => {
     return (
-      <div id = "hem">
+      <div id = "home">
       <HemHeader/>
       <VälkomstMeddelande/>
       <div id = "profilOchInnehav">

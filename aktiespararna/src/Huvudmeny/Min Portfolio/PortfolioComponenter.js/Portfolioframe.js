@@ -1,14 +1,14 @@
 import React from 'react'; 
-import Företag from './folderComponents/Företag'
-import Innehav from './folderComponents/Innehav'
-import Aktier from './folderComponents/Aktier'
-import Industri from './folderComponents/Företag'
+import Företag from './Folder Components/Företag'
+import Innehav from './Folder Components/Innehav'
+import Aktier from './Folder Components/Aktier'
+import Industri from './Folder Components/Företag'
 
 
 class PortfolioFrame extends React.Component {
     render(){
       return(
-        <div class = "portfolioFrames" style = {{position: "relative"}}>
+        <div className = "portfolioFrames" style = {{position: "relative"}}>
         <div> <Företag/> </div>
         <div><Innehav/></div>
         <div><Aktier/></div>

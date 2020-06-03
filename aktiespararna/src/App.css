@@ -25,51 +25,6 @@ body {
   overflow-x: auto;
   display: inline;
 }
-#hem {
-  background-color: rgb(207, 171, 146);
-}
-#hemHeader {
-  background-color: rgb(226, 222, 222);
-  color: rgb(0, 0, 0);
-}
-#välkomstMeddelande {
-  background-color: rgb(233, 215, 136);
-}
-#profilOchInnehav {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 20px;
-  padding: 2px;   
-}
-#hemProfil {
- border-radius: 2px;
-  background-color: white;
-  float: left;
-  position: absolute;
-  margin-bottom: 50px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee;
-}
-
-#mittInnehav {
-border-radius: 2px;
-  background-color: white;
-  float: left;
-  position: absolute;
-  margin-bottom: 200px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee;
-}
-#profilePic {
-  position: relative;
-  width: 60px;
-  border: 1px solid #ddd;
-  border-radius: 10%;
-  padding: 5px;
-}
-.hemprofilHeader {
-  float: left;
-  padding: 5px;
-}
-
 .portfolioFrames {
     border-radius: 2px;
     display: grid;
@@ -78,4 +33,9 @@ border-radius: 2px;
     background-color: rgb(178, 199, 187);
     padding-bottom: 70%;
     margin: 20px 20px 20px;
+}
+#logOutButton {
+  position: relative;
+  top: 400px;
+  left: 60px;
 }
