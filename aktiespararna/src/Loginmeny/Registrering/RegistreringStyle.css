@@ -1,0 +1,8 @@
+#mainDiv {
+  text-align: center;
+  background-image: linear-gradient(
+    to top left,
+    rgb(0, 162, 255),
+    rgb(255, 255, 255)
+  );
+}
