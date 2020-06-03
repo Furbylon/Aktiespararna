@@ -5,7 +5,7 @@ import GlömtLösenord from './Glömt lösenord/GlömtLösenord'
 export default class LoginMenu extends Component {
   render() {
     return (
-      <div>
+      <div id = "loginMenu" style = {{display: "none"}}>
         <Login />
         <Registrering/>
         <GlömtLösenord/>

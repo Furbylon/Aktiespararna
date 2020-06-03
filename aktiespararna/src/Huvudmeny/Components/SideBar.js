@@ -1,5 +1,4 @@
 import React from "react";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import LogoutButton from './LogoutButton'
 
 const Sidebar = () => {
@@ -8,7 +7,7 @@ const Sidebar = () => {
     console.log("home");
     if (def !== 0) {
       document.getElementById("mySideBar").style.width = "0px";
-      document.getElementById("menu").style.marginLeft = "0px";
+      document.getElementById("headMenu").style.marginLeft = "0px";
       document.getElementById("home").style.display = "block";
       document.getElementById("portfolio").style.display = "none";
       document.getElementById("settings").style.display = "none";
@@ -20,7 +19,7 @@ const Sidebar = () => {
     console.log("port");
     if (def !== 1) {
       document.getElementById("mySideBar").style.width = "0px";
-      document.getElementById("menu").style.marginLeft = "0px";
+      document.getElementById("headMenu").style.marginLeft = "0px";
       document.getElementById("home").style.display = "none";
       document.getElementById("portfolio").style.display = "block";
       document.getElementById("settings").style.display = "none";
@@ -32,7 +31,7 @@ const Sidebar = () => {
     console.log("settings");
     if (def !== 2) {
       document.getElementById("mySideBar").style.width = "0px";
-      document.getElementById("menu").style.marginLeft = "0px";
+      document.getElementById("headMenu").style.marginLeft = "0px";
       document.getElementById("home").style.display = "none";
       document.getElementById("portfolio").style.display = "none";
       document.getElementById("settings").style.display = "block";
@@ -42,31 +41,31 @@ const Sidebar = () => {
   };
   return (
     <div className="sidebar" id="mySideBar">
-      <Tabs>
-        <TabList className="sidebarList">
-          <Tab label="HomeButton" id="homeButton" onClick={OpenHome}>
-            {" "}
-            Hem{" "}
-          </Tab>
-          <Tab
+      <ul className = "sidebarList">
+      <li>
+          <button label="HomeButton" id="homeButton" onClick={OpenHome}>
+            Hem
+          </button>
+          </li>
+          <li>
+          <button
             label="PortfolioButton"
             id="PortfolioButton"
             onClick={OpenPortfolio}
           >
             Min portfolio
-          </Tab>
-          <Tab
+          </button>
+          </li>
+          <li>
+          <button
             label="SettingsButton"
             id="SettingsButton"
             onClick={OpenSettings}
           >
             Inställningar
-          </Tab>
-        </TabList>
-        <TabPanel></TabPanel>
-        <TabPanel></TabPanel>
-        <TabPanel></TabPanel>
-      </Tabs>
+          </button>
+          </li>
+      </ul>
       <LogoutButton/>
     </div>
   );

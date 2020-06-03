@@ -20,16 +20,16 @@ const HeadMenu = () => {
     let sideButton = document.getElementById("sidebarButton");
     if (sideButton.innerHTML === "Open sidebar") {
       document.getElementById("mySideBar").style.width = "250px";
-      document.getElementById("menu").style.marginLeft = "250px";
+      document.getElementById("headMenu").style.marginLeft = "250px";
       document.getElementById("sidebarButton").innerHTML = "close";
     } else {
       document.getElementById("mySideBar").style.width = "0px";
-      document.getElementById("menu").style.marginLeft = "0px";
+      document.getElementById("headMenu").style.marginLeft = "0px";
       document.getElementById("sidebarButton").innerHTML = "Open sidebar";
     }
   };
   return (
-    <div id="menu">
+    <div id="headMenu">
       <button id="sidebarButton" onClick={OpenCloseNavigation}>
         Open sidebar
       </button>
