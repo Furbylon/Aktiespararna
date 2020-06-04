@@ -1,14 +1,12 @@
 import React from 'react'; 
 
+const industry = (props) => {
+  return (
+    <div id = "industry">
+    <p>Industry</p>
+    <p>{props.industry}</p>
+    </div>
+  )
+}
 
-class Industri extends React.Component {
-    render() {
-      return (
-        <div id = "industri">
-        <p>Industri</p>
-        </div>
-      )
-    }
-  }
-
-export default Industri;
+export default industry;

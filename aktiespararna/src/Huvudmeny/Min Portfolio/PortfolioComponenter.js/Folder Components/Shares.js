@@ -1,14 +1,13 @@
 import React from 'react'; 
 
 
-class Aktier extends React.Component {
-    render() {
-      return (
-        <div id = "aktier">
-        <p>Aktier</p>
-        </div>
-      )
-    }
-  }
+const shares = (props) => {
+  return (
+    <div id = "shares">
+    <p>Aktier</p>
+    <p>{props.shares}</p>
+    </div>
+  )
+}
 
-export default Aktier;
+export default shares;

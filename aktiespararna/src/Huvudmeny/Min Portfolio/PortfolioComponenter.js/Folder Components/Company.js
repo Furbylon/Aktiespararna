@@ -3,9 +3,9 @@ import React from 'react';
 
 const company = (props) => {
       return (
-        <div id = "företag">
+        <div id = "company">
         <p>Företag</p>
-        <p>{props.company}</p>
+        <p>{props.companyName}</p>
         </div>
       )
     }

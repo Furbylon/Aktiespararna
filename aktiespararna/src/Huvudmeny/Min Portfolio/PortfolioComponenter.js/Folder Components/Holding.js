@@ -1,14 +1,14 @@
 import React from 'react'; 
 
 
-class Innehav extends React.Component {
-    render() {
-      return (
-        <div id = "innehav">
-        <p>Innehav</p>
-        </div>
-      )
-    }
-  }
 
-export default Innehav;
+const holding = (props) => {
+  return (
+    <div id = "holding">
+    <p>Innehav</p>
+    <p>{props.holding}</p>
+    </div>
+  )
+}
+
+export default holding;

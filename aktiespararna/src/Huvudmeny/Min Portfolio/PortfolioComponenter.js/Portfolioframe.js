@@ -1,21 +1,21 @@
-import React from 'react'; 
-import Company from './Folder Components/Company'
-import Innehav from './Folder Components/Holding'
-import Aktier from './Folder Components/Shares'
-import Industri from './Folder Components/Industry'
-
+import React from "react";
+import PortfolioValues from './Folder Components/PortfolioValues'
+import actors from './Folder Components/mock.json'
 
 class PortfolioFrame extends React.Component {
-    render(){
-      return(
-        <div className = "portfolioFrames" style = {{position: "relative"}}>
-        <div> <Company/> </div>
-        <div><Innehav/></div>
-        <div><Aktier/></div>
-        <div><Industri/></div>
-        </div>
-      )
-    }
+  render() {
+    return (
+      <div className="portfolioFrames" style={{ position: "relative" }}>
+      {actors.map((actors) => {
+        return(
+          <div key= {actors.name}>
+          <PortfolioValues values = {{company: actors.name}}/>
+          </div>
+        )
+      })}
+      </div>
+    );
   }
+}
 
 export default PortfolioFrame;

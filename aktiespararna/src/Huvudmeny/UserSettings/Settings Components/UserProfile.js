@@ -5,7 +5,7 @@ import '../UserSettings css/UserProfile.css'
 class Profile extends React.Component {
   render() {
     return (
-      <div id="userProfile" style = {{display: "none"}}>
+      <div id="userProfile" style = {{display: "block"}}>
       <img src={Ior} alt="profilePic" id= "profilePic"></img>
       <form>
       <p>Förnamn</p>

@@ -1,5 +1,5 @@
 import React from "react";
-import LogoutButton from './LogoutButton'
+import LogoutButton from "./LogoutButton";
 
 const Sidebar = () => {
   let def = 0;
@@ -40,14 +40,14 @@ const Sidebar = () => {
     }
   };
   return (
-    <div className="sidebar" id="mySideBar">
-      <ul className = "sidebarList">
-      <li>
+    <div id="mySideBar">
+      <ul>
+        <li>
           <button label="HomeButton" id="homeButton" onClick={OpenHome}>
             Hem
           </button>
-          </li>
-          <li>
+        </li>
+        <li>
           <button
             label="PortfolioButton"
             id="PortfolioButton"
@@ -55,8 +55,8 @@ const Sidebar = () => {
           >
             Min portfolio
           </button>
-          </li>
-          <li>
+        </li>
+        <li>
           <button
             label="SettingsButton"
             id="SettingsButton"
@@ -64,12 +64,11 @@ const Sidebar = () => {
           >
             Inställningar
           </button>
-          </li>
+        </li>
       </ul>
-      <LogoutButton/>
+      <LogoutButton />
     </div>
   );
 };
-
 
 export default Sidebar;
