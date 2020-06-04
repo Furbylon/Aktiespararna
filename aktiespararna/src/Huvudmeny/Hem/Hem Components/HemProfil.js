@@ -5,7 +5,7 @@ import Ior from '../../images/Ior.jpg'
 class HemProfil extends React.Component {
     render(){
       return(
-        <div id = "hemProfil" style = {{position: "relative"}}>
+        <div id = "homeProfile" style = {{position: "relative"}}>
         <div className = "hemprofilHeader">
         <header>Min Profil</header>
         </div>

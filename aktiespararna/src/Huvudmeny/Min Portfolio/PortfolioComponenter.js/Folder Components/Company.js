@@ -1,14 +1,13 @@
 import React from 'react'; 
 
 
-class Företag extends React.Component {
-    render() {
+const company = (props) => {
       return (
         <div id = "företag">
         <p>Företag</p>
+        <p>{props.company}</p>
         </div>
       )
     }
-  }
 
-export default Företag;
+export default company;

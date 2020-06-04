@@ -1,8 +1,8 @@
 import React from 'react';  
-import '../Inställningar css/SettingsFrame.css'
-import Profile from '../UserProfile js/Profile'
-import PasswordChange from '../ChangePassword js/PasswordChange'
-import Preferences from '../Preferences js/Preferences'
+import '../UserSettings css/SettingsFrame.css'
+import Profile from './UserProfile'
+import PasswordChange from './PasswordChange'
+import Preferences from './Preferences'
 
 class SettingsComp extends React.Component {
     render() {
@@ -45,7 +45,7 @@ const SettingsFrame = () => {
     return(          
         <div className = "settingsFrame" style = {{position: "relative"}}>
         <button id= "profileButton" onClick= {openProfile}>Min Profil</button>
-        <button id= "changePasswordButton" onClick= {openPasswordChange}> Byt lösenord</button>
+        <button id= "changePasswordButton" onClick= {openPasswordChange}>Byt lösenord</button>
         <button id= "preferencesButton" onClick= {openPreferences}>Preferenser</button>
         <SettingsComp/>
         </div>

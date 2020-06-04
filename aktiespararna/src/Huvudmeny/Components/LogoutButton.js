@@ -2,7 +2,7 @@ import React from "react";
 
 const logOut = () => {
   document.getElementById("headMenu").style.display = "none";
-  document.getElementById("loginDiv").style.display = "block";
+  document.getElementById("loginMenu").style.display = "block";
 }
 class LogoutButton extends React.Component {
     render() {
