@@ -1,6 +1,6 @@
 #mySideBar {
   height: 100%;
-  width: 0;
+  width: 0px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -21,18 +21,9 @@ body {
   background-color: rgba(238, 232, 232, 0.651);
   max-width: 100%;
   max-height: 100%;
-  overflow-y: hidden;
+  overflow-y: auto;
   overflow-x: auto;
   display: inline;
-}
-.portfolioFrames {
-    border-radius: 2px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 20px;
-    background-color: rgb(178, 199, 187);
-    padding-bottom: 70%;
-    margin: 20px 20px 20px;
 }
 #logOutButton {
   position: relative;

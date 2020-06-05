@@ -1,0 +1,9 @@
+.portfolioFrames {
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    background-color: rgb(178, 199, 187);
+    padding-bottom: 70%;
+    margin: 20px 20px 20px;
+}

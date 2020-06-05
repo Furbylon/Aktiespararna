@@ -41,7 +41,7 @@ const Sidebar = () => {
   };
   return (
     <div id="mySideBar">
-      <ul>
+      <ul id="sidebarButtons">
         <li>
           <button label="HomeButton" id="homeButton" onClick={OpenHome}>
             Hem
@@ -50,7 +50,7 @@ const Sidebar = () => {
         <li>
           <button
             label="PortfolioButton"
-            id="PortfolioButton"
+            id="portfolioButton"
             onClick={OpenPortfolio}
           >
             Min portfolio
@@ -59,7 +59,7 @@ const Sidebar = () => {
         <li>
           <button
             label="SettingsButton"
-            id="SettingsButton"
+            id="settingsButton"
             onClick={OpenSettings}
           >
             Inställningar
