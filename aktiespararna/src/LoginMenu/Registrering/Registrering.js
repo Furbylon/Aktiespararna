@@ -5,7 +5,7 @@ import RegistreringStyle from "./RegistreringStyle.css";
 export default class Register extends Component {
   render() {
     return (
-      <div id="mainDiv">
+      <div id="registrationDiv">
         <img id="logo" src={aktielogoo} alt="logo" />
 
         <form>

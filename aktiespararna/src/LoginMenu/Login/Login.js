@@ -5,7 +5,7 @@ import LoginStyle from "./LoginStyle.css";
 const openMenu = () => {
   console.log("menu")
   document.getElementsByClassName("menu").style.display = "block";
-  document.getElementById("loginMenu").style.display = "none"
+  document.getElementById("loginDiv").style.display = "none"
 }
 
 export default class Login extends Component {

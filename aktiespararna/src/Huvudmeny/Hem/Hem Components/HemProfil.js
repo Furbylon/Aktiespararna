@@ -1,16 +1,28 @@
 import React from "react";
 import profileList from "../Hem Components/profil.json";
-import ProfileValues from '../Hem Components/ProfileValues'
+import ProfileValues from "../Hem Components/ProfileValues";
 const max = 1;
 class HemProfil extends React.Component {
-  state = {
-    profiles: [],
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      profiles: [],
+    };
+    this.profileEditButton = this.profileEditButton.bind(this);
+  }
   componentDidMount() {
     const sliced = profileList.slice(0, max);
     this.setState({
       profiles: sliced,
     });
+  }
+  profileEditButton() {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("settings").style.display = "block";
+    document.getElementById("userProfile").style.display = "block";
+    document.getElementById("preferences").style.display = "none";
+    document.getElementById("passwordChange").style.display = "none";
   }
   render() {
     return (
@@ -19,14 +31,16 @@ class HemProfil extends React.Component {
           <header>Min Profil</header>
         </div>
         <div className="hemprofilHeader">
-          <button id="profileButton">Redigera</button>
+          <button id="profileButton" onClick={this.profileEditButton}>
+            Redigera
+          </button>
         </div>
         <div>
           {this.state.profiles.map((profile) => {
             return (
               <ProfileValues
-              key ={profile.name}
-              picture={profile.pictureUrl}
+                key={profile.name}
+                picture={profile.pictureUrl}
                 name={profile.name}
                 personalNumber={profile.personalNumber}
                 industries={profile.industries}

@@ -1,42 +1,40 @@
 import React from "react";
 import LogoutButton from "./LogoutButton";
 
+
+
 const Sidebar = () => {
-  let def = 0;
   const OpenHome = () => {
     console.log("home");
-    if (def !== 0) {
+    if ( document.getElementById("home") !== 'block') {
       document.getElementById("mySideBar").style.width = "0px";
       document.getElementById("headMenu").style.marginLeft = "0px";
       document.getElementById("home").style.display = "block";
       document.getElementById("portfolio").style.display = "none";
       document.getElementById("settings").style.display = "none";
       document.getElementById("sidebarButton").innerHTML = "Open sidebar";
-      def = 0;
     }
   };
   const OpenPortfolio = () => {
     console.log("port");
-    if (def !== 1) {
+    if (document.getElementById("portfolio") !== 'block') {
       document.getElementById("mySideBar").style.width = "0px";
       document.getElementById("headMenu").style.marginLeft = "0px";
       document.getElementById("home").style.display = "none";
       document.getElementById("portfolio").style.display = "block";
       document.getElementById("settings").style.display = "none";
       document.getElementById("sidebarButton").innerHTML = "Open sidebar";
-      def = 1;
     }
   };
   const OpenSettings = () => {
     console.log("settings");
-    if (def !== 2) {
+    if (document.getElementById("settings") !== 'block') {
       document.getElementById("mySideBar").style.width = "0px";
       document.getElementById("headMenu").style.marginLeft = "0px";
       document.getElementById("home").style.display = "none";
       document.getElementById("portfolio").style.display = "none";
       document.getElementById("settings").style.display = "block";
       document.getElementById("sidebarButton").innerHTML = "Open sidebar";
-      def = 2;
     }
   };
   return (

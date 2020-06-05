@@ -5,7 +5,7 @@ import ForgottenPasswordStyle from "./ForgottenPassword.css";
 export default class ForgotPassword extends Component {
   render() {
     return (
-      <div id="mainDiv">
+      <div id="forgottenPasswordDiv">
         <form>
           <p>Forgotten password?</p>
           <p> Username:</p>
