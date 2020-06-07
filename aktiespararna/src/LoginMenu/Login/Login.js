@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import aktielogoo from "./img/aktielogoo.png";
-import LoginStyle from "./LoginStyle.css";
+import LoginStyle from './LoginStyle.css'
 
 const openMenu = () => {
   console.log("menu")
@@ -17,7 +17,7 @@ export default class Login extends Component {
   {}
   render() {
     return (
-      <div id="loginDiv">
+      <div id="loginDiv" className="loginMenuPages">
         <img id="logo" src={aktielogoo} alt="logo" />
         <form>
           <p>Username:</p>

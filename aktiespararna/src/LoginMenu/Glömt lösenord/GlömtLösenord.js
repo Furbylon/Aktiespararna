@@ -5,7 +5,7 @@ import ForgottenPasswordStyle from "./ForgottenPassword.css";
 export default class ForgotPassword extends Component {
   render() {
     return (
-      <div id="forgottenPasswordDiv">
+      <div id="forgottenPasswordDiv" className="loginMenuPages">
         <form>
           <p>Forgotten password?</p>
           <p> Username:</p>

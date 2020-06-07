@@ -30,27 +30,29 @@ const SettingsFrame = () => {
       def = 2;
     }
   };
-
+  const SettingsHead = () => {
+    return(
+    <div>
+    <div>
+      <button id="profileButton" onClick={openProfile}>
+        Min Profil
+      </button>
+    </div>
+    <div>
+      <button id="changePasswordButton" onClick={openPasswordChange}>
+        Byt lösenord
+      </button>
+    </div>
+    <div>
+      <button id="preferencesButton" onClick={openPreferences}>
+        Preferenser
+      </button>
+    </div>
+  </div>
+  )
+  }
   const SettingsComp = () => {
     return (
-      <div>
-        <div>
-          <div>
-            <button id="profileButton" onClick={openProfile}>
-              Min Profil
-            </button>
-          </div>
-          <div>
-            <button id="changePasswordButton" onClick={openPasswordChange}>
-              Byt lösenord
-            </button>
-          </div>
-          <div>
-            <button id="preferencesButton" onClick={openPreferences}>
-              Preferenser
-            </button>
-          </div>
-        </div>
         <div>
         <div>
           <Profile />
@@ -62,12 +64,12 @@ const SettingsFrame = () => {
           <Preferences />
         </div>
         </div>
-      </div>
     );
   };
 
   return (
     <div className="settingsFrame" style ={{display:"absolute"}}>
+    <SettingsHead/>
       <SettingsComp />
     </div>
   );

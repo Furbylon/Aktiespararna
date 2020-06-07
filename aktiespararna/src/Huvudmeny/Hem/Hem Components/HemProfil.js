@@ -1,5 +1,5 @@
 import React from "react";
-import profileList from "../Hem Components/profil.json";
+import profileList  from "../../../data/profil.json"
 import ProfileValues from "../Hem Components/ProfileValues";
 const max = 1;
 class HemProfil extends React.Component {
