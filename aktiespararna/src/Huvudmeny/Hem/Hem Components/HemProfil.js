@@ -1,60 +1,43 @@
-import React from "react";
-import profileList  from "../../../data/profil.json"
+import React, { useState, useEffect} from "react";
+import profileList from "../../../data/profil.json";
 import ProfileValues from "../Hem Components/ProfileValues";
-const max = 1;
-class HemProfil extends React.Component {
-  constructor(props) {
-    super(props);
+import userProfile from '../../UserSettings/Settings Components/UserProfile'
 
-    this.state = {
-      profiles: [],
-    };
-    this.profileEditButton = this.profileEditButton.bind(this);
-  }
-  componentDidMount() {
-    const sliced = profileList.slice(0, max);
-    this.setState({
-      profiles: sliced,
-    });
-  }
-  profileEditButton() {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("settings").style.display = "block";
-    document.getElementById("userProfile").style.display = "block";
-    document.getElementById("preferences").style.display = "none";
-    document.getElementById("passwordChange").style.display = "none";
-  }
-  render() {
+
+
+
+const HemProfil = () => {
+  let [profile, setProfile] = useState(profileList.slice(0, 1));
+
+  const showProfile = (profile) => {
     return (
-      <div id="homeProfile" style={{ position: "relative" }}>
-        <div className="hemprofilHeader">
-          <header>Min Profil</header>
-        </div>
-        <div className="hemprofilHeader">
-          <button id="profileButton" onClick={this.profileEditButton}>
-            Redigera
-          </button>
-        </div>
-        <div>
-          {this.state.profiles.map((profile) => {
-            return (
-              <ProfileValues
-                key={profile.name}
-                picture={profile.pictureUrl}
-                name={profile.name}
-                personalNumber={profile.personalNumber}
-                industries={profile.industries}
-                telephoneNumber={profile.telephone}
-                email={profile.email}
-                address={profile.address}
-                postNumber={profile.postNumber}
-                postTown={profile.postTown}
-              />
-            );
-          })}
-        </div>
-      </div>
+      <ProfileValues
+        key={profile.name}
+        picture={profile.pictureUrl}
+        name={profile.name}
+        personalNumber={profile.personalNumber}
+        industries={profile.industries}
+        telephoneNumber={profile.telephone}
+        email={profile.email}
+        address={profile.address}
+        postNumber={profile.postNumber}
+        postTown={profile.postTown}
+      />
     );
-  }
-}
+  };
+  return (
+    <div id="homeProfile" style={{ position: "relative" }}>
+      <div className="hemprofilHeader">
+        <header>Min Profil</header>
+      <div className="hemprofilHeader">
+        <button id="profileButton">
+          Redigera
+        </button>
+      </div>
+      </div>
+
+      <div>{profile.map(showProfile)}</div>
+    </div>
+  );
+};
 export default HemProfil;

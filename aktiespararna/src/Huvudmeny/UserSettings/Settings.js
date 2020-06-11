@@ -1,13 +1,11 @@
 import React from 'react';  
 import SettingsFrame from './Settings Components/SettingsFrame'
 
-class Settings extends React.Component {
-  render(){
+const Settings = () => {
     return (
-      <div id = "settings" style = {{display: "none"}}>
+      <div id = "settings">
       <SettingsFrame/>
       </div>
     );
-  }
   }
 export default Settings;

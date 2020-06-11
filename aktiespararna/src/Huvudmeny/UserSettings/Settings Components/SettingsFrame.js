@@ -4,65 +4,40 @@ import Profile from "./UserProfile";
 import PasswordChange from "./PasswordChange";
 import Preferences from "./Preferences";
 
+import { BrowserRouter, Route, Switch, Link} from "react-router-dom";
+
 const SettingsFrame = () => {
-  let def = 0;
-  const openProfile = () => {
-    if (def !== 0) {
-      document.getElementById("userProfile").style.display = "block";
-      document.getElementById("passwordChange").style.display = "none";
-      document.getElementById("preferences").style.display = "none";
-      def = 0;
-    }
-  };
-  const openPasswordChange = () => {
-    if (def !== 1) {
-      document.getElementById("userProfile").style.display = "none";
-      document.getElementById("passwordChange").style.display = "block";
-      document.getElementById("preferences").style.display = "none";
-      def = 1;
-    }
-  };
-  const openPreferences = () => {
-    if (def !== 2) {
-      document.getElementById("userProfile").style.display = "none";
-      document.getElementById("passwordChange").style.display = "none";
-      document.getElementById("preferences").style.display = "block";
-      def = 2;
-    }
-  };
   const SettingsHead = () => {
     return(
     <div>
-    <div>
-      <button id="profileButton" onClick={openProfile}>
-        Min Profil
-      </button>
-    </div>
-    <div>
-      <button id="changePasswordButton" onClick={openPasswordChange}>
-        Byt lösenord
-      </button>
-    </div>
-    <div>
-      <button id="preferencesButton" onClick={openPreferences}>
+    <BrowserRouter>
+    <li>
+      <Link to="/settings/profile" exact={true}>
+        Profil
+      </Link>
+    </li>
+    <li>
+      <Link to="/settings/passwordchange" exact={true}>
+        Ändra Lösenord
+      </Link>
+    </li>
+    <li>
+      <Link to="/settings/preferences" exact={true}>
         Preferenser
-      </button>
-    </div>
+      </Link>
+    </li>
+  </BrowserRouter>
   </div>
   )
   }
   const SettingsComp = () => {
     return (
         <div>
-        <div>
-          <Profile />
-        </div>
-        <div>
-          <PasswordChange />
-        </div>
-        <div>
-          <Preferences />
-        </div>
+        <Switch>
+        <Route path="/settings/profile" component={Profile} exact ={true}/>
+        <Route path="/settings/passwordchange" component={PasswordChange} exact= {true}/>
+        <Route path="/settings/preferences" component={Preferences} exact= {true}/>
+        </Switch>
         </div>
     );
   };

@@ -1,48 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import Ior from "../../images/Ior.jpg";
 import "../UserSettings css/UserProfile.css";
-import ProfileValues from "../../Hem/Hem Components/ProfileValues";
-import profileList  from "../../../data/profil.json"
-const max = 1; 
+import profileList from "../../../data/profil.json";
+import {BrowserRouter, Route} from 'react-router-dom'
 
-class Profile extends React.Component {
-  constructor(props) {
-    super(props)
-    
-    this.updateValues = this.updateValues.bind(this);
+const Profile = (props) => {
+  let [profile, setProfile] = useState(profileList.slice(0, 1));
 
-    this.state = {
-      profiles:[]
-    }
+  const updateProfile = () => {
+
   }
-  updateValues(){
-    console.log("test")
-  }
-  render(){
   return (
-    <div id="userProfile">
+    <div>
+      <div id="userProfile"></div>
       <img src={Ior} alt="profilePic" id="profilePic"></img>
-      <form method="get">
+      <form>
         Förnamn
-        <input type= "text" id="firstNameInput"></input><br/>
+        <input type="text" id="firstNameInput"></input>
+        <br />
         Efternamn
-        <input type= "text" id="lastNameInput"></input><br/>
+        <input type="text" id="lastNameInput"></input>
+        <br />
         Personnummer
-        <input type="number" id="personalNumberInput"></input><br/>
+        <input type="text" id="personalNumberInput"></input>
+        <br />
         Adress
-        <input type="number" id="adressInput"></input><br/>
+        <input type="text" id="adressInput"></input>
+        <br />
         Postort
-        <input type="number" id="postTownInput"></input><br/>
+        <input type="text" id="postTownInput"></input>
+        <br />
         Postnummer
-        <input type="number" id="postNumberInput"></input><br/>
+        <input type="text" id="postNumberInput"></input>
+        <br />
         Telefonnummer
-        <input type="number" id="telephoneNumberInput"></input><br/>
+        <input type="text" id="telephoneNumberInput"></input>
+        <br />
         Email
-        <input type="number" id="emailInput"></input><br/>
-        <button onClick={this.updateValues} id="profileSaveButton">Spara</button>
+        <input type="text" id="emailInput"></input>
+        <br />
+        <button id="profileSaveButton" onClick= {updateProfile()}>Spara</button>
       </form>
     </div>
   );
 };
-}
 export default Profile;

@@ -1,22 +1,34 @@
 import React from "react";
 import SideBar from "./Components/SideBar";
 import Home from "./Hem/Home";
-import Settings from './UserSettings/Settings'
 import Portfolio from "./Min Portfolio/Portfolio";
+import Settings from "./UserSettings/Settings";
 
-class Comps extends React.Component {
-  render() {
+import { BrowserRouter, Route, Switch, Link} from "react-router-dom";
+
+const HeadMenu = () => {
+
+  const MissingPage = () => {
+    return(
+    <div>
+    404 - <Link to="/home">Go home</Link>
+    </div>
+    )
+  }
+  const CompPath = () => {
     return (
-      <div className= {"componentCompilation"}>
-        <Home />
-        <Portfolio />
-        <Settings />
+      <div className={"componentCompilation"}>
+      <Switch>
+          <Route path="/home" component={Home}/>
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/settings" component={Settings} />
+          <Route component={MissingPage} />
+          </Switch>
       </div>
     );
-  }
-}
-const HeadMenu = () => {
-  const OpenCloseNavigation = (e) => {
+  };
+
+  const openCloseNavigation = () => {
     let sideButton = document.getElementById("sidebarButton");
     if (sideButton.innerHTML === "Open sidebar") {
       document.getElementById("mySideBar").style.width = "150px";
@@ -28,14 +40,23 @@ const HeadMenu = () => {
       document.getElementById("sidebarButton").innerHTML = "Open sidebar";
     }
   };
-  return (
-    <div id="headMenu">
-      <button id="sidebarButton" onClick={OpenCloseNavigation}>
+  
+  const SidebarButton = () => {
+    return (
+      <button id="sidebarButton" onClick={openCloseNavigation}>
         Open sidebar
       </button>
-      <SideBar />
-      <Comps />
-    </div>
+    );
+  };
+
+  return (
+    <BrowserRouter>
+      <div id="headMenu">
+        <SidebarButton/>        
+        <SideBar />
+        <CompPath />
+      </div>
+    </BrowserRouter>
   );
 };
 

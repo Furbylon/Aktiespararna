@@ -3,10 +3,11 @@ import PortfolioHeader from './PortfolioComponenter.js/PortfolioHeader'
 import Portfolioframe from './PortfolioComponenter.js/Portfolioframe'
 import './Portfolio css/Portfolio.css'
 
-const Portfolio = () => {
 
+
+const Portfolio = () => {
     return (
-      <div id = "portfolio" style = {{display: "none"}}>
+      <div id = "portfolio">
       <PortfolioHeader/>
       <Portfolioframe/>
       </div>

@@ -1,22 +1,15 @@
-import React from "react";
+import React,{useState} from "react";
 import PortfolioValues from "./Folder Components/PortfolioValues";
-import actors from "../../../data/profil.json"
+import profileList from "../../../data/profil.json";
 
-class PortfolioFrame extends React.Component {
-  state = {
-    mock: [],
-  };
+const PortfolioFrame = () => {
 
-  componentDidMount() {
-    const slicedArr = actors.slice(0, 1);
-    this.setState({
-      mock: slicedArr,
-    });
-  }
-  render() {
+  let [portfolioValues, setPortfolioValues] = useState(profileList.slice(0, 1));
+
+  
     return (
       <div className="portfolioFrames">
-        <table className="portfolioTable" style={{ position: "absolute" }}>
+        <table className="portfolioTable" style={{ position: "relative" }}>
         <thead>
         <tr>
             <td>Företag</td>
@@ -30,7 +23,7 @@ class PortfolioFrame extends React.Component {
             </tr>
             </thead>
           <tbody>
-            {this.state.mock.map((mock) => {
+            {portfolioValues.map((mock) => {
               return (
                 <PortfolioValues 
                 key={mock.name}
@@ -50,6 +43,5 @@ class PortfolioFrame extends React.Component {
       </div>
     );
   }
-}
 
 export default PortfolioFrame;
