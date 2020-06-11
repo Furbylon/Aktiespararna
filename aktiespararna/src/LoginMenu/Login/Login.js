@@ -3,24 +3,26 @@ import aktielogoo from "./img/aktielogoo.png";
 import css from "./LoginStyle.css";
 import userData from "../../../src/data/user.json";
 import { useForm } from "react-hook-form";
+import { BrowserRouter, Route, Link, Router } from "react-router-dom";
+const toHeadMenu = () => {
+  return (
+    <div>
+      <BrowserRouter>
+        <link to="/home" exact={true} />
+      </BrowserRouter>
+    </div>
+  );
+};
 
 export default function Login() {
   const { register, handleSubmit } = useForm();
-
-  const openMenu = () => {
-    console.log("menu");
-    document.getElementsByClassName("menu").style.display = "block";
-    document.getElementById("loginDiv").style.display = "none";
-  };
   const onSubmit = (data) => {
     if (JSON.stringify(data) === JSON.stringify(userData)) {
-      alert("you fucking made it");
       console.log(data, userData);
     } else {
-      console.log(data, userData);
+      alert("invalidinput");
     }
   };
-
   return (
     <div id="loginDiv" className="loginMenuPages">
       <img id="logo" src={aktielogoo} alt="logo" />
@@ -32,6 +34,7 @@ export default function Login() {
           name="username"
           placeholder="username"
           ref={register}
+          required
         />
         <br></br>
         <label for="password">Password:</label>
@@ -41,6 +44,7 @@ export default function Login() {
           name="password"
           placeholder="password"
           ref={register}
+          required
         />
         <br></br>
         <input type="submit" value="Logga in" />
