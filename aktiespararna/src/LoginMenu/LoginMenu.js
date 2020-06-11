@@ -1,16 +1,28 @@
 import React, { Component } from "react";
 import Login from "./Login/Login";
-import Registrering from './Registrering/Registrering'
-import GlömtLösenord from './Glömt lösenord/GlömtLösenord'
-export default class LoginMenu extends Component {
+import Registrering from "./Registrering/Registrering";
+import GlömtLösenord from "./Glömt lösenord/GlömtLösenord";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-  render() {
+const LoginMenu = () => {
+  const LoginPaths = () => {
     return (
-      <div id = "loginMenu" style = {{display: "none"}}>
-        <Login/>
-        <Registrering/>
-        <GlömtLösenord/>
+      <div className={"componentCompilation"}>
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Registrering}/>
+          <Route path="/forgotpassword" component={GlömtLösenord}/>
+        </Switch>
       </div>
     );
-  }
-}
+  };
+
+  return (
+    <BrowserRouter>
+      <div id="loginMenu">
+        <LoginPaths />
+      </div>
+    </BrowserRouter>
+  );
+};
+export default LoginMenu;

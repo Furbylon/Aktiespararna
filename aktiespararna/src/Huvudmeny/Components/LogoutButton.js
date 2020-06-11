@@ -1,16 +1,11 @@
 import React from "react";
+import { BrowserRouter, Route, Switch, Link} from "react-router-dom";
 
-const logOut = () => {
-  document.getElementById("headMenu").style.display = "none";
-  document.getElementById("loginMenu").style.display = "block";
-  document.getElementById("registrationDiv").style.display ="none"
-  document.getElementById("forgottenPasswordDiv").style.display ="none"
-}
 class LogoutButton extends React.Component {
     render() {
       return (
         <div>
-          <button id="logOutButton" onClick = {logOut}>Logga ut</button>
+        <Link to = "/login" exact= {true}>Logout</Link>
         </div>
       );
     }
