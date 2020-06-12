@@ -1,28 +1,28 @@
 import React from "react";
 import LogoutButton from "./LogoutButton";
 
-import { BrowserRouter, Link} from "react-router-dom";
+import {Link, Switch} from "react-router-dom";
 
 const Sidebar = () => {
   const Routes = () => (
     <div>
-      <BrowserRouter>
-        <li>
-          <Link to="/home" exact={true}>
+      <Switch>
+      <button>
+               <Link to="/home">
             Hem
           </Link>
-        </li>
-        <li>
-          <Link to="/portfolio" exact={true}>
+          </button>
+          <button>
+          <Link to="/portfolio">
             Portfolio
           </Link>
-        </li>
-        <li>
-          <Link to="/settings" exact={true}>
+          </button>
+          <button>
+          <Link to="/settings/profile">
             Settings
           </Link>
-        </li>
-      </BrowserRouter>
+          </button>
+          </Switch>
     </div>
   );
 

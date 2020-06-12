@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Ior from "../../images/Ior.jpg";
 import "../UserSettings css/UserProfile.css";
 import profileList from "../../../data/profil.json";
-import {BrowserRouter, Route} from 'react-router-dom'
 
 const Profile = (props) => {
   let [profile, setProfile] = useState(profileList.slice(0, 1));

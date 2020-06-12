@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import aktielogoo from "../Login/img/aktielogoo.png";
 import userData from "../../../src/data/user.json";
 import { useForm } from "react-hook-form";
-import { BrowserRouter, Route, Link, Router } from "react-router-dom";
 
 export default function ForgottenPassword() {
   const { register, handleSubmit } = useForm();
