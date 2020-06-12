@@ -1,30 +1,34 @@
 import React from "react";
 import "../UserSettings css/SettingsFrame.css";
-import Profile from "./UserProfile";
-import PasswordChange from "./PasswordChange";
-import Preferences from "./Preferences";
 
-import {Switch, Link} from "react-router-dom";
+import UserSettings from "../Settings Components/UserProfile"
+import PasswordChange from "../Settings Components/PasswordChange"
+import Preferences from "../Settings Components/Preferences"
+import {Link, Route} from "react-router-dom";
+
 
 const SettingsFrame = () => {
   const SettingsHead = () => {
     return(
     <div>
     <li>
-      <Link to="/settings/profile">
+      <Link to="/mainmenu/settings/profile">
         Profil
       </Link>
     </li>
     <li>
-      <Link to="/settings/passwordchange">
+      <Link to="/mainmenu/settings/passwordchange">
         Ändra Lösenord
       </Link>
     </li>
     <li>
-      <Link to="/settings/preferences">
+      <Link to="/mainmenu/settings/preferences">
         Preferenser
       </Link>
     </li>
+    <Route path="/mainmenu/settings/profile" component={UserSettings}/>
+    <Route path="/mainmenu/settings/passwordchange" component={PasswordChange}/>
+    <Route path="/mainmenu/settings/preferences" component={Preferences}/>
   </div>
   )
   }

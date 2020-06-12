@@ -4,16 +4,21 @@ import LogoutButton from "./LogoutButton";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
+  const closeNavigation = () => {
+    document.getElementById("mySideBar").style.width = "0px";
+    document.getElementById("headMenu").style.marginLeft = "0px";
+    document.getElementById("sidebarButton").innerHTML = "close";
+  };
   const Routes = () => (
     <div>
-    <li>
-      <NavLink to="/home">Hem</NavLink>
+      <li>
+          <NavLink to="/mainmenu/home" onClick={closeNavigation}>Hem</NavLink>
       </li>
       <li>
-      <NavLink to="/portfolio">Portfolio</NavLink>
+          <NavLink to="/mainmenu/portfolio" onClick={closeNavigation}>Portfolio</NavLink>
       </li>
       <li>
-      <NavLink to="/settings/profile">Settings</NavLink>
+        <NavLink to="/mainmenu/settings/profile" onClick={closeNavigation}>Settings</NavLink>
       </li>
     </div>
   );

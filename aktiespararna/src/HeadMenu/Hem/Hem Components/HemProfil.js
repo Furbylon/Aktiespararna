@@ -1,7 +1,7 @@
-import React, { useState, useEffect} from "react";
+import React, { useState} from "react";
 import profileList from "../../../data/profil.json";
 import ProfileValues from "../Hem Components/ProfileValues";
-import userProfile from '../../UserSettings/Settings Components/UserProfile'
+import { Link } from "react-router-dom";
 
 
 
@@ -30,8 +30,10 @@ const HemProfil = () => {
       <div className="hemprofilHeader">
         <header>Min Profil</header>
       <div className="hemprofilHeader">
-        <button id="profileButton">
+      <button id="profileButton">
+        <Link to="/settings/profile">
           Redigera
+        </Link>
         </button>
       </div>
       </div>

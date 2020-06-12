@@ -8,12 +8,10 @@ import SidebarButton from "../Components/SidebarButton"
 
 
 
-
 const Hem = () => {
   return (
     <div id="home">
       <HemHeader />
-      <SidebarButton/>
       <VälkomstMeddelande />
       <div id="profilOchInnehav">
         <HemProfil />
