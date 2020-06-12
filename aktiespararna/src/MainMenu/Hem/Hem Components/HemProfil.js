@@ -1,14 +1,11 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import profileList from "../../../data/profil.json";
 import ProfileValues from "../Hem Components/ProfileValues";
 import { Link } from "react-router-dom";
 
-
-
-
 const HemProfil = () => {
   let [profile, setProfile] = useState(profileList.slice(0, 1));
-  
+
   const showProfile = (profile) => {
     return (
       <ProfileValues
@@ -29,11 +26,9 @@ const HemProfil = () => {
     <div id="homeProfile" style={{ position: "relative" }}>
       <div className="hemprofilHeader">
         <header>Min Profil</header>
-      <div className="hemprofilHeader">
-        <Link to="/mainmenu/settings/profile">
-          Redigera
-        </Link>
-      </div>
+        <div className="hemprofilHeader">
+          <Link to="/mainmenu/settings/profile">Redigera</Link>
+        </div>
       </div>
 
       <div>{profile.map(showProfile)}</div>

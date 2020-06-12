@@ -15,10 +15,13 @@ import Mainmenu from "./MainMenu/MainMenu"
       const MenuPaths = () => {
         return (
           <div id="mainMenu">
+          <Switch className="App">
             <Route path="/mainmenu" component={Mainmenu} />
             <Route path="/login" component={Login} />
             <Route path="/registration" component={Registrering}/>
             <Route path="/forgotpassword" component={GlömtLösenord}/>
+            <Route component={MissingPage} />
+            </Switch>
           </div>
         );
       };
@@ -26,10 +29,7 @@ import Mainmenu from "./MainMenu/MainMenu"
 const Main = () => {
   return (
     <BrowserRouter>
-    <Switch className="App">
     <MenuPaths/>
-    <Route component={MissingPage} />
-    </Switch>
     </BrowserRouter>
 
   );
