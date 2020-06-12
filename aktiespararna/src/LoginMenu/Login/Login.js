@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import aktielogoo from "./img/aktielogoo.png";
 import userData from "../../../src/data/user.json";
 import { useForm } from "react-hook-form";
-import { BrowserRouter, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 export default function Login() {
@@ -12,11 +12,7 @@ export default function Login() {
     if (JSON.stringify(data) === JSON.stringify(userData)) {
       return(
         <div>
-        <BrowserRouter>
-        <li>
-        <Link to="/home" exact={true}/>
-        </li>
-        </BrowserRouter>
+        <link to = "/registration"></link>
         </div>
       )
     } else {
@@ -47,10 +43,10 @@ export default function Login() {
           required
         />
         <br></br>
-        <input type="submit" value="Logga in" />
+        <input type="submit" value="Logga in"/>
         <br></br>
-        <p>Dont have an account?</p>
-        <a href="www.google.com">Register now!</a>
+        <p>Saknar konto?</p>
+                <Link to="/registration">Registrera</Link>
       </form>
     </div>
   );
