@@ -3,28 +3,22 @@ import "./App.css";
 import Login from "./LoginMenu/Login/Login";
 import Registrering from "./LoginMenu/Registrering/Registrering";
 import GlömtLösenord from "./LoginMenu/Glömt lösenord/GlömtLösenord"
-import {BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./HeadMenu/Hem/Home";
-import Portfolio from "./HeadMenu/Min Portfolio/Portfolio";
-import Settings from "./HeadMenu/UserSettings/Settings";
-import Sidebar from "./HeadMenu/Components/SideBar";
-import Mainmenu from "./HeadMenu/HeadMenu"
+import {BrowserRouter, Route, Switch, Link} from "react-router-dom";
+import Home from "./MainMenu/Hem/Home";
+import Portfolio from "./MainMenu/Min Portfolio/Portfolio";
+import Settings from "./MainMenu/UserSettings/Settings";
+import Sidebar from "./MainMenu/Components/SideBar";
+import Mainmenu from "./MainMenu/MainMenu"
 
 
-
-const LoginPaths = () => {
-  return (
-    <div id="loginMenu">
-      <Route path="/login" component={Login} />
-        <Route path="/registration" component={Registrering}/>
-        <Route path="/forgotpassword" component={GlömtLösenord}/>
-        </div>
-        );
-      };
+      const MissingPage = () => <div><Link to ="/login">404- missing page</Link></div>;
       const MenuPaths = () => {
         return (
-          <div id="headMenu">
+          <div id="mainMenu">
             <Route path="/mainmenu" component={Mainmenu} />
+            <Route path="/login" component={Login} />
+            <Route path="/registration" component={Registrering}/>
+            <Route path="/forgotpassword" component={GlömtLösenord}/>
           </div>
         );
       };
@@ -32,11 +26,9 @@ const LoginPaths = () => {
 const Main = () => {
   return (
     <BrowserRouter>
-    <Switch>
-    <div className="App">
-    <LoginPaths/>
+    <Switch className="App">
     <MenuPaths/>
-    </div>
+    <Route component={MissingPage} />
     </Switch>
     </BrowserRouter>
 

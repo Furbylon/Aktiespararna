@@ -4,17 +4,12 @@ import userData from "../../../src/data/user.json";
 import { useForm } from "react-hook-form";
 import { Link, Route } from "react-router-dom";
 
-
 export default function Login() {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     if (JSON.stringify(data) === JSON.stringify(userData)) {
-      return (
-        <div>
-          <link to="/home"></link>
-        </div>
-      );
+      return alert("Correct");
     } else {
       alert("invalidinput");
     }

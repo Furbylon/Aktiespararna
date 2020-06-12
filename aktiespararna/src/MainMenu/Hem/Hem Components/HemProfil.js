@@ -30,11 +30,9 @@ const HemProfil = () => {
       <div className="hemprofilHeader">
         <header>Min Profil</header>
       <div className="hemprofilHeader">
-      <button id="profileButton">
-        <Link to="/settings/profile">
+        <Link to="/mainmenu/settings/profile">
           Redigera
         </Link>
-        </button>
       </div>
       </div>
 

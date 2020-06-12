@@ -2,6 +2,8 @@ import React, { useState, useEffect} from 'react';
 import portfolio from '../../Min Portfolio/Portfolio'
 import portfolioFrame from '../../Min Portfolio/PortfolioComponenter.js/Portfolioframe'
 import profileList from "../../../data/profil.json";
+import { Link, Route } from "react-router-dom";
+
 
 
 const MittInnehav = () => {
@@ -32,7 +34,7 @@ const MittInnehav = () => {
         <div id = "mittInnehav" style = {{position: "relative"}}>
         <div>
         <header>Mitt Innehav</header>
-        <button>Min portfölj</button>
+        <Link to= "/mainmenu/portfolio">Min portfölj</Link>
         <h1>SEK</h1> 
         <p>Senast uppdaterad: </p>
         <CheckIfValuesExist/>

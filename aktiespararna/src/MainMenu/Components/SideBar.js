@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   const closeNavigation = () => {
     document.getElementById("mySideBar").style.width = "0px";
-    document.getElementById("headMenu").style.marginLeft = "0px";
+    document.getElementById("mainMenu").style.marginLeft = "0px";
     document.getElementById("sidebarButton").innerHTML = "close";
   };
   const Routes = () => (
