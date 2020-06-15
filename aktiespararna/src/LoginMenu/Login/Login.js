@@ -12,7 +12,9 @@ export default function Login() {
       JSON.stringify(data.username && data.password) ===
       JSON.stringify(userData.username && userData.password)
     ) {
-      return alert("Success");
+      return(
+        <Link to="/forgotpassword"/>
+      )
     } else {
       alert("invalidinput");
     }
@@ -45,6 +47,8 @@ export default function Login() {
         <br></br>
         <p>Saknar konto?</p>
         <Link to="/registration">Registrera</Link>
+        <br/>
+        <Link to="/forgotpassword">Glömt lösenord</Link>
       </form>
     </div>
   );
