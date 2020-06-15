@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import aktielogoo from "../Login/img/aktielogoo.png";
 import userData from "../../../src/data/user.json";
 import { useForm } from "react-hook-form";
 
 export default function ForgottenPassword() {
   const { register, handleSubmit } = useForm();
+
   const onSubmit = (data) => {
     if (
-      JSON.stringify(data) === JSON.stringify(userData.username, userData.email)
+      JSON.stringify(data.username && data.email) ===
+      JSON.stringify(userData.username && userData.email)
     ) {
-      alert(JSON.stringify("Your Password is: ", userData.password));
+      alert(JSON.stringify("Your Password is: " + userData.password));
     } else {
-      alert(
-        JSON.stringify(data),
-        JSON.stringify(userData.username, userData.email)
-      );
+      alert("No username Found");
     }
   };
   return (
@@ -36,7 +35,7 @@ export default function ForgottenPassword() {
         <input
           type="text"
           name="email"
-          placeholder="email"
+          placeholder="Email"
           ref={register}
           required
         />

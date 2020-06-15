@@ -2,19 +2,17 @@ import React from "react";
 import aktielogoo from "./img/aktielogoo.png";
 import userData from "../../../src/data/user.json";
 import { useForm } from "react-hook-form";
-import {Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    if (JSON.stringify(data) === JSON.stringify(userData)) {
-      return(
-        <div>
-        <link to = "/registration"></link>
-        </div>
-      )
+    if (
+      JSON.stringify(data.username && data.password) ===
+      JSON.stringify(userData.username && userData.password)
+    ) {
+      return alert("Success");
     } else {
       alert("invalidinput");
     }
@@ -43,10 +41,10 @@ export default function Login() {
           required
         />
         <br></br>
-        <input type="submit" value="Logga in"/>
+        <input type="submit" value="Logga in" />
         <br></br>
         <p>Saknar konto?</p>
-                <Link to="/registration">Registrera</Link>
+        <Link to="/registration">Registrera</Link>
       </form>
     </div>
   );
