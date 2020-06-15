@@ -2,23 +2,23 @@ import React from "react";
 import aktielogoo from "./img/aktielogoo.png";
 import userData from "../../../src/data/user.json";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function Login() {
   const { register, handleSubmit } = useForm();
-
+  const history = useHistory();
   const onSubmit = (data) => {
     if (
       JSON.stringify(data.username && data.password) ===
       JSON.stringify(userData.username && userData.password)
     ) {
-      return(
-        <Link to="/forgotpassword"/>
-      )
+      console.log("Success");
+      return history.push("/mainmenu/home");
     } else {
-      alert("invalidinput");
+      alert("Wrong username/password");
     }
   };
+
   return (
     <div id="loginDiv" className="loginMenuPages">
       <img id="logo" src={aktielogoo} alt="logo" />
