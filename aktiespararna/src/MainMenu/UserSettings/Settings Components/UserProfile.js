@@ -1,34 +1,39 @@
 import React, { useState } from "react";
 import Ior from "../../images/Ior.jpg";
 import "../UserSettings css/UserProfile.css";
-import {useForm} from "react-hook-form"
+import { useForm } from "react-hook-form";
 import profileList from "../../../data/profil.json";
-import ProfileValues from "../../Hem/Hem Components/ProfileValues";
+import profileValues from "../../Hem/Hem Components/ProfileValues";
 
 const Profile = () => {
+  let { register, handleSubmit } = useForm();
   let [profile, setProfile] = useState(profileList.slice(0, 1));
+  let [firstName, setFirstName] = useState();
 
-  const updateProfile = (event) => {
-    setProfile = currentProfile.placeholder
+  const onSubmit = (event) => {
+    setFirstName(event.firstNameInput);
+    alert(firstName);
   };
-  const currentProfile = (profile) => {
+  let currentProfile = (profile) => {
     return (
-      <div key= {profile.name}>
+      <div key={profile.username}>
         <div id="userProfile"></div>
         <img src={Ior} alt="profilePic" id="profilePic"></img>
-        <form>
+        <form name="input" onSubmit={handleSubmit(onSubmit)}>
           Förnamn
           <input
             type="text"
-            id="firstNameInput"
-            placeholder={profile.name}
+            name="firstNameInput"
+            placeholder={profile.firstName}
+            ref={register}
           ></input>
           <br />
           Efternamn
           <input
             type="text"
             name="lastNameInput"
-            placeholder={profile.name}
+            placeholder={profile.lastName}
+            ref={register}
           ></input>
           <br />
           Personnummer
@@ -36,6 +41,7 @@ const Profile = () => {
             type="text"
             name="personalNumberInput"
             placeholder={profile.personalNumber}
+            ref={register}
           ></input>
           <br />
           Adress
@@ -43,6 +49,7 @@ const Profile = () => {
             type="text"
             name="adressInput"
             placeholder={profile.address}
+            ref={register}
           ></input>
           <br />
           Postort
@@ -50,6 +57,7 @@ const Profile = () => {
             type="text"
             name="postTownInput"
             placeholder={profile.postTown}
+            ref={register}
           ></input>
           <br />
           Postnummer
@@ -57,6 +65,7 @@ const Profile = () => {
             type="text"
             name="postNumberInput"
             placeholder={profile.postNumber}
+            ref={register}
           ></input>
           <br />
           Telefonnummer
@@ -64,6 +73,7 @@ const Profile = () => {
             type="text"
             name="telephoneNumberInput"
             placeholder={profile.telephone}
+            ref={register}
           ></input>
           <br />
           Email
@@ -71,14 +81,10 @@ const Profile = () => {
             type="text"
             name="emailInput"
             placeholder={profile.email}
+            ref={register}
           ></input>
           <br />
-          <input
-            type="submit"
-            id="profileSaveButton"
-            value="Uppdatera"
-            onClick={updateProfile()}
-          />
+          <input type="submit" id="profileSaveButton" value="Uppdatera" />
         </form>
       </div>
     );

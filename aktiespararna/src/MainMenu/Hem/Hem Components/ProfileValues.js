@@ -24,7 +24,8 @@ const ProfileValues = ({
         <p>{personalNumber}</p>
       </div>
       <div>
-        <p>{industries}</p>
+      <p style={{}}>Föredragna industrier</p>
+        <p>Industri: {industries}</p>
       </div>
       <div>
         <p>Telefon: {telephoneNumber}</p>
