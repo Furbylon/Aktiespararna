@@ -47,6 +47,8 @@ export default function Login() {
         <br></br>
         <p>Saknar konto?</p>
         <Link to="/registration">Registrera</Link>
+        <br/>
+        <Link to="/forgotpassword">Glömt lösenord</Link>
       </form>
     </div>
   );

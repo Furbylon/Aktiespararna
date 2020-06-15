@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import Ior from "../../images/Ior.jpg";
 import "../UserSettings css/UserProfile.css";
+import {useForm} from "react-hook-form"
 import profileList from "../../../data/profil.json";
 import ProfileValues from "../../Hem/Hem Components/ProfileValues";
 
 const Profile = () => {
   let [profile, setProfile] = useState(profileList.slice(0, 1));
 
-  const updateProfile = () => {};
+  const updateProfile = (event) => {
+    setProfile = currentProfile.placeholder
+  };
   const currentProfile = (profile) => {
     return (
-      <div>
+      <div key= {profile.name}>
         <div id="userProfile"></div>
         <img src={Ior} alt="profilePic" id="profilePic"></img>
         <form>
