@@ -1,15 +1,14 @@
 import React from "react";
+import data from "../../../../data/mock.json";
 
 const portfolioValues = ({
   company,
-  holding,
-  shareType,
-  shareQuantity,
-  shareNumber,
+  stockSector,
+  balance,
+  shares,
   ownership,
   votingPower,
   industry,
-  download,
 }) => {
   return (
     <tr>
@@ -17,16 +16,13 @@ const portfolioValues = ({
         <p>{company}</p>
       </td>
       <td>
-        <p>{holding}</p>
+        <p>{stockSector}</p>
       </td>
       <td>
-        <p>{shareType}</p>
+        <p>{balance}</p>
       </td>
       <td>
-        <p>{shareQuantity}</p>
-      </td>
-      <td>
-        <p>{shareNumber}</p>
+        <p>{shares}</p>
       </td>
       <td>
         <p>{ownership}</p>
@@ -35,8 +31,8 @@ const portfolioValues = ({
         <p>{votingPower}</p>
       </td>
       <td>
-      <p>{industry}</p>
-    </td>
+        <p>{industry}</p>
+      </td>
     </tr>
   );
 };

@@ -1,27 +1,29 @@
 [
-    {
-      "name": "Idris Elba",
-      "pictureUrl": "https://image.tmdb.org/t/p/w500/d9NkfCwczP0TjgrjpF94jF67SK8.jpg",
-      "popularity": 11.622713
-    },
-    {
-      "name": "Jessica Chastain",
-      "pictureUrl": "https://image.tmdb.org/t/p/w500/nkFrkn5NZVGWb4b2X0yIcXezhyt.jpg",
-      "popularity": 8.324357
-    },
-    {
-      "name": "Johnny Depp",
-      "pictureUrl": "https://image.tmdb.org/t/p/w500/kbWValANhZI8rbWZXximXuMN4UN.jpg",
-      "popularity": 15.656534
-    },
-    {
-      "name": "Emilia Clarke",
-      "pictureUrl": "https://image.tmdb.org/t/p/w500/j7d083zIMhwnKro3tQqDz2Fq1UD.jpg",
-      "popularity": 16.211837
-    },
-    {
-      "name": "Leonardo DiCaprio",
-      "pictureUrl": "https://image.tmdb.org/t/p/w500/A85WIRIKVsD2DeUSc8wQ4fOKc4e.jpg",
-      "popularity": 11.245333
-    }
-  ]
+  {
+    "Company": ["Quimba", "Skinte", "BananaMan", "Meevee", "Devcast"],
+    "StockSector": [
+      "Public Utilities",
+      "Public Utilities",
+      "Food",
+      "Technology",
+      "Health Care"
+    ],
+    "Balance": [
+      "$1995071.23",
+      "$2365900.13",
+      "$7948357.40",
+      "$4486687.96",
+      "$2928148.96"
+    ],
+    "Shares": [9191, 8918, 7732, 866, 6735],
+    "Ownership": [76, 7, 28, 26, 60],
+    "VotingPower": [6, 42, 14, 98, 33],
+    "Industry": [
+      "Oil & Gas Production",
+      "Water Supply",
+      "Banana Export",
+      "Computer Software: Prepackaged Software",
+      "Biotechnology: Biological Products (No Diagnostic Substances)"
+    ]
+  }
+]
