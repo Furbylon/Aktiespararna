@@ -28,6 +28,8 @@ const ProfileValues = ({
         <p>Industri: {industries}</p>
       </div>
       <div>
+      <br/>
+      <p>Kontaktuppgifter</p>
         <p>Telefon: {telephoneNumber}</p>
         <p>Mail: {email} </p>
         <p>Adress: {address}</p>

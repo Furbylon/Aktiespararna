@@ -1,8 +1,7 @@
 import React from "react";
-import data from "../../../../data/mock.json";
 
 const portfolioValues = ({
-  company,
+  companyName,
   stockSector,
   balance,
   shares,
@@ -13,7 +12,7 @@ const portfolioValues = ({
   return (
     <tr>
       <td>
-        <p>{company}</p>
+        <p>{companyName}</p>
       </td>
       <td>
         <p>{stockSector}</p>
@@ -25,10 +24,10 @@ const portfolioValues = ({
         <p>{shares}</p>
       </td>
       <td>
-        <p>{ownership}</p>
+        <p>{ownership}%</p>
       </td>
       <td>
-        <p>{votingPower}</p>
+        <p>{votingPower}%</p>
       </td>
       <td>
         <p>{industry}</p>
