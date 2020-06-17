@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import mock from "../../../data/mock.json";
+import mock from "../../../data/JSON/mock.json";
 
 const Preferences = () => {
   let [industries, setIndustries] = useState(mock.slice(0, 1));

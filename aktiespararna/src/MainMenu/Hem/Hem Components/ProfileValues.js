@@ -2,9 +2,13 @@ import React from "react";
 
 const ProfileValues = ({
   picture,
-  name,
+  firstName,
+  lastName,
   personalNumber,
-  industries,
+  industry1,
+  industry2,
+  industry3,
+  industry4,
   telephoneNumber,
   email,
   address,
@@ -18,18 +22,23 @@ const ProfileValues = ({
           id="profile"
           style={{ height: 100 }}
           src={picture}
-          alt={name}
+          alt={firstName}
         ></img>
-        <h3>{name}</h3>
+        <h3>
+          {firstName} {lastName}
+        </h3>
+        <h5>Person Nr/Organisations Nr:</h5>
         <p>{personalNumber}</p>
       </div>
       <div>
-      <p style={{}}>Föredragna industrier</p>
-        <p>Industri: {industries}</p>
+        <h4>Föredragna industrier:</h4>
+        <p>
+          {industry1} {industry2} {industry3} {industry4}{" "}
+        </p>
       </div>
       <div>
-      <br/>
-      <p>Kontaktuppgifter</p>
+        <br />
+        <h4>Kontaktuppgifter:</h4>
         <p>Telefon: {telephoneNumber}</p>
         <p>Mail: {email} </p>
         <p>Adress: {address}</p>

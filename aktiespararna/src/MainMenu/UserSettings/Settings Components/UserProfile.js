@@ -2,24 +2,20 @@ import React, { useState } from "react";
 import Ior from "../../images/Ior.jpg";
 import "../UserSettings css/UserProfile.css";
 import { useForm } from "react-hook-form";
-import profileList from "../../../data/profil.json";
+import profileList from "../../../data/JSON/profil.json";
 import profileValues from "../../Hem/Hem Components/ProfileValues";
 
 const Profile = () => {
   let { register, handleSubmit } = useForm();
   let [profile, setProfile] = useState(profileList.slice(0, 1));
-  let [firstName, setFirstName] = useState();
 
-  const onSubmit = (event) => {
-    setFirstName(event.firstNameInput);
-    alert(firstName);
-  };
+
   let currentProfile = (profile) => {
     return (
       <div key={profile.username}>
         <div id="userProfile"></div>
         <img src={Ior} alt="profilePic" id="profilePic"></img>
-        <form name="input" onSubmit={handleSubmit(onSubmit)}>
+        <form name="input">
           Förnamn
           <input
             type="text"

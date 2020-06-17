@@ -1,6 +1,6 @@
 import React from "react";
 import aktielogoo from "./img/aktielogoo.png";
-import userData from "../../../src/data/user.json";
+import userData from "../../../src/data/JSON/user.json";
 import { useForm } from "react-hook-form";
 import { Link, useHistory } from "react-router-dom";
 

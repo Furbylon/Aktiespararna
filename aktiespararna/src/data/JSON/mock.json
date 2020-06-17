@@ -1,8 +1,8 @@
 [
   {
-    "Company": ["Quimba", "Skinte", "BananaMan", "Meevee", "Devcast"],
+    "id": [1, 2, 3, 4, 5],
+    "Company": ["Quimba", "BananaMan", "Meevee", "Devcast"],
     "StockSector": [
-      "Public Utilities",
       "Public Utilities",
       "Food",
       "Technology",
@@ -10,7 +10,6 @@
     ],
     "Balance": [
       "$1995071.23",
-      "$2365900.13",
       "$7948357.40",
       "$4486687.96",
       "$2928148.96"

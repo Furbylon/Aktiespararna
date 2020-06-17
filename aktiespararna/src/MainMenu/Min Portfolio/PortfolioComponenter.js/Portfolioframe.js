@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import PortfolioValues from "./Folder Components/PortfolioValues";
-import profileList from "../../../data/profil.json";
-import data from "../../../data/mock.json"
+import profileList from "../../../data/JSON/profil.json";
+import data from "../../../data/JSON/mock.json"
 
 const PortfolioFrame = () => {
   let [currentData, setPortfolioValues] = useState(data.slice(0, 1));

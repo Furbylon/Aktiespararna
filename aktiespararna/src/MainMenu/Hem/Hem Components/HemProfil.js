@@ -1,24 +1,28 @@
 import React, { useState } from "react";
-import profileList from "../../../data/profil.json";
+import profileList from "../../../data/JSON/profil.json";
 import ProfileValues from "../Hem Components/ProfileValues";
 import { Link } from "react-router-dom";
 import userProfile from "../../UserSettings/Settings Components/UserProfile"
 
 const HemProfil = () => {
-  let [profile, setProfile] = useState(profileList.slice(0, 1));
+  let [profile, setProfile] = useState(profileList);
 
   setProfile = () => {
-
+    
   }
 
   const showProfile = (profile) => {
     return (
       <ProfileValues
-        key={profile.name}
+        key={profile.id}
         picture={profile.pictureUrl}
-        name={profile.name}
+        firstName={profile.firstName}
+        lastName= {profile.lastName}
         personalNumber={profile.personalNumber}
-        industries={profile.industries}
+        industry1={profile.industries[0]}
+        industry2={profile.industries[1]}
+        industry3={profile.industries[2]}
+        industry4={profile.industries[3]}
         telephoneNumber={profile.telephone}
         email={profile.email}
         address={profile.address}

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import portfolio from "../../Min Portfolio/Portfolio";
 import portfolioFrame from "../../Min Portfolio/PortfolioComponenter.js/Portfolioframe";
-import profileList from "../../../data/profil.json";
+import profileList from "../../../data/JSON/profil.json";
 import { Link, Route } from "react-router-dom";
-import mock from "../../../data/mock.json";
+import mock from "../../../data/JSON/mock.json";
 import IndustryPercentage from "../Hem Components/IndustryPrecentage"
 
 const MittInnehav = () => {
@@ -12,13 +12,13 @@ const MittInnehav = () => {
   const CheckIfValuesExist = (companies) => {
     if (values.length !== 0) {
       return (
-        <div>
+        <div key={companies.id}>
         <IndustryPercentage/>
           <p>{companies.Industry.slice(0,1)}</p>
           <p>{companies.Industry.slice(1,2)} {companies.Shares.slice(1,2)} SEK</p>
           <p>{companies.Industry.slice(2,3)} {companies.Shares.slice(2,3)} SEK</p>
           <p>{companies.Industry.slice(3,4)} {companies.Shares.slice(3,4)} SEK</p>
-          <p>{companies.Industry.slice(4,5)} {companies.Shares.slice(4,5)} SEK  </p>
+          <p>{companies.Industry.slice(4,5)} {companies.Shares.slice(4,5)} SEK</p>
         </div>
       );
     } else {
