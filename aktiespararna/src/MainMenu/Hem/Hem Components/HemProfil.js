@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import userProfile from "../../UserSettings/Settings Components/UserProfile"
 
 const HemProfil = () => {
-  let [profile, setProfile] = useState(profileList);
+  let [profile, setProfile] = useState(profileList.slice(0,1));
 
   setProfile = () => {
     

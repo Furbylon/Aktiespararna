@@ -7,18 +7,18 @@ import mock from "../../../data/JSON/mock.json";
 import IndustryPercentage from "../Hem Components/IndustryPrecentage"
 
 const MittInnehav = () => {
-  let [values, setValues] = useState(mock);
+  let [values, setValues] = useState(mock.slice(0,1));
 
   const CheckIfValuesExist = (companies) => {
     if (values.length !== 0) {
       return (
         <div key={companies.id}>
         <IndustryPercentage/>
-          <p>{companies.Industry.slice(0,1)}</p>
-          <p>{companies.Industry.slice(1,2)} {companies.Shares.slice(1,2)} SEK</p>
-          <p>{companies.Industry.slice(2,3)} {companies.Shares.slice(2,3)} SEK</p>
-          <p>{companies.Industry.slice(3,4)} {companies.Shares.slice(3,4)} SEK</p>
-          <p>{companies.Industry.slice(4,5)} {companies.Shares.slice(4,5)} SEK</p>
+          <p>{companies.Industry}</p>
+          <p>{companies.Industry} {companies.Shares} SEK</p>
+          <p>{companies.Industry} {companies.Shares} SEK</p>
+          <p>{companies.Industry} {companies.Shares} SEK</p>
+          <p>{companies.Industry} {companies.Shares} SEK</p>
         </div>
       );
     } else {

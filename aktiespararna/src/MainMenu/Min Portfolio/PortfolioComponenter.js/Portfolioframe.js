@@ -1,10 +1,10 @@
 import React, { useState, useEffect} from "react";
-import PortfolioValues from "./Folder Components/PortfolioValues";
+import PortfolioStructure from "./Folder Components/PortfolioValues";
 import profileList from "../../../data/JSON/profil.json";
 import data from "../../../data/JSON/mock.json"
 
 const PortfolioFrame = () => {
-  let [currentData, setPortfolioValues] = useState(data.slice(0, 1));
+  let [currentData, setData] = useState(data.slice(0, 9));
 
 
   return (
@@ -24,15 +24,15 @@ const PortfolioFrame = () => {
         <tbody>
           {currentData.map((company, key) => {
             return (
-              <PortfolioValues
+              <PortfolioStructure
                 key={key}
                 companyName={company.Company}
-                stockSector={company.stockSector}
-                balance={company.balance}
-                shares={company.shares}
-                ownership={company.ownership}
-                votingpower={company.votingpower}
-                industry={company.industry}
+                stockSector={company.StockSector}
+                balance={company.Balance}
+                shares={company.Shares}
+                ownership={company.Ownership}
+                votingPower={company.VotingPower}
+                industry={company.Industry}
               />
             );
           })}

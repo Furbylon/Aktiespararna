@@ -1,28 +1,502 @@
 [
   {
-    "id": [1, 2, 3, 4, 5],
-    "Company": ["Quimba", "BananaMan", "Meevee", "Devcast"],
-    "StockSector": [
-      "Public Utilities",
-      "Food",
-      "Technology",
-      "Health Care"
-    ],
-    "Balance": [
-      "$1995071.23",
-      "$7948357.40",
-      "$4486687.96",
-      "$2928148.96"
-    ],
-    "Shares": [9191, 8918, 7732, 866, 6735],
-    "Ownership": [76, 7, 28, 26, 60],
-    "VotingPower": [6, 42, 14, 98, 33],
-    "Industry": [
-      "Oil & Gas Production",
-      "Water Supply",
-      "Banana Export",
-      "Computer Software: Prepackaged Software",
-      "Biotechnology: Biological Products (No Diagnostic Substances)"
-    ]
+    "id": 45,
+    "Company": "Youfeed",
+    "StockSector": "Basic Industries",
+    "Balance": "$6896927.58",
+    "Shares": 8032,
+    "Ownership": 645,
+    "VotingPower": 14,
+    "Industry": "Steel/Iron Ore"
+  },
+  {
+    "id": 51,
+    "Company": "Demizz",
+    "StockSector": "Consumer Durables",
+    "Balance": "$7482623.91",
+    "Shares": 264,
+    "Ownership": 124,
+    "VotingPower": 1,
+    "Industry": "Telecommunications Equipment"
+  },
+  {
+    "id": 57,
+    "Company": "Zoomzone",
+    "StockSector": "n/a",
+    "Balance": "$2367563.36",
+    "Shares": 5317,
+    "Ownership": 1859,
+    "VotingPower": 21,
+    "Industry": "n/a"
+  },
+  {
+    "id": 55,
+    "Company": "Twitterbeat",
+    "StockSector": "Health Care",
+    "Balance": "$4760384.41",
+    "Shares": 2802,
+    "Ownership": 5567,
+    "VotingPower": 2,
+    "Industry": "Major Pharmaceuticals"
+  },
+  {
+    "id": 92,
+    "Company": "Kanoodle",
+    "StockSector": "n/a",
+    "Balance": "$5499487.42",
+    "Shares": 2239,
+    "Ownership": 5625,
+    "VotingPower": 48,
+    "Industry": "n/a"
+  },
+  {
+    "id": 45,
+    "Company": "Twitterlist",
+    "StockSector": "Consumer Services",
+    "Balance": "$2376847.23",
+    "Shares": 276,
+    "Ownership": 5174,
+    "VotingPower": 16,
+    "Industry": "Catalog/Specialty Distribution"
+  },
+  {
+    "id": 41,
+    "Company": "Kayveo",
+    "StockSector": "Basic Industries",
+    "Balance": "$3168848.57",
+    "Shares": 1472,
+    "Ownership": 8770,
+    "VotingPower": 42,
+    "Industry": "Water Supply"
+  },
+  {
+    "id": 87,
+    "Company": "Bluezoom",
+    "StockSector": "n/a",
+    "Balance": "$2988770.94",
+    "Shares": 1963,
+    "Ownership": 6092,
+    "VotingPower": 96,
+    "Industry": "n/a"
+  },
+  {
+    "id": 20,
+    "Company": "Eayo",
+    "StockSector": "Technology",
+    "Balance": "$4427538.72",
+    "Shares": 1863,
+    "Ownership": 7272,
+    "VotingPower": 11,
+    "Industry": "Computer Software: Programming, Data Processing"
+  },
+  {
+    "id": 92,
+    "Company": "Fivebridge",
+    "StockSector": "Health Care",
+    "Balance": "$8751185.18",
+    "Shares": 8373,
+    "Ownership": 4771,
+    "VotingPower": 40,
+    "Industry": "Medical/Dental Instruments"
+  },
+  {
+    "id": 18,
+    "Company": "Tagopia",
+    "StockSector": "Consumer Services",
+    "Balance": "$5324260.06",
+    "Shares": 8057,
+    "Ownership": 3743,
+    "VotingPower": 21,
+    "Industry": "Marine Transportation"
+  },
+  {
+    "id": 96,
+    "Company": "Blogtags",
+    "StockSector": "n/a",
+    "Balance": "$5945810.76",
+    "Shares": 8687,
+    "Ownership": 453,
+    "VotingPower": 47,
+    "Industry": "n/a"
+  },
+  {
+    "id": 95,
+    "Company": "Jaxspan",
+    "StockSector": "Technology",
+    "Balance": "$3331527.41",
+    "Shares": 7622,
+    "Ownership": 4660,
+    "VotingPower": 82,
+    "Industry": "Industrial Machinery/Components"
+  },
+  {
+    "id": 96,
+    "Company": "Tagfeed",
+    "StockSector": "n/a",
+    "Balance": "$4128168.20",
+    "Shares": 5701,
+    "Ownership": 1829,
+    "VotingPower": 11,
+    "Industry": "n/a"
+  },
+  {
+    "id": 67,
+    "Company": "Photospace",
+    "StockSector": "Health Care",
+    "Balance": "$6578337.44",
+    "Shares": 813,
+    "Ownership": 4651,
+    "VotingPower": 64,
+    "Industry": "Biotechnology: Electromedical & Electrotherapeutic Apparatus"
+  },
+  {
+    "id": 39,
+    "Company": "Flipstorm",
+    "StockSector": "Health Care",
+    "Balance": "$8755486.65",
+    "Shares": 4206,
+    "Ownership": 3554,
+    "VotingPower": 67,
+    "Industry": "Major Pharmaceuticals"
+  },
+  {
+    "id": 81,
+    "Company": "Voonder",
+    "StockSector": "Consumer Durables",
+    "Balance": "$4547386.51",
+    "Shares": 6281,
+    "Ownership": 8634,
+    "VotingPower": 80,
+    "Industry": "Specialty Chemicals"
+  },
+  {
+    "id": 52,
+    "Company": "Flipstorm",
+    "StockSector": "Public Utilities",
+    "Balance": "$4461781.00",
+    "Shares": 5693,
+    "Ownership": 6582,
+    "VotingPower": 33,
+    "Industry": "Power Generation"
+  },
+  {
+    "id": 77,
+    "Company": "Eazzy",
+    "StockSector": "Health Care",
+    "Balance": "$1960731.60",
+    "Shares": 2842,
+    "Ownership": 7495,
+    "VotingPower": 69,
+    "Industry": "Major Pharmaceuticals"
+  },
+  {
+    "id": 27,
+    "Company": "Twitterwire",
+    "StockSector": "Miscellaneous",
+    "Balance": "$8458283.33",
+    "Shares": 303,
+    "Ownership": 4271,
+    "VotingPower": 81,
+    "Industry": "Publishing"
+  },
+  {
+    "id": 46,
+    "Company": "Quinu",
+    "StockSector": "Basic Industries",
+    "Balance": "$5439825.99",
+    "Shares": 3573,
+    "Ownership": 4072,
+    "VotingPower": 59,
+    "Industry": "Precious Metals"
+  },
+  {
+    "id": 86,
+    "Company": "Yombu",
+    "StockSector": "n/a",
+    "Balance": "$6241859.17",
+    "Shares": 3434,
+    "Ownership": 4761,
+    "VotingPower": 36,
+    "Industry": "n/a"
+  },
+  {
+    "id": 68,
+    "Company": "Lajo",
+    "StockSector": "Finance",
+    "Balance": "$5841476.06",
+    "Shares": 6398,
+    "Ownership": 303,
+    "VotingPower": 6,
+    "Industry": "Business Services"
+  },
+  {
+    "id": 21,
+    "Company": "Einti",
+    "StockSector": "Technology",
+    "Balance": "$5454142.03",
+    "Shares": 1397,
+    "Ownership": 243,
+    "VotingPower": 32,
+    "Industry": "Computer Software: Prepackaged Software"
+  },
+  {
+    "id": 55,
+    "Company": "Zoombox",
+    "StockSector": "Basic Industries",
+    "Balance": "$1555497.93",
+    "Shares": 4904,
+    "Ownership": 4513,
+    "VotingPower": 99,
+    "Industry": "Agricultural Chemicals"
+  },
+  {
+    "id": 78,
+    "Company": "Mymm",
+    "StockSector": "Consumer Non-Durables",
+    "Balance": "$1039195.60",
+    "Shares": 3513,
+    "Ownership": 5940,
+    "VotingPower": 85,
+    "Industry": "Beverages (Production/Distribution)"
+  },
+  {
+    "id": 97,
+    "Company": "Leenti",
+    "StockSector": "Health Care",
+    "Balance": "$2545859.60",
+    "Shares": 3826,
+    "Ownership": 4381,
+    "VotingPower": 97,
+    "Industry": "Major Pharmaceuticals"
+  },
+  {
+    "id": 70,
+    "Company": "Jabberstorm",
+    "StockSector": "n/a",
+    "Balance": "$2851891.55",
+    "Shares": 2764,
+    "Ownership": 7459,
+    "VotingPower": 62,
+    "Industry": "n/a"
+  },
+  {
+    "id": 34,
+    "Company": "Buzzbean",
+    "StockSector": "Technology",
+    "Balance": "$5257376.34",
+    "Shares": 2946,
+    "Ownership": 5770,
+    "VotingPower": 54,
+    "Industry": "EDP Services"
+  },
+  {
+    "id": 36,
+    "Company": "Jabberstorm",
+    "StockSector": "Consumer Services",
+    "Balance": "$8030184.27",
+    "Shares": 8980,
+    "Ownership": 3663,
+    "VotingPower": 2,
+    "Industry": "Professional Services"
+  },
+  {
+    "id": 73,
+    "Company": "Skimia",
+    "StockSector": "Consumer Services",
+    "Balance": "$5688928.29",
+    "Shares": 8207,
+    "Ownership": 7185,
+    "VotingPower": 34,
+    "Industry": "RETAIL: Building Materials"
+  },
+  {
+    "id": 41,
+    "Company": "Thoughtsphere",
+    "StockSector": "Consumer Services",
+    "Balance": "$5705368.50",
+    "Shares": 7208,
+    "Ownership": 8596,
+    "VotingPower": 4,
+    "Industry": "Marine Transportation"
+  },
+  {
+    "id": 39,
+    "Company": "Skinder",
+    "StockSector": "Finance",
+    "Balance": "$4136831.90",
+    "Shares": 7191,
+    "Ownership": 5221,
+    "VotingPower": 65,
+    "Industry": "Property-Casualty Insurers"
+  },
+  {
+    "id": 95,
+    "Company": "Tagpad",
+    "StockSector": "n/a",
+    "Balance": "$1731244.76",
+    "Shares": 201,
+    "Ownership": 289,
+    "VotingPower": 97,
+    "Industry": "n/a"
+  },
+  {
+    "id": 70,
+    "Company": "Skipstorm",
+    "StockSector": "Basic Industries",
+    "Balance": "$8693294.56",
+    "Shares": 2120,
+    "Ownership": 42,
+    "VotingPower": 15,
+    "Industry": "Water Supply"
+  },
+  {
+    "id": 76,
+    "Company": "Quatz",
+    "StockSector": "Health Care",
+    "Balance": "$7283201.36",
+    "Shares": 8659,
+    "Ownership": 5146,
+    "VotingPower": 73,
+    "Industry": "Medical/Dental Instruments"
+  },
+  {
+    "id": 52,
+    "Company": "Shuffletag",
+    "StockSector": "Consumer Durables",
+    "Balance": "$8916008.99",
+    "Shares": 3239,
+    "Ownership": 5307,
+    "VotingPower": 74,
+    "Industry": "Industrial Specialties"
+  },
+  {
+    "id": 12,
+    "Company": "Zooxo",
+    "StockSector": "Finance",
+    "Balance": "$6987276.00",
+    "Shares": 6703,
+    "Ownership": 103,
+    "VotingPower": 94,
+    "Industry": "Major Banks"
+  },
+  {
+    "id": 50,
+    "Company": "Jayo",
+    "StockSector": "Consumer Services",
+    "Balance": "$1664636.49",
+    "Shares": 1232,
+    "Ownership": 4093,
+    "VotingPower": 23,
+    "Industry": "Other Consumer Services"
+  },
+  {
+    "id": 67,
+    "Company": "Yodo",
+    "StockSector": "n/a",
+    "Balance": "$192087.33",
+    "Shares": 7141,
+    "Ownership": 3721,
+    "VotingPower": 3,
+    "Industry": "n/a"
+  },
+  {
+    "id": 17,
+    "Company": "Camimbo",
+    "StockSector": "n/a",
+    "Balance": "$7823022.72",
+    "Shares": 8932,
+    "Ownership": 1917,
+    "VotingPower": 90,
+    "Industry": "n/a"
+  },
+  {
+    "id": 39,
+    "Company": "Oyoyo",
+    "StockSector": "n/a",
+    "Balance": "$60698.71",
+    "Shares": 1040,
+    "Ownership": 3112,
+    "VotingPower": 25,
+    "Industry": "n/a"
+  },
+  {
+    "id": 98,
+    "Company": "Oyoloo",
+    "StockSector": "n/a",
+    "Balance": "$7263790.17",
+    "Shares": 1569,
+    "Ownership": 2493,
+    "VotingPower": 46,
+    "Industry": "n/a"
+  },
+  {
+    "id": 81,
+    "Company": "Aimbu",
+    "StockSector": "n/a",
+    "Balance": "$4520628.34",
+    "Shares": 5528,
+    "Ownership": 8019,
+    "VotingPower": 59,
+    "Industry": "n/a"
+  },
+  {
+    "id": 3,
+    "Company": "Zooxo",
+    "StockSector": "Consumer Services",
+    "Balance": "$2494046.26",
+    "Shares": 2301,
+    "Ownership": 5181,
+    "VotingPower": 71,
+    "Industry": "Catalog/Specialty Distribution"
+  },
+  {
+    "id": 23,
+    "Company": "Zoombeat",
+    "StockSector": "Capital Goods",
+    "Balance": "$4529738.95",
+    "Shares": 6137,
+    "Ownership": 8557,
+    "VotingPower": 17,
+    "Industry": "Industrial Machinery/Components"
+  },
+  {
+    "id": 70,
+    "Company": "Thoughtsphere",
+    "StockSector": "Finance",
+    "Balance": "$3425196.37",
+    "Shares": 3340,
+    "Ownership": 182,
+    "VotingPower": 51,
+    "Industry": "Major Banks"
+  },
+  {
+    "id": 76,
+    "Company": "Ailane",
+    "StockSector": "Capital Goods",
+    "Balance": "$5249363.71",
+    "Shares": 7439,
+    "Ownership": 8832,
+    "VotingPower": 2,
+    "Industry": "Biotechnology: Laboratory Analytical Instruments"
+  },
+  {
+    "id": 39,
+    "Company": "Centizu",
+    "StockSector": "Finance",
+    "Balance": "$4997666.32",
+    "Shares": 7136,
+    "Ownership": 1446,
+    "VotingPower": 21,
+    "Industry": "Major Banks"
+  },
+  {
+    "id": 5,
+    "Company": "Meevee",
+    "StockSector": "Finance",
+    "Balance": "$2994736.92",
+    "Shares": 7819,
+    "Ownership": 328,
+    "VotingPower": 62,
+    "Industry": "Major Banks"
   }
 ]
