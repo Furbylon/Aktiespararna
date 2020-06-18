@@ -3,7 +3,6 @@ import Ior from "../../images/Ior.jpg";
 import "../UserSettings css/UserProfile.css";
 import { useForm } from "react-hook-form";
 import profileList from "../../../data/JSON/profil.json";
-import profileValues from "../../Hem/Hem Components/ProfileValues";
 
 const Profile = () => {
   let { register, handleSubmit } = useForm();
