@@ -17,7 +17,7 @@ const ProfileValues = ({
 }) => {
   return (
     <div>
-      <div>
+      <div >
         <img
           id="profile"
           style={{ height: 100 }}
@@ -30,7 +30,7 @@ const ProfileValues = ({
         <h5>Person Nr/Organisations Nr:</h5>
         <p>{personalNumber}</p>
       </div>
-      <div>
+      <div >
         <h4>Föredragna industrier:</h4>
         <p>
           {industry1} {industry2} {industry3} {industry4}{" "}

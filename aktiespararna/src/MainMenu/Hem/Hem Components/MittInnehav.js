@@ -3,6 +3,7 @@ import { Link, Route } from "react-router-dom";
 import mock from "../../../data/JSON/mock.json";
 import IndustryPercentage from "../Hem Components/IndustryPrecentage"
 import AddDate from "../../Components/LastUpdate"
+import Header from "../Hem Components/HemHeader"
 
 const MittInnehav = () => {
   let [values, setValues] = useState(mock.slice(0,5));
@@ -23,10 +24,10 @@ const MittInnehav = () => {
     }
   };
   return (
-    <div id="mittInnehav" style={{ position: "relative", fontSize: "60%" }}>
+    <div id="mittInnehav" style={{ position: "relative"}}>
       <div>
       <AddDate/>
-        <header>Mitt Innehav</header>
+      <Header head={"Mitt Innehav"}/>
         <Link to="/mainmenu/portfolio">Min portfölj</Link>
         <h1>500 000 SEK</h1>
         <p>Senast uppdaterad: </p>

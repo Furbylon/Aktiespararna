@@ -4,7 +4,7 @@ import profileList from "../../../data/JSON/profil.json";
 import data from "../../../data/JSON/mock.json"
 
 const PortfolioFrame = () => {
-  let [currentData, setData] = useState(data.slice(0, 9));
+  let [currentData, setData] = useState(data.slice(0,10));
 
 
   return (
@@ -23,6 +23,11 @@ const PortfolioFrame = () => {
         </thead>
         <tbody>
           {currentData.map((company, key) => {
+            if(currentData.length === 0) {
+              return(
+                <h1>Inget innehav tillagt ännu</h1>
+              )
+            }
             return (
               <PortfolioStructure
                 key={key}

@@ -30,3 +30,36 @@ body {
   top: 400px;
   left: 60px;
 }
+
+li{
+  list-style: none;
+}
+#sidebarButtons li:hover {
+  background-color: #eee;
+}
+.sideButton {
+  text-decoration: none;
+  color: white;
+}
+.activeSideButtons {
+  color: wheat;
+  font-weight: bold;
+
+}
+.sideButton:hover{
+  color: black;
+}
+#sidebarButtons li {
+  display: block;
+  background-color: inherit;
+  color: rgb(82, 37, 37);
+  padding: 25px 2px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 20px;
+
+}

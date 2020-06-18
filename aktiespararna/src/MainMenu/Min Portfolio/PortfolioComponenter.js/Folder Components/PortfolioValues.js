@@ -10,7 +10,7 @@ const portfolioValues = ({
   industry,
 }) => {
   return (
-    <tr>
+    <tr id= "portfolioGrid">
       <td>
         <p>{companyName}</p>
       </td>
@@ -31,6 +31,9 @@ const portfolioValues = ({
       </td>
       <td>
         <p>{industry}</p>
+      </td>
+      <td>
+      <button>Ladda ner</button>
       </td>
     </tr>
   );

@@ -4,9 +4,6 @@ import MittInnehav from "./Hem Components/MittInnehav";
 import VälkomstMeddelande from "./Hem Components/VälkomstMeddelande";
 import HemHeader from "./Hem Components/HemHeader";
 import "./Hem css/Hem.css";
-import SidebarButton from "../Components/SidebarButton"
-
-
 
 const Hem = () => {
   return (

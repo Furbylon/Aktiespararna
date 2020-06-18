@@ -1,14 +1,11 @@
 import React from 'react'; 
 
 
-class HemHeader extends React.Component {
-    render() {
+const HemHeader = ({head}) => {
       return (
         <div id = "hemHeader">
-        <header>Hem</header>
+        <p>{head}</p>
         </div>
       )
     }
-  }
-
 export default HemHeader;

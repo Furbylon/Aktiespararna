@@ -10,24 +10,22 @@ const Sidebar = () => {
     document.getElementById("sidebarButton").innerHTML = "close";
   };
   const Routes = () => (
-    <div>
+    <div id="sidebarButtons">
       <li>
-          <NavLink to="/mainmenu/home" onClick={closeNavigation}>Hem</NavLink>
+          <NavLink className="sideButton" activeClassName="activeSideButtons" to="/mainmenu/home" onClick={closeNavigation}>HEM</NavLink>
       </li>
       <li>
-          <NavLink to="/mainmenu/portfolio" onClick={closeNavigation}>Portfolio</NavLink>
+          <NavLink className="sideButton" activeClassName="activeSideButtons" to="/mainmenu/portfolio" onClick={closeNavigation}>PORTFOLIO</NavLink>
       </li>
       <li>
-        <NavLink to="/mainmenu/settings/profile" onClick={closeNavigation}>Settings</NavLink>
+        <NavLink className="sideButton" activeClassName="activeSideButtons" to="/mainmenu/settings/profile" onClick={closeNavigation}>INSTÄLLNINGAR</NavLink>
       </li>
     </div>
   );
 
   return (
     <div id="mySideBar">
-      <ul id="sidebarButtons">
         <Routes />
-      </ul>
       <LogoutButton />
     </div>
   );

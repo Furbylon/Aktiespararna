@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import profileList from "../../../data/JSON/profil.json";
 import ProfileValues from "../Hem Components/ProfileValues";
 import { Link } from "react-router-dom";
-import userProfile from "../../UserSettings/Settings Components/UserProfile"
+import Header from "../Hem Components/HemHeader"
+
 
 const HemProfil = () => {
   let [profile, setProfile] = useState(profileList.slice(0,1));
@@ -32,9 +33,9 @@ const HemProfil = () => {
     );
   };
   return (
-    <div id="homeProfile" style={{ position: "relative", fontSize: "80%"}}>
+    <div id="homeProfile" style={{ position: "relative"}}>
+    <Header head = {"Min Profil"}/>
       <div className="hemprofilHeader">
-        <header>Min Profil</header>
         <div className="hemprofilHeader">
           <Link to="/mainmenu/settings/profile">Redigera</Link>
         </div>
