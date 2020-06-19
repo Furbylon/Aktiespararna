@@ -2,6 +2,8 @@ import React from "react";
 import aktielogoo from "../Login/img/aktielogoo.png";
 import userData from "../../../src/data/JSON/user.json";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import css from "../Glömt lösenord/ForgottenPassword.css";
 
 export default function ForgottenPassword() {
   const { register, handleSubmit } = useForm();
@@ -40,9 +42,15 @@ export default function ForgottenPassword() {
           required
         />
         <br></br>
-        <input type="submit" value="Get Password" />
+        <div id="button">
+          <input type="submit" value="Retrieve Password" />
+        </div>
         <br></br>
       </form>
+      <br></br>
+      <div id="link">
+        <Link to="/login">Start page</Link>
+      </div>
     </div>
   );
 }
