@@ -22,7 +22,7 @@ export default function ForgottenPassword() {
     <div id="forgottenPasswordDiv" className="loginMenuPages">
       <img id="logo" src={aktielogoo} alt="logo" />
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label for="username">Username:</label>
+        <label htmlFor="username">Username:</label>
         <br></br>
         <input
           type="text"
@@ -32,7 +32,7 @@ export default function ForgottenPassword() {
           required
         />
         <br></br>
-        <label for="email">Email:</label>
+        <label htmlFor="email">Email:</label>
         <br></br>
         <input
           type="text"

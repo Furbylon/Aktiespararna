@@ -7,20 +7,20 @@ const Preferences = () => {
   let currentPreferences = (companies) => {
     return (
       <div id="preferences" key={companies.Company}>
-        <form>
           <input type="checkbox"></input>
           {companies.Industry}
           <br />
-        </form>
       </div>
     );
   };
   return (
     <div>
       {" "}
+      <form>
       <p>Mina prefererade industrier att investera inom:</p>
       {industries.map(currentPreferences)}
-      <button>Save</button>
+      <button>Spara</button>
+      </form>
     </div>
   );
 };

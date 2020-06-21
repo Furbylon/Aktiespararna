@@ -13,7 +13,8 @@ const Profile = () => {
     return (
       <div key={profile.username}>
         <div id="userProfile"></div>
-        <img src={Ior} alt="profilePic" id="profilePic"></img>
+        <img src={profile.pictureURL} alt="profilePic" id="profilePic"></img>
+        <input type="submit" id="profileSaveButton" value="Spara" />
         <form name="input">
           Förnamn
           <input
@@ -79,7 +80,6 @@ const Profile = () => {
             ref={register}
           ></input>
           <br />
-          <input type="submit" id="profileSaveButton" value="Uppdatera" />
         </form>
       </div>
     );

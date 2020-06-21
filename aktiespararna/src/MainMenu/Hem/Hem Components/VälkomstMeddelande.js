@@ -7,10 +7,11 @@ const VälkomstMeddelande = () => {
 
   const addName = (name) => {
     return (
-      <div>
+      <div key = {name.id}>
         <p>
-          Välkommen {name.firstName} {name.lastName}, ditt innehav blev senast uppdaterat: <LastUpdate />
+          Välkommen {name.firstName} {name.lastName}, ditt innehav blev senast uppdaterat:
         </p>
+        <LastUpdate/>
       </div>
     );
   };

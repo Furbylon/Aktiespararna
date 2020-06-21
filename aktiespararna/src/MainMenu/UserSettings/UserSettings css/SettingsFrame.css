@@ -4,8 +4,9 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
     background-color: rgb(216, 223, 153);
-    margin-left: 20px;
     margin-right: 20px;
+    box-shadow: 1px 1px 1px rgba(180, 117, 117, 0.15), 0 10px 0 -5px #eee;
+    margin-bottom: 20px;
 }
 #topBarSettings {
     overflow: hidden;

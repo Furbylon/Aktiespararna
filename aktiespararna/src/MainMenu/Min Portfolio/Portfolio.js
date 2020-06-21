@@ -1,5 +1,5 @@
 import React from 'react';  
-import PortfolioHeader from './PortfolioComponenter.js/PortfolioHeader'
+import Header from "../Components/Header"
 import Portfolioframe from './PortfolioComponenter.js/Portfolioframe'
 import './Portfolio css/Portfolio.css'
 
@@ -7,7 +7,7 @@ import './Portfolio css/Portfolio.css'
 const Portfolio = () => {
     return (
       <div id = "portfolio">
-      <PortfolioHeader/>
+      <Header head = {"Portfolio"}/>
       <Portfolioframe/>
       </div>
     );

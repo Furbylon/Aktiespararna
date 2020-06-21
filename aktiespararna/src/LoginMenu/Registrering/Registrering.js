@@ -7,7 +7,6 @@ export default class Register extends Component {
     return (
       <div id="registrationDiv" className="loginMenuPages">
         <img id="logo" src={aktielogoo} alt="logo" />
-
         <form>
           <p> Register an account</p>
           <br></br>

@@ -1,10 +1,10 @@
 import React from 'react';  
 import SettingsFrame from './Settings Components/SettingsFrame'
-import SidebarButton from "../Components/SidebarButton"
-
+import Header from "../Components/Header"
 const Settings = () => {
     return (
       <div id = "settings">
+      <Header head={"Inställningar"}/>
       <SettingsFrame/>
       </div>
     );

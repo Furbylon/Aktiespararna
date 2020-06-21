@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import profileList from "../../../data/JSON/profil.json";
 import ProfileValues from "../Hem Components/ProfileValues";
 import { Link } from "react-router-dom";
-import Header from "../Hem Components/HemHeader"
+import Header from "../../Components/Header"
 
 
 const HemProfil = () => {
