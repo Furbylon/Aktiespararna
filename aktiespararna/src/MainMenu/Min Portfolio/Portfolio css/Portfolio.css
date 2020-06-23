@@ -7,3 +7,12 @@
     margin-right: 20px;
     margin-bottom: 20px;
 }
+
+th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }

@@ -4,18 +4,17 @@ import mock from "../../../data/JSON/mock.json";
 import IndustryPercentage from "../Hem Components/IndustryPrecentage";
 import LastUpdate from "../../Components/LastUpdate";
 import Header from "../../Components/Header";
-import ShareColours from "../Hem Components/ShareColours"
 
 const MittInnehav = () => {
-  let [values] = useState(mock.slice(0, 5));
+  let values = mock.slice(0, 3);
 
   const CheckIfValuesExist = (companies) => {
     if (values.length !== 0) {
       return (
         <div key={companies.id}>
-          <p>
-            {companies.Industry} {companies.Shares} SEK
-          </p>
+            <p>
+              {companies.Industry} {companies.Shares} SEK
+            </p>
         </div>
       );
     } else {
@@ -31,14 +30,11 @@ const MittInnehav = () => {
     <div id="mittInnehav" style={{ position: "relative" }}>
       <div>
         <Header head={"Mitt Innehav"} />
-        <ShareColours/>
         <Link to="/mainmenu/portfolio">Min portfölj</Link>
         <IndustryPercentage />
         <h1>500 000 SEK</h1>
-        <p>Senast uppdaterad: </p>
         {values.map(CheckIfValuesExist)}
         <p>Övrigt: 60 000 SEK </p>
-        <LastUpdate />
       </div>
     </div>
   );
