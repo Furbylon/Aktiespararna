@@ -30,11 +30,10 @@ const MittInnehav = () => {
     <div id="mittInnehav" style={{ position: "relative" }}>
       <div>
         <Header head={"Mitt Innehav"} />
-        <Link to="/mainmenu/portfolio">Min portfölj</Link>
         <IndustryPercentage />
-        <h1>500 000 SEK</h1>
         {values.map(CheckIfValuesExist)}
         <p>Övrigt: 60 000 SEK </p>
+        <Link to="/mainmenu/portfolio">Min portfölj</Link>
       </div>
     </div>
   );
