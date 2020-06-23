@@ -4,7 +4,7 @@ import profileList from "../../../data/JSON/profil.json";
 import data from "../../../data/JSON/mock.json"
 
 const PortfolioFrame = () => {
-  let [currentData, setData] = useState(data.slice(0,10));
+  const [currentData, setData] = useState(data.slice(0,10));
 
 
   return (

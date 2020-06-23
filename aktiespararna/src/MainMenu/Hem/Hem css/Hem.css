@@ -44,3 +44,29 @@
     padding: 5px;
   }
  
+  .container {
+    width: 100%;
+    background-color: #ddd;
+  }
+  
+  .shares {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+  }
+  .first {width: 90%; background-color: #4CAF50;}
+.second {width: 80%; background-color: #2196F3;}
+.third {width: 65%; background-color: #f44336;}
+.fourth {width: 60%; background-color: #808080;}
+
+.companyColour {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  top: 510px;
+}
+.One {width: 10px; background-color: #4CAF50;}
+.Two {width: 10px; background-color: #2196F3;}
+.Three {width: 10px; background-color: #f44336;}
+.Four {width: 10px; background-color: #808080;}

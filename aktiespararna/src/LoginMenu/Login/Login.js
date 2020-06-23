@@ -3,7 +3,6 @@ import aktielogoo from "./img/aktielogoo.png";
 import userData from "../../../src/data/JSON/user.json";
 import { useForm } from "react-hook-form";
 import { Link, useHistory } from "react-router-dom";
-import css from "../Login/LoginStyle.css";
 
 export default function Login() {
   const { register, handleSubmit } = useForm();

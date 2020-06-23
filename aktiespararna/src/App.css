@@ -14,7 +14,9 @@
   font-size: 20px;
   color: white;
 }
-
+#mainMenu {
+  transition: margin-left .5;
+}
 .componentComp {
   color: rgb(29, 117, 110);
 }
@@ -43,13 +45,12 @@ input[type="password"] {
 }
 input[type="submit"], button {
   margin-top: 5px;
-  width: 80px;
+  width: 100px;
   height: 30px;
-  font-size: 14px;
   font-weight: bold;
   color: #fff;
   background-color: #acd6ef;
-  border-radius: 30px;
+  border-radius: 50px;
   border: 1px solid #66add6;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -100,5 +101,4 @@ li{
   font-size: larger;
   font-style: italic;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: ;
 }

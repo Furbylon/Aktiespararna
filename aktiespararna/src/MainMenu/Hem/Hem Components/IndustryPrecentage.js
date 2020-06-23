@@ -1,19 +1,16 @@
 import React, { useState } from "react";
 import mock from "../../../data/JSON/mock.json";
 
-
-let PercentageBar = () => {    
-    let [firstIndustry, setFirstIndustry] = useState(mock)
-    
-    return(
-        <div id="myProgress" style={{height: "100%", backgroundColor: "white"}}>
-        <div id="Industry1" style={{width: "20%", height: "20px", backgroundColor: "green"}} />
-        <div id="Industry2" style={{width: "20%", height: "20px", backgroundColor: "red"}} />
-        <div id="Industry3" style={{width: "20%", height: "20px", backgroundColor: "blue"}} />
-        <div id="Industry4" style={{width: "20%", height: "20px", backgroundColor: "yellow"}} />
-
-        <br/>
-        </div>
-    )
-}
+let PercentageBar = () => {
+  return (
+    <div>
+      <div className="container">
+        <div className="shares first">90%</div>
+        <div className="shares second">80%</div>
+        <div className="shares third">65%</div>
+        <div className="shares fourth">60%</div>
+      </div>
+    </div>
+  );
+};
 export default PercentageBar;

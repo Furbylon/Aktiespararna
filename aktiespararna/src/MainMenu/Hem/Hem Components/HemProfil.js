@@ -36,12 +36,10 @@ const HemProfil = () => {
     <div id="homeProfile" style={{ position: "relative"}}>
     <Header head = {"Min Profil"}/>
       <div className="hemprofilHeader">
-        <div className="hemprofilHeader">
-          <Link to="/mainmenu/settings/profile">Redigera</Link>
-        </div>
       </div>
 
       <div>{profile.map(showProfile)}</div>
+      <Link to="/mainmenu/settings/profile">Redigera</Link>
     </div>
   );
 };

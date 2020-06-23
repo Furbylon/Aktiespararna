@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Link, Route } from "react-router-dom";
 import mock from "../../../data/JSON/mock.json";
-import IndustryPercentage from "../Hem Components/IndustryPrecentage"
-import LastUpdate from "../../Components/LastUpdate"
-import Header from "../../Components/Header"
+import IndustryPercentage from "../Hem Components/IndustryPrecentage";
+import LastUpdate from "../../Components/LastUpdate";
+import Header from "../../Components/Header";
+import ShareColours from "../Hem Components/ShareColours"
 
 const MittInnehav = () => {
-  let [values, setValues] = useState(mock.slice(0,5));
+  let [values] = useState(mock.slice(0, 5));
 
   const CheckIfValuesExist = (companies) => {
     if (values.length !== 0) {
       return (
         <div key={companies.id}>
-          <p>{companies.Industry} {companies.Shares} SEK</p>
+          <p>
+            {companies.Industry} {companies.Shares} SEK
+          </p>
         </div>
       );
     } else {
@@ -23,17 +26,19 @@ const MittInnehav = () => {
       );
     }
   };
+
   return (
-    <div id="mittInnehav" style={{ position: "relative"}}>
+    <div id="mittInnehav" style={{ position: "relative" }}>
       <div>
-      <Header head={"Mitt Innehav"}/>
+        <Header head={"Mitt Innehav"} />
+        <ShareColours/>
         <Link to="/mainmenu/portfolio">Min portfölj</Link>
-        <IndustryPercentage/>
+        <IndustryPercentage />
         <h1>500 000 SEK</h1>
         <p>Senast uppdaterad: </p>
         {values.map(CheckIfValuesExist)}
-        <LastUpdate/>
-
+        <p>Övrigt: 60 000 SEK </p>
+        <LastUpdate />
       </div>
     </div>
   );

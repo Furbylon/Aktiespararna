@@ -2,14 +2,14 @@ import React from "react";
 import Home from "./Hem/Home";
 import Portfolio from "./Min Portfolio/Portfolio";
 import Settings from "./UserSettings/Settings";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import {Route} from "react-router-dom";
 import SidebarButton from "../MainMenu/Components/SidebarButton";
 import Sidebar from "../MainMenu/Components/SideBar";
 
 const MainMenu = () => {
   const CompPath = () => {
     return (
-      <div>
+      <div id = "mainMenu">
         <Sidebar />
         <SidebarButton />
         <Route path="/mainmenu/home" component={Home} />
