@@ -6,7 +6,7 @@ import LastUpdate from "../../Components/LastUpdate";
 import Header from "../../Components/Header";
 
 const MittInnehav = () => {
-  let values = mock.slice(0, 3);
+  let values = mock.slice(0, 4);
 
   const CheckIfValuesExist = (companies) => {
     if (values.length !== 0) {

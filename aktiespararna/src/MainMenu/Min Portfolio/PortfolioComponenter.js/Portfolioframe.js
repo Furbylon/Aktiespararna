@@ -3,8 +3,30 @@ import PortfolioStructure from "./Folder Components/PortfolioValues";
 import data from "../../../data/JSON/mock.json";
 
 const PortfolioFrame = () => {
-  const currentData = data.slice(0, 10);
-  if(currentData.length !== 0) {
+  const [currentData, setCurrentData] = useState(data.slice(0, 10));
+
+  const [currentPage, setCurrentPage] = useState(10);
+
+  let AmountOfPages = () => {
+    let totalData = data.length
+    let divided = totalData / 10
+    let arr = []
+    for (let i = 1; i <= divided; i++) {
+      arr.push(i)
+    }
+    let slides = []
+    slides = arr.map((value) =>
+    <option>{10 * value}</option>
+    )
+    return(
+      slides
+      )
+  }
+  let updatePage = (e) => {
+    setCurrentPage(e.target.value);
+    setCurrentData(data.slice(10,20))
+  };
+  if (currentData.length !== 0) {
     return (
       <div className="portfolioFrames">
         <table className="portfolioTable" style={{ position: "relative" }}>
@@ -39,24 +61,29 @@ const PortfolioFrame = () => {
             })}
           </tbody>
         </table>
+        <form>
+          <select value={currentPage} onChange={updatePage}>
+          <AmountOfPages/>
+          </select>
+        </form>
       </div>
     );
   } else {
-    return(
+    return (
       <div className="portfolioFrames">
-      <table className="portfolioTable" style={{ position: "relative" }}>
-        <thead>
-          <tr>
-            <td>Företag</td>
-            <td>Innehav</td>
-            <td>Antal Aktier</td>
-            <td>Industri</td>
-          </tr>
-        </thead>
-        <h1>hej hej</h1>
-      </table>
-    </div>
-    )
+        <table className="portfolioTable" style={{ position: "relative" }}>
+          <thead>
+            <tr>
+              <td>Företag</td>
+              <td>Innehav</td>
+              <td>Antal Aktier</td>
+              <td>Industri</td>
+            </tr>
+          </thead>
+          <h1>hej hej</h1>
+        </table>
+      </div>
+    );
   }
 };
 

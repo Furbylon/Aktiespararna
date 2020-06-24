@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
 import mock from "../../../data/JSON/mock.json";
 
+
 let PercentageBar = () => {
-  let values = mock.slice(0, 3);
+  let values = mock.slice(0, 4);
   let sum = 0;
   let result = mock.map((values) => {
     return (sum += values.Shares);
@@ -11,7 +12,7 @@ let PercentageBar = () => {
   const addIndustry = (companies) => {
     return (
       <div key={companies.id}>
-        <div style={{width: companies.Shares/sum + "%"}} className="shares first">{companies.Shares / sum}</div>
+        <div className="shares first">{companies.Shares / sum}</div>
       </div>
     );
   };
