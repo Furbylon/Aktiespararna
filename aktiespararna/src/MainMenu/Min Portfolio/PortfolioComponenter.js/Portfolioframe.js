@@ -16,7 +16,7 @@ const PortfolioFrame = () => {
     }
     let slides = []
     slides = arr.map((value) =>
-    <option>{10 * value}</option>
+    <option key={value}>{10 * value}</option>
     )
     return(
       slides
@@ -24,7 +24,7 @@ const PortfolioFrame = () => {
   }
   let updatePage = (e) => {
     setCurrentPage(e.target.value);
-    setCurrentData(data.slice(10,20))
+    setCurrentData(data.slice(e.target.value - 10,e.target.value))
   };
   if (currentData.length !== 0) {
     return (
