@@ -1,11 +1,13 @@
-import React from 'react'; 
+import React from "react";
+import LastUpdate from "../Components/LastUpdate";
 
-
-const HemHeader = ({head}) => {
-      return (
-        <div id = "hemHeader">
-        <p>{head}</p>
-        </div>
-      )
-    }
+const HemHeader = ({ head }) => {
+  return (
+    <div id="Header">
+      <p>
+        {head}
+      </p>
+    </div>
+  );
+};
 export default HemHeader;

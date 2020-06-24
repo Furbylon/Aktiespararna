@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Link, Route } from "react-router-dom";
+import {Link} from "react-router-dom";
 import mock from "../../../data/JSON/mock.json";
 import IndustryPercentage from "../Hem Components/IndustryPrecentage";
-import LastUpdate from "../../Components/LastUpdate";
 import Header from "../../Components/Header";
+import LastUpdate from "../../Components/LastUpdate"
 
-const MittInnehav = () => {
-  let values = mock.slice(0, 4);
-
+const MittInnehav = (newValue) => {
+  let [values, setValues] = useState(mock.slice(0, 4));
   const CheckIfValuesExist = (companies) => {
     if (values.length !== 0) {
       return (
         <div key={companies.id}>
             <p>
-              {companies.Industry} {companies.Shares} SEK
+              {companies.Industry} {companies.Balance} SEK
             </p>
         </div>
       );
@@ -29,7 +28,8 @@ const MittInnehav = () => {
   return (
     <div id="mittInnehav" style={{ position: "relative" }}>
       <div>
-        <Header head={"Mitt Innehav"} />
+        <Header head={"Mitt Innehav"}/>
+        <p style = {{fontWeight: "lighter"}}>Senast uppdaterad: <LastUpdate/> </p>
         <IndustryPercentage />
         {values.map(CheckIfValuesExist)}
         <p>Övrigt: 60 000 SEK </p>

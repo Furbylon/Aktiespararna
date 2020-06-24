@@ -8,15 +8,12 @@ import Header from "../../Components/Header"
 const HemProfil = () => {
   let [profile, setProfile] = useState(profileList.slice(0,1));
 
-  setProfile = () => {
-    
-  }
-
+  
   const showProfile = (profile) => {
     return (
       <ProfileValues
         key={profile.id}
-        picture={profile.pictureUrl}
+        picture={profile.pictureURL}
         firstName={profile.firstName}
         lastName= {profile.lastName}
         personalNumber={profile.personalNumber}

@@ -1,16 +1,13 @@
-import React,{useEffect}from 'react';  
+import React, { useEffect,useRef } from "react";
 
 const LastUpdate = () => {
+  let x = document.lastModified
 
-   useEffect (() => {
-    let x = document.lastModified
-    document.getElementById("date").innerHTML = x
-  }, [])
-  
   return (
-      <div id = "date">
-      </div>
-    );
-  }
+    <div>
+      <p>{x}</p>
+    </div>
+  );
+};
 
 export default LastUpdate;

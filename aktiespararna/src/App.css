@@ -96,8 +96,12 @@ li{
   font-size: 20px;
 }
 
-#hemHeader {
+#Header {
+  position: relative;
+  background-color: rgb(175, 214, 240);
+  color: rgb(0, 0, 0);
   height: 40px;
+  padding-bottom: 10px;
   font-weight: bolder;
   font-size: larger;
   font-style: italic;

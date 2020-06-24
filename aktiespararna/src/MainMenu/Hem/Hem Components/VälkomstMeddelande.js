@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import UserInformation from "../../../data/JSON/profil.json";
-import LastUpdate from "../../Components/LastUpdate";
+import LastUpdate from "../../Components/LastUpdate"
 
 const VälkomstMeddelande = () => {
   const [name] = useState(UserInformation.slice(0, 1));
@@ -9,9 +9,8 @@ const VälkomstMeddelande = () => {
     return (
       <div key = {name.id}>
         <p>
-          Välkommen {name.firstName} {name.lastName}, ditt innehav blev senast uppdaterat:
+          Välkommen {name.firstName} {name.lastName} Ditt innehav blev senast uppdaterat: <LastUpdate/>
         </p>
-        <LastUpdate/>
       </div>
     );
   };

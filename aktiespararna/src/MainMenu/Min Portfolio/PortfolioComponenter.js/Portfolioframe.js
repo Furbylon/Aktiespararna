@@ -8,23 +8,20 @@ const PortfolioFrame = () => {
   const [currentPage, setCurrentPage] = useState(10);
 
   let AmountOfPages = () => {
-    let totalData = data.length
-    let divided = totalData / 10
-    let arr = []
+    let totalData = data.length;
+    let divided = totalData / 10;
+    let arr = [];
     for (let i = 1; i <= divided; i++) {
-      arr.push(i)
+      arr.push(i);
     }
-    let slides = []
-    slides = arr.map((value) =>
-    <option key={value}>{10 * value}</option>
-    )
-    return(
-      slides
-      )
-  }
+    let slides = [];
+    slides = arr.map((value) => <option key={value}>{10 * value}</option>);
+
+    return slides;
+  };
   let updatePage = (e) => {
     setCurrentPage(e.target.value);
-    setCurrentData(data.slice(e.target.value - 10,e.target.value))
+    setCurrentData(data.slice(e.target.value - 10, e.target.value));
   };
   if (currentData.length !== 0) {
     return (
@@ -63,9 +60,10 @@ const PortfolioFrame = () => {
         </table>
         <form>
           <select value={currentPage} onChange={updatePage}>
-          <AmountOfPages/>
+            <AmountOfPages />
           </select>
         </form>
+        <p>Visar</p>
       </div>
     );
   } else {
@@ -80,7 +78,6 @@ const PortfolioFrame = () => {
               <td>Industri</td>
             </tr>
           </thead>
-          <h1>hej hej</h1>
         </table>
       </div>
     );
