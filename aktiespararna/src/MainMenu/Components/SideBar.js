@@ -12,20 +12,41 @@ const Sidebar = () => {
   const Routes = () => (
     <div id="sidebarButtons">
       <li>
-          <NavLink className="sideButton" activeClassName="activeSideButtons" to="/mainmenu/home" onClick={closeNavigation}>HEM</NavLink>
+        <NavLink
+          className="sideButton"
+          activeClassName="activeSideButtons"
+          to="/mainmenu/home"
+          onClick={closeNavigation}
+        >
+          Startsida
+        </NavLink>
       </li>
       <li>
-          <NavLink className="sideButton" activeClassName="activeSideButtons" to="/mainmenu/portfolio" onClick={closeNavigation}>PORTFOLIO</NavLink>
+        <NavLink
+          className="sideButton"
+          activeClassName="activeSideButtons"
+          to="/mainmenu/portfolio"
+          onClick={closeNavigation}
+        >
+          Min Portfolio
+        </NavLink>
       </li>
       <li>
-        <NavLink className="sideButton" activeClassName="activeSideButtons" to="/mainmenu/settings/profile" onClick={closeNavigation}>INSTÄLLNINGAR</NavLink>
+        <NavLink
+          className="sideButton"
+          activeClassName="activeSideButtons"
+          to="/mainmenu/settings/profile"
+          onClick={closeNavigation}
+        >
+          Inställningar
+        </NavLink>
       </li>
     </div>
   );
 
   return (
     <div id="mySideBar">
-        <Routes />
+      <Routes />
       <LogoutButton />
     </div>
   );

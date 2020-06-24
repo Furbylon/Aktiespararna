@@ -8,7 +8,9 @@ import "./Hem css/Hem.css";
 const Hem = () => {
   return (
     <div id="home">
-      <Header head = {"Hem"}/>
+      <div id="homeHeader">
+        <Header head={"Aktiespararna - Ditt aktieverktyg"} />
+      </div>
       <VälkomstMeddelande />
       <div id="profilOchInnehav">
         <HemProfil />

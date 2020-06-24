@@ -1,27 +1,8 @@
-#mySideBar {
-  height: 100%;
-  width: 0px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(52, 96, 153);
-  overflow-x: hidden;
-  transition: 0.5;
-  padding-top: 60px;
-}
-.sidebarList {
-  font-size: 20px;
-  color: white;
-}
-#mainMenu {
-  transition: margin-left .5;
-}
 .componentComp {
   color: rgb(29, 117, 110);
 }
 body {
-  background-color: rgba(238, 232, 232, 0.651);
+  background-color: rgba(255, 255, 255, 0.651);
   max-width: 100%;
   max-height: 100%;
   overflow-y: auto;
@@ -43,7 +24,8 @@ input[type="password"] {
   width: 290px;
   height: 35px;
 }
-input[type="submit"], button {
+input[type="submit"],
+button {
   margin-top: 5px;
   width: 100px;
   height: 30px;
@@ -58,52 +40,14 @@ input[type="submit"], button {
   border: hidden;
 }
 
-#logOutButton {
-  position: relative;
-  top: 400px;
-  left: 60px;
-}
-
-li{
-  list-style: none;
-}
-#sidebarButtons li:hover {
-  background-color: #eee;
-}
-.sideButton {
-  text-decoration: none;
-  color: white;
-}
-.activeSideButtons {
-  color: wheat;
-  font-weight: bold;
-
-}
-.sideButton:hover{
-  color: black;
-}
-#sidebarButtons li {
-  display: block;
-  background-color: inherit;
-  color: rgb(82, 37, 37);
-  padding: 25px 2px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.1s;
-  font-size: 20px;
-}
-
 #Header {
   position: relative;
-  background-color: rgb(175, 214, 240);
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   height: 40px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   font-weight: bolder;
   font-size: larger;
   font-style: italic;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

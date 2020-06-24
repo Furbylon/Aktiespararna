@@ -1,62 +1,161 @@
+/* CSS FOR MAIN HOMEPAGE */
 #home {
-    background-color: rgb(207, 206, 146);
-  }
-  
-  #välkomstMeddelande {
-    background-color: rgb(233, 215, 136);
-  }
-  #profilOchInnehav {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 20px;
-    padding: 2px;
-  }
-  #homeProfile {
-   border-radius: 2px;
-    background-color: white;
-    float: left;
-    position: sticky;
-    margin-bottom: 50px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee;
-  }
-  
-  #mittInnehav {
+  background-color: white;
+  padding: 0px;
+}
+#mainMenu {
+  transition: margin-left 0.5;
+  background-color: white;
+}
+#homeHeader {
+  text-align: center;
+  border-bottom: rgba(128, 128, 128, 0.541);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+#välkomstMeddelande {
+  border-bottom: rgba(128, 128, 128, 0.541);
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-width: 1px;
+  margin-left: 5px;
+  padding: 0px;
+}
+#profilOchInnehav {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  padding: 2px;
+}
+#homeProfile {
   border-radius: 2px;
-    background-color: white;
-    float: left;
-    position: sticky;
-    margin-bottom: 200px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee;
-  }
-  #profilePic {
-    position: relative;
-    float: bottom;
-    width: 60px;
-    border: 1px solid #ddd;
-    border-radius: 10%;
-    padding: 5px;
-  }
-  .hemprofilHeader {
-    float: left;
-    padding: 5px;
-  }
- 
-  .container {
-    width: 100%;
-    background-color: #ddd;
-  }
-  
-  .shares {
-    text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
-  }
-  .first {width: 90%; background-color: #4CAF50;}
-.second {width: 80%; background-color: #2196F3;}
-.third {width: 65%; background-color: #f44336;}
-.fourth {width: 60%; background-color: #808080;}
+  background-color: white;
+  float: left;
+  position: sticky;
+  margin-bottom: 50px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee;
+  margin-left: 5px;
+}
+
+#mittInnehav {
+  border-radius: 2px;
+  background-color: white;
+  float: left;
+  position: sticky;
+  margin-bottom: 200px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee;
+}
+#profilePic {
+  position: relative;
+  float: bottom;
+  width: 60px;
+  border: 1px solid #ddd;
+  border-radius: 10%;
+  padding: 5px;
+}
+.hemprofilHeader {
+  float: left;
+  padding: 5px;
+}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.shares {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+.first {
+  width: 90%;
+  background-color: #4caf50;
+}
+.second {
+  width: 80%;
+  background-color: #2196f3;
+}
+.third {
+  width: 65%;
+  background-color: #f44336;
+}
+.fourth {
+  width: 60%;
+  background-color: #808080;
+}
 
 #industryColours {
   background-color: #f44336;
+}
+/* CSS FOR SIDEBAR */
+#sidebarButton {
+  margin-left: 5px;
+}
+#mySideBar {
+  border-right: solid 1px black;
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(0, 162, 255),
+    rgb(255, 255, 255)
+  );
+  overflow-x: hidden;
+  transition: 0.5;
+  padding-top: 60px;
+}
+
+.sidebarList {
+  font-size: 20px;
+  color: white;
+}
+#sidebarButtons {
+  color: white;
+}
+#logOutButton {
+  position: relative;
+  top: 400px;
+  left: 60px;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.sideButton {
+  text-decoration: none;
+  color: white;
+}
+.activeSideButtons {
+  color: white;
+  text-decoration: underline;
+}
+.sideButton:hover {
+  color: black;
+}
+#sidebarButtons li {
+  display: block;
+  background-color: inherit;
+  color: rgb(82, 37, 37);
+  padding: 25px 2px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.1s;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: normal;
 }
