@@ -21,12 +21,12 @@ body {
   background-repeat: no-repeat;
 }
 #loginForm {
-  position: fixed;
+  position: relative;
   width: 340px;
   height: 280px;
   top: 15%;
   left: 50%;
-  margin-top: -140px;
+  margin-top: -40px;
   margin-left: -170px;
 }
 form {

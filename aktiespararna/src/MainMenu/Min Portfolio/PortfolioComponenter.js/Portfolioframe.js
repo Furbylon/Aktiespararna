@@ -6,19 +6,9 @@ const PortfolioFrame = () => {
   const [currentData, setCurrentData] = useState(data.slice(0, 10));
 
   const [currentPage, setCurrentPage] = useState(10);
+  let totalData = data.length;
 
-  let AmountOfPages = () => {
-    let totalData = data.length;
-    let divided = totalData / 10;
-    let arr = [];
-    for (let i = 1; i <= divided; i++) {
-      arr.push(i);
-    }
-    let slides = [];
-    slides = arr.map((value) => <option key={value}>{10 * value}</option>);
 
-    return slides;
-  };
   let updatePage = (e) => {
     setCurrentPage(e.target.value);
     setCurrentData(data.slice(e.target.value - 10, e.target.value));
@@ -40,9 +30,6 @@ const PortfolioFrame = () => {
           </thead>
           <tbody>
             {currentData.map((company, key) => {
-              if (currentData.length === 0) {
-                return <h1>Inget innehav tillagt ännu</h1>;
-              }
               return (
                 <PortfolioStructure
                   key={key}
@@ -58,16 +45,12 @@ const PortfolioFrame = () => {
             })}
           </tbody>
         </table>
-        <form>
-          <select value={currentPage} onChange={updatePage}>
-            <AmountOfPages />
-          </select>
-        </form>
-        <p>Visar</p>
+
       </div>
     );
   } else {
     return (
+      <div>
       <div className="portfolioFrames">
         <table className="portfolioTable" style={{ position: "relative" }}>
           <thead>
@@ -78,7 +61,11 @@ const PortfolioFrame = () => {
               <td>Industri</td>
             </tr>
           </thead>
+          <tbody>
+          </tbody>
         </table>
+      </div>
+      <h1>Inget innehav tillagt ännu</h1>
       </div>
     );
   }
