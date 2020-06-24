@@ -40,13 +40,3 @@ label {
   padding-top: 10px;
   font-size: 14px;
 }
-p a {
-  font-size: 11px;
-  color: aquamarine;
-  float: right;
-  margin-top: -13px;
-  margin-right: 20px;
-}
-p a:hover {
-  color: #555;
-}

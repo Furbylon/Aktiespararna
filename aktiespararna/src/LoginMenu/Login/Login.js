@@ -27,23 +27,11 @@ export default function Login() {
         <form name="userinput" onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="username">Username:</label>
           <br></br>
-          <input
-            type="text"
-            name="username"
-            placeholder="username"
-            ref={register}
-            required
-          />
+          <input type="text" name="username" ref={register} required />
           <br></br>
           <label htmlFor="password">Password:</label>
           <br></br>
-          <input
-            type="password"
-            name="password"
-            placeholder="password"
-            ref={register}
-            required
-          />
+          <input type="password" name="password" ref={register} required />
           <br></br>
           <input type="submit" value="Logga in" />
           <br></br>
