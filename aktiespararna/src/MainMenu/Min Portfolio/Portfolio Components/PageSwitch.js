@@ -24,6 +24,7 @@ const PageSwitch = (props) => {
   };
   let UpdatePage = (e) => {
     if (e.target.value === "back") {
+        console.log(props.currentPage - 10)
       props.setCurrentPage(props.currentPage - 10);
       props.setCurrentData(props.currentPage - 10, props.currentPage);
     }

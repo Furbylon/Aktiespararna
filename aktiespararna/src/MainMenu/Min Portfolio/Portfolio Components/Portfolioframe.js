@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import PortfolioStructure from "./PortfolioValues";
 import data from "../../../data/JSON/mock.json";
-import PageSelect from "./PageSelect";
+import PageSwitch from "./PageSwitch";
+import SelectBox from "./SelectBox"
 
 const PortfolioFrame = () => {
   const [currentData, setCurrentData] = useState(data.slice(0, 10));
+  const [currentPage, setCurrentPage] = useState(10);
+
 
   let totalData = data.length;
 
@@ -41,10 +44,20 @@ const PortfolioFrame = () => {
             })}
           </tbody>
         </table>
-        <PageSelect
+        <PageSwitch
+        totalData={totalData}
+        currentData={currentData}
+        setCurrentData={setCurrentData}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        data={data}
+        />
+        <SelectBox
           totalData={totalData}
           currentData={currentData}
           setCurrentData={setCurrentData}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
           data={data}
         />
       </div>
