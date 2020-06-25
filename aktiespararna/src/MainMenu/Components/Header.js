@@ -4,9 +4,7 @@ import LastUpdate from "../Components/LastUpdate";
 const HemHeader = ({ head }) => {
   return (
     <div id="Header">
-      <p>
-        {head}
-      </p>
+      <p id="headerText">{head}</p>
     </div>
   );
 };

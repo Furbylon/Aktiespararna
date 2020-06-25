@@ -42,7 +42,6 @@ button {
 
 #Header {
   position: relative;
-  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   height: 40px;
   padding-bottom: 5px;
@@ -50,4 +49,5 @@ button {
   font-size: larger;
   font-style: italic;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
 }
