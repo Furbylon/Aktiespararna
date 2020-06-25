@@ -1,18 +1,32 @@
 .portfolioFrames {
-    position: relative;
-    border-radius: 2px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    background-color: rgb(153, 223, 188);
-    margin-right: 20px;
-    margin-bottom: 20px;
+  padding-left: 10px;
+  position: relative;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: rgb(124, 207, 255);
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
-th, td {
-    text-align: left;
-    padding: 16px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
+th,
+td {
+  text-align: left;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.portfolioTable {
+  background-color: rgb(124, 207, 255);
+}
+#portfolioForm {
+  background-color: rgb(124, 207, 255);
+}
+#firstRow {
+  background-color: white;
+}
+#portfolioHeader {
+  text-align: center;
+}

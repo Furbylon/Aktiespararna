@@ -8,13 +8,12 @@ const PortfolioFrame = () => {
 
   let totalData = data.length;
 
-
   if (currentData.length !== 0) {
     return (
       <div className="portfolioFrames">
         <table className="portfolioTable" style={{ position: "relative" }}>
           <thead>
-            <tr>
+            <tr id="firstRow">
               <td>Företag</td>
               <td>Aktietyp</td>
               <td>Innehav</td>
@@ -22,6 +21,7 @@ const PortfolioFrame = () => {
               <td>Ägarandel</td>
               <td>Röstvärde</td>
               <td>Industri</td>
+              <td>Ladda ner</td>
             </tr>
           </thead>
           <tbody>
