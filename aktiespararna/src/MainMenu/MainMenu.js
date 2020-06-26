@@ -12,9 +12,9 @@ const MainMenu = () => {
       <div id = "mainMenu">
         <Sidebar />
         <SidebarButton />
-        <Route path="/mainmenu/home" component={Home} />
-        <Route path="/mainmenu/portfolio" component={Portfolio} />
-        <Route path="/mainmenu/settings" component={Settings} />
+        <Route path="/home" component={Home}/>
+        <Route path="/portfolio" component={Portfolio} />
+        <Route path="/settings" component={Settings} />
       </div>
     );
   };

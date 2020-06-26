@@ -8,7 +8,7 @@ const LogoutButton = () => {
   return (
     <div>
       <button onClick={CloseNavigation}>
-        <Link to="/login">Logga ut</Link>
+        <Link to="/">Logga ut</Link>
       </button>
     </div>
   );

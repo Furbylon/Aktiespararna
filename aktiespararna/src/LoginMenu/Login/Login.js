@@ -14,7 +14,7 @@ export default function Login() {
       JSON.stringify(userData.username && userData.password)
     ) {
       console.log("Success");
-      return history.push("/mainmenu/home");
+      return history.push("/home");
     } else {
       alert("Wrong username/password");
     }

@@ -51,3 +51,7 @@ input[type="submit"],
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0px;
 }
+
+#missingPageButton {
+  background-color: wheat;
+}

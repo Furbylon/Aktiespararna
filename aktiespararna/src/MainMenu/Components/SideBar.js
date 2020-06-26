@@ -15,7 +15,7 @@ const Sidebar = () => {
         <NavLink
           className="sideButton"
           activeClassName="activeSideButtons"
-          to="/mainmenu/home"
+          to="/home"
           onClick={closeNavigation}
         >
           Startsida
@@ -25,7 +25,7 @@ const Sidebar = () => {
         <NavLink
           className="sideButton"
           activeClassName="activeSideButtons"
-          to="/mainmenu/portfolio"
+          to="/portfolio"
           onClick={closeNavigation}
         >
           Min Portfolio
@@ -35,7 +35,7 @@ const Sidebar = () => {
         <NavLink
           className="sideButton"
           activeClassName="activeSideButtons"
-          to="/mainmenu/settings/profile"
+          to="/settings/profile"
           onClick={closeNavigation}
         >
           Inställningar

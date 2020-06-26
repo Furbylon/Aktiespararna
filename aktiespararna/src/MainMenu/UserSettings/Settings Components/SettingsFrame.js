@@ -11,9 +11,9 @@ const SettingsFrame = () => {
     return (
       <div>
       <div id = "topBarSettings">
-        <NavLink to="/mainmenu/settings/profile" className = "topBarLinks" activeClassName="activeTopBarLinks"> Profil </NavLink>
-        <NavLink to="/mainmenu/settings/passwordchange" className = "topBarLinks" activeClassName="activeTopBarLinks"> Ändra Lösenord </NavLink>
-        <NavLink to="/mainmenu/settings/preferences" className = "topBarLinks" activeClassName="activeTopBarLinks"> Preferenser </NavLink>
+        <NavLink to="/settings/profile" className = "topBarLinks" activeClassName="activeTopBarLinks"> Profil </NavLink>
+        <NavLink to="/settings/passwordchange" className = "topBarLinks" activeClassName="activeTopBarLinks"> Ändra Lösenord </NavLink>
+        <NavLink to="/settings/preferences" className = "topBarLinks" activeClassName="activeTopBarLinks"> Preferenser </NavLink>
         </div>
         <div>
         <Routes/>
@@ -24,12 +24,12 @@ const SettingsFrame = () => {
   const Routes = () => {
     return(
     <div>
-    <Route path="/mainmenu/settings/profile" component={UserSettings} />
+    <Route path="/settings/profile" component={UserSettings} />
     <Route
-      path="/mainmenu/settings/passwordchange"
+      path="/settings/passwordchange"
       component={PasswordChange}
     />
-    <Route path="/mainmenu/settings/preferences" component={Preferences} />
+    <Route path="/settings/preferences" component={Preferences} />
     </div>
     )
   }
