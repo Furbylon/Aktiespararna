@@ -44,23 +44,25 @@ const PortfolioFrame = () => {
             })}
           </tbody>
         </table>
-        <PageSwitch
-          shownData={shownData}
-          totalData={totalData}
-          currentData={currentData}
-          setCurrentData={setCurrentData}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          data={data}
-        />
-        <SelectBox
-          totalData={totalData}
-          currentData={currentData}
-          setCurrentData={setCurrentData}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          data={data}
-        />
+        <div id="pageSwitch">
+          <PageSwitch
+            shownData={shownData}
+            totalData={totalData}
+            currentData={currentData}
+            setCurrentData={setCurrentData}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            data={data}
+          />
+          <SelectBox
+            totalData={totalData}
+            currentData={currentData}
+            setCurrentData={setCurrentData}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            data={data}
+          />
+        </div>
       </div>
     );
   } else {
