@@ -1,7 +1,8 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 const PageSwitch = (props) => {
-    let [shownButtons, setShownButtons]= useState(5)
+  let divide = props.totalData / 10;
+  let [shownButtons, setShownButtons] = useState(divide / 2);
   let SetButtons = () => {
     let arr = [];
     for (let i = 1; i <= shownButtons; i++) {
@@ -9,24 +10,82 @@ const PageSwitch = (props) => {
     }
     let buttons = [];
     buttons = arr.map((value) => (
-      <button value={value * 10} onClick={UpdatePage} id="pageButton" key={value}>
+      <button
+        type={"button"}
+        value={value * props.shownData}
+        id="pageButton"
+        key={value}
+      >
         {value}
       </button>
     ));
+
     return buttons;
   };
+
   let UpdatePage = (e) => {
-      console.log(e.target.value)
     props.setCurrentPage(e.target.value);
-    props.setCurrentData(props.data.slice(e.target.value - 10, e.target.value));
+    props.setCurrentData(
+      props.data.slice(e.target.value - props.shownData, e.target.value)
+    );
+    console.log(e.target.value);
   };
 
-  return (
-    <div style={{position: "absolute", right: "160px"}}>
-      <form>
-        <SetButtons />
-      </form>
-    </div>
-  );
+  if (props.totalData === shownButtons) {
+    return (
+      <div style={{ position: "absolute", right: "160px" }}>
+        <form onSubmit={UpdatePage} id={"nativePageSwitchForm"}>
+          <button
+            id={"back"}
+            type={"button"}
+            value={props.currentPage - props.shownData}
+            form={"nativePageswitchForm"}
+          >
+            {"<"}
+          </button>
+          <SetButtons />
+          <button
+            id={"forward"}
+            type={"button"}
+            value={props.currentPage + props.shownData}
+            form={"nativePageSwitchForm"}
+          >
+            {">"}
+          </button>
+        </form>
+      </div>
+    );
+  } else {
+    return (
+      <div style={{ position: "absolute", right: "160px" }}>
+        <form onClick={UpdatePage} id={"pageSwitchForm"}>
+          <button
+            id={"back"}
+            type={"button"}
+            value={props.currentPage - props.shownData}
+            form={"pageSwitchForm"}
+          >
+            {"<"}
+          </button>
+          <SetButtons />
+          <button
+            type={"button"}
+            value={props.currentPage + props.shownData}
+            form={"pageSwitchForm"}
+          >
+            ...
+          </button>
+          <button
+            id={"foward"}
+            type={"button"}
+            value={props.currentPage + props.shownData}
+            form={"pageSwitchForm"}
+          >
+            {">"}
+          </button>
+        </form>
+      </div>
+    );
+  }
 };
 export default PageSwitch;

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React,{useState} from "react";
 
-const SelectBox = (props) => {
+const PageSelect = (props) => {
+
   let AmountOfPages = () => {
     let divided = props.totalData / 10;
     let arr = [];
@@ -14,20 +15,19 @@ const SelectBox = (props) => {
 
   let UpdatePage = (e) => {
     props.setCurrentPage(e.target.value);
+    console.log(e.target.value)
     props.setCurrentData(props.data.slice(e.target.value - 10, e.target.value));
   };
 
   return (
-    <div style={{ position: "absolute", right: "0" }}>
+    <div>
       <form>
         <select value={props.currentPage} onChange={UpdatePage}>
           <AmountOfPages />
         </select>
       </form>
-      <p style={{ fontWeight: "bold" }}>
-        Visar {props.currentPage - 9} - {props.currentPage} av {props.totalData}
-      </p>
+      <p>Visar {props.currentPage-9} - {props.currentPage} av {props.totalData}</p>
     </div>
   );
 };
-export default SelectBox;
+export default PageSelect;

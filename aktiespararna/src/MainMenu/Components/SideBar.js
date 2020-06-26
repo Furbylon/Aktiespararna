@@ -1,5 +1,6 @@
 import React from "react";
 import LogoutButton from "./LogoutButton";
+import SidebarButton from "./SidebarButton"
 
 import { NavLink } from "react-router-dom";
 
@@ -15,7 +16,7 @@ const Sidebar = () => {
         <NavLink
           className="sideButton"
           activeClassName="activeSideButtons"
-          to="/mainmenu/home"
+          to="/mainMenu/home"
           onClick={closeNavigation}
         >
           Startsida
@@ -25,7 +26,7 @@ const Sidebar = () => {
         <NavLink
           className="sideButton"
           activeClassName="activeSideButtons"
-          to="/mainmenu/portfolio"
+          to="/mainMenu/portfolio"
           onClick={closeNavigation}
         >
           Min Portfolio
@@ -35,7 +36,7 @@ const Sidebar = () => {
         <NavLink
           className="sideButton"
           activeClassName="activeSideButtons"
-          to="/mainmenu/settings/profile"
+          to="/mainMenu/settings/profile"
           onClick={closeNavigation}
         >
           Inställningar
@@ -45,9 +46,12 @@ const Sidebar = () => {
   );
 
   return (
+    <div>
     <div id="mySideBar">
       <Routes />
       <LogoutButton />
+    </div>
+    <SidebarButton/>
     </div>
   );
 };
