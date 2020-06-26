@@ -31,7 +31,7 @@ const PageSwitch = (props) => {
 
   if (props.totalData === 5) {
     return (
-      <div style={{ position: "absolute", right: "160px" }}>
+      <div>
         <form onSubmit={UpdatePage} id={"nativePageSwitchForm"}>
           <button
             id={"back"}

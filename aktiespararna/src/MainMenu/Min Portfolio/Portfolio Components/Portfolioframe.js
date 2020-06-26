@@ -19,16 +19,6 @@ const PortfolioFrame = () => {
   if (currentData.length !== 0) {
     return (
       <div>
-         <PageSwitch
-          shownData={shownData}
-          totalData={totalData}
-          currentData={currentData}
-          setCurrentData={setCurrentData}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          data={data}
-          pagesArray={pagesArray}
-        />
         <p>Visar {currentPage-9} - {currentPage} av {totalData}</p>
       <div className="portfolioFrames">
         <table className="portfolioTable" style={{ position: "relative" }}>
@@ -61,15 +51,25 @@ const PortfolioFrame = () => {
             })}
           </tbody>
         </table>
-        <SelectBox
-        totalData={totalData}
-        currentData={currentData}
-        setCurrentData={setCurrentData}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        data={data}
-        pagesArray={pagesArray}
-      />
+        <div id="pageSwitch">
+          <PageSwitch
+            shownData={shownData}
+            totalData={totalData}
+            currentData={currentData}
+            setCurrentData={setCurrentData}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            data={data}
+          />
+          <SelectBox
+            totalData={totalData}
+            currentData={currentData}
+            setCurrentData={setCurrentData}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            data={data}
+          />
+        </div>
       </div>
       </div>
     );
