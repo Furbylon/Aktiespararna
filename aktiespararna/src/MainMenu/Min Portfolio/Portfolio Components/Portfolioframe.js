@@ -10,9 +10,26 @@ const PortfolioFrame = () => {
   const [currentPage, setCurrentPage] = useState(10);
 
   let totalData = data.length;
-
+  let divided = totalData / 10;
+  let pagesArray = [];
+  for (let i = 1; i <= divided; i++) {
+    pagesArray.push(i *10);
+  }
+  
   if (currentData.length !== 0) {
     return (
+      <div>
+         <PageSwitch
+          shownData={shownData}
+          totalData={totalData}
+          currentData={currentData}
+          setCurrentData={setCurrentData}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          data={data}
+          pagesArray={pagesArray}
+        />
+        <p>Visar {currentPage-9} - {currentPage} av {totalData}</p>
       <div className="portfolioFrames">
         <table className="portfolioTable" style={{ position: "relative" }}>
           <thead>
@@ -44,23 +61,16 @@ const PortfolioFrame = () => {
             })}
           </tbody>
         </table>
-        <PageSwitch
-          shownData={shownData}
-          totalData={totalData}
-          currentData={currentData}
-          setCurrentData={setCurrentData}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          data={data}
-        />
         <SelectBox
-          totalData={totalData}
-          currentData={currentData}
-          setCurrentData={setCurrentData}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          data={data}
-        />
+        totalData={totalData}
+        currentData={currentData}
+        setCurrentData={setCurrentData}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        data={data}
+        pagesArray={pagesArray}
+      />
+      </div>
       </div>
     );
   } else {

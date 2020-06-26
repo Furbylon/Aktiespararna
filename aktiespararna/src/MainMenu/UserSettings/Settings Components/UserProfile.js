@@ -5,9 +5,7 @@ import profileList from "../../../data/JSON/profil.json";
 const Profile = () => {
   let [profile, setProfile] = useState(profileList.slice(0, 1));
 
-  let handleSubmit = (e) => {
-    
-  }
+  let handleSubmit = (e) => {};
   let currentProfile = (profile) => {
     return (
       <div key={profile.username}>
@@ -19,7 +17,6 @@ const Profile = () => {
             type="text"
             name="firstNameInput"
             placeholder={profile.firstName}
-            ref={profile}
           ></input>
           <br />
           Efternamn
@@ -27,7 +24,6 @@ const Profile = () => {
             type="text"
             name="lastNameInput"
             placeholder={profile.lastName}
-            ref={profile}
           ></input>
           <br />
           Personnummer
@@ -35,7 +31,6 @@ const Profile = () => {
             type="text"
             name="personalNumberInput"
             placeholder={profile.personalNumber}
-            ref={profile}
           ></input>
           <br />
           Adress
@@ -43,7 +38,6 @@ const Profile = () => {
             type="text"
             name="adressInput"
             placeholder={profile.address}
-            ref={profile}
           ></input>
           <br />
           Postort
@@ -51,7 +45,6 @@ const Profile = () => {
             type="text"
             name="postTownInput"
             placeholder={profile.postTown}
-            ref={profile}
           ></input>
           <br />
           Postnummer
@@ -59,7 +52,6 @@ const Profile = () => {
             type="text"
             name="postNumberInput"
             placeholder={profile.postNumber}
-            ref={profile}
           ></input>
           <br />
           Telefonnummer
@@ -67,7 +59,6 @@ const Profile = () => {
             type="text"
             name="telephoneNumberInput"
             placeholder={profile.telephone}
-            ref={profile}
           ></input>
           <br />
           Email
@@ -75,7 +66,6 @@ const Profile = () => {
             type="text"
             name="emailInput"
             placeholder={profile.email}
-            ref={profile}
           ></input>
           <br />
           <input type="submit" id="profileSaveButton" value="Save" />

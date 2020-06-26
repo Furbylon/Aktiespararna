@@ -29,7 +29,8 @@ const MittInnehav = (newValue) => {
     <div id="mittInnehav" style={{ position: "relative" }}>
       <div>
         <Header head={"Mitt Innehav"}/>
-        <p style = {{fontWeight: "lighter"}}>Senast uppdaterad: <LastUpdate/> </p>
+        <p style = {{fontWeight: "lighter"}}>Senast uppdaterad: </p>
+        <LastUpdate/>
         <IndustryPercentage />
         {values.map(CheckIfValuesExist)}
         <p>Övrigt: 60 000 SEK </p>

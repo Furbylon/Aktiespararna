@@ -18,7 +18,7 @@ const Main = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={Login} exact="true" />
+        <Route path="/" component={Login} exact={true} />
         <Route path="/registration" component={Registrering} />
         <Route
           path="/forgotpassword"
