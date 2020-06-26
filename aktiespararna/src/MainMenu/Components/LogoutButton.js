@@ -7,7 +7,7 @@ const LogoutButton = () => {
   };
   return (
     <div>
-      <button onClick={CloseNavigation}>
+      <button id="logoutButton" onClick={CloseNavigation}>
         <Link to="/">Logga ut</Link>
       </button>
     </div>
