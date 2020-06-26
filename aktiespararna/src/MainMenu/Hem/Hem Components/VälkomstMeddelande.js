@@ -9,9 +9,9 @@ const VälkomstMeddelande = () => {
     return (
       <div key={name.id}>
         <p>
-          Välkommen {name.firstName} {name.lastName}! Ditt innehav blev senast
-          uppdaterat: <LastUpdate />
+          Välkommen {name.firstName} {name.lastName}! Ditt innehav blev senast uppdaterat: 
         </p>
+        <LastUpdate />
       </div>
     );
   };

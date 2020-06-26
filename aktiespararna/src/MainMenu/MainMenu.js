@@ -9,7 +9,7 @@ const MainMenu = () => {
   const CompPath = () => {
     return (
       <div id="mainMenu">
-        <Route path="/mainMenu" component={Sidebar} />
+        <Route path="/mainMenu" component={Sidebar}/>
         <Route path="/mainMenu/home" component={Home} />
         <Route path="/mainMenu/portfolio" component={Portfolio} />
         <Route path="/mainMenu/settings" component={Settings} />

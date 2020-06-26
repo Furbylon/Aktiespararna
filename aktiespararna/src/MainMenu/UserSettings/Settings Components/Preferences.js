@@ -1,33 +1,49 @@
 import React, { useState } from "react";
 import mock from "../../../data/JSON/mock.json";
-import {Link} from "react-router-dom";
-import MittInnehav from "../../Hem/Hem Components/MittInnehav"
+import { Link } from "react-router-dom";
 
 const Preferences = () => {
-  let industries = mock;
-  let max = 5;
+  let [max, setMax] = useState(5);
+  let [min, setMin] = useState(0);
+  let [industries, setIndustries] = useState(mock.slice(min, max));
 
+  let handleSubmit = () => {};
 
-  let handleSubmit = () => {
-  }
- 
+  let ImplementBank = () => {
+    alert("Integrera Bank :)");
+  };
+
+  let ShowMore = (e) => {
+    e.preventDefault();
+    let value = parseInt(e.target.value);
+    console.log(value);
+
+    setMax(value);
+    setIndustries(mock.slice(min, max));
+  };
   let currentPreferences = (companies) => {
     return (
       <div id="preferences" key={companies.id}>
-          <input type="checkbox"></input>
-          {companies.Industry}
-          <br /> 
+        <input type="checkbox"></input>
+        {companies.Industry}
+        <br />
       </div>
     );
   };
   return (
     <div>
-      <form onSubmit= {handleSubmit}>
-      <p>Mina prefererade industrier att investera inom:</p>
-      {industries.map(currentPreferences)}
-      <Link to={"/"} style = {{color: "blue"}}>Integrera bank</Link>
-      <br/>
-      <button>Spara</button>
+      <form>
+        <p>Mina prefererade industrier att investera inom:</p>
+        <button type={"button"} onClick={ShowMore} value={parseInt(max + 5)}>
+          Visa mer
+        </button>
+        {industries.map(currentPreferences)}
+        <br />
+        <Link onClick={ImplementBank} to={"/"} style={{ color: "blue" }}>
+          Integrera bank
+        </Link>
+        <br />
+        <button>Spara</button>
       </form>
     </div>
   );

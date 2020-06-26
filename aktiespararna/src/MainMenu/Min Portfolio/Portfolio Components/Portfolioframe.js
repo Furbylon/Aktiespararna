@@ -10,9 +10,16 @@ const PortfolioFrame = () => {
   const [currentPage, setCurrentPage] = useState(10);
 
   let totalData = data.length;
-
+  let divided = totalData / 10;
+  let pagesArray = [];
+  for (let i = 1; i <= divided; i++) {
+    pagesArray.push(i *10);
+  }
+  
   if (currentData.length !== 0) {
     return (
+      <div>
+        <p>Visar {currentPage-9} - {currentPage} av {totalData}</p>
       <div className="portfolioFrames">
         <table className="portfolioTable" style={{ position: "relative" }}>
           <thead>
@@ -63,6 +70,7 @@ const PortfolioFrame = () => {
             data={data}
           />
         </div>
+      </div>
       </div>
     );
   } else {

@@ -1,7 +1,6 @@
-import React,{useState} from "react";
+import React from "react";
 
 const PageSelect = (props) => {
-
   let AmountOfPages = () => {
     let divided = props.totalData / 10;
     let arr = [];
@@ -26,7 +25,6 @@ const PageSelect = (props) => {
           <AmountOfPages />
         </select>
       </form>
-      <p>Visar {props.currentPage-9} - {props.currentPage} av {props.totalData}</p>
     </div>
   );
 };

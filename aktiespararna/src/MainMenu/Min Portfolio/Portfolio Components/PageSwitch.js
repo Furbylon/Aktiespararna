@@ -1,37 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 
 const PageSwitch = (props) => {
-  let divide = props.totalData / 10;
-  let [shownButtons, setShownButtons] = useState(divide / 2);
   let SetButtons = () => {
     let arr = [];
-    for (let i = 1; i <= shownButtons; i++) {
+    for (let i = 1; i <= 5; i++) {
       arr.push(i);
     }
     let buttons = [];
     buttons = arr.map((value) => (
       <button
         type={"button"}
-        value={value * props.shownData}
+        value={props.shownData * value}
         id="pageButton"
         key={value}
       >
         {value}
       </button>
     ));
-
     return buttons;
   };
 
   let UpdatePage = (e) => {
-    props.setCurrentPage(e.target.value);
-    props.setCurrentData(
-      props.data.slice(e.target.value - props.shownData, e.target.value)
-    );
-    console.log(e.target.value);
+    console.log(props.pagesArray);
+    let value = parseInt(e.target.value);
+    if(props.pagesArray.includes(value)) {
+      props.setCurrentPage(value);
+      props.setCurrentData(props.data.slice(value - props.shownData, value));
+    }
   };
 
-  if (props.totalData === shownButtons) {
+  if (props.totalData === 5) {
     return (
       <div>
         <form onSubmit={UpdatePage} id={"nativePageSwitchForm"}>
@@ -68,11 +66,7 @@ const PageSwitch = (props) => {
             {"<"}
           </button>
           <SetButtons />
-          <button
-            type={"button"}
-            value={props.currentPage + props.shownData}
-            form={"pageSwitchForm"}
-          >
+          <button type={"button"} form={"pageSwitchForm"}>
             ...
           </button>
           <button
