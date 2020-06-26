@@ -1,31 +1,37 @@
 .settingsFrame {
-    position: relative;
-    border-radius: 2px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    background-color: rgb(216, 223, 153);
-    margin-right: 20px;
-    box-shadow: 1px 1px 1px rgba(180, 117, 117, 0.15), 0 10px 0 -5px #eee;
-    margin-bottom: 20px;
+  position: relative;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: rgb(124, 207, 255);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-left: 10px;
 }
 #topBarSettings {
-    overflow: hidden;
-    background-color: rgb(105, 197, 109);
-    font-size: large;
+  overflow: hidden;
+  background-color: rgb(75, 157, 204);
+  font-size: large;
+  padding-left: 0px;
+  margin-right: -790px;
+  margin-left: -10px;
 }
 .topBarLinks {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    float: left;
-    text-align: center;
-    padding: 15px 12px;
-    font-size: large;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  float: left;
+  text-align: center;
+  padding: 15px 12px;
+  font-size: large;
 }
 .topBarLinks:hover {
-    background-color: rgb(255, 255, 255);
-    color: black;
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
 .activeTopBarLinks {
-    color: wheat;
-    font-weight: bold;    
+  font-weight: bold;
+  text-decoration: underline;
+}
+#settingsHeader {
+  text-align: center;
 }
