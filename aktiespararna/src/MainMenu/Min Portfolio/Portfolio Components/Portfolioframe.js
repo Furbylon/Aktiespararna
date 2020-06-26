@@ -60,6 +60,8 @@ const PortfolioFrame = () => {
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
             data={data}
+            pagesArray={pagesArray}
+
           />
           <SelectBox
             totalData={totalData}

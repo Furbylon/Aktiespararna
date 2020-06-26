@@ -21,7 +21,6 @@ const PageSwitch = (props) => {
   };
 
   let UpdatePage = (e) => {
-    console.log(props.pagesArray);
     let value = parseInt(e.target.value);
     if(props.pagesArray.includes(value)) {
       props.setCurrentPage(value);
@@ -32,7 +31,7 @@ const PageSwitch = (props) => {
   if (props.totalData === 5) {
     return (
       <div>
-        <form onSubmit={UpdatePage} id={"nativePageSwitchForm"}>
+        <form onClick={UpdatePage} id={"nativePageSwitchForm"}>
           <button
             id={"back"}
             type={"button"}

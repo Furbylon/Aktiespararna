@@ -32,10 +32,7 @@ const HemProfil = () => {
   return (
     <div id="homeProfile" style={{ position: "relative"}}>
     <Header head = {"Min Profil"}/>
-      <div className="hemprofilHeader">
-      </div>
-
-      <div>{profile.map(showProfile)}</div>
+      <div id="profileInformation">{profile.map(showProfile)}</div>
       <Link to="/mainmenu/settings/profile">Redigera</Link>
     </div>
   );

@@ -9,24 +9,17 @@ import Mainmenu from "./MainMenu/MainMenu";
 const Main = () => {
   const MissingPage = () => (
     <div>
-      404 -{" "}
-      <button id="missingPageButton">
-        <Link to="/">Missing page </Link>
-      </button>
+      404 - <button><Link to="/">Missing page </Link></button>
     </div>
   );
+
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" component={Login} exact={true} />
         <Route path="/registration" component={Registrering} />
-        <Route
-          path="/forgotpassword"
-          component={GlömtLösenord}
-          MissingPage={MissingPage}
-        />
-        <Mainmenu MissingPage ={MissingPage}/>
-        <Route component={MissingPage} />
+        <Route path="/forgotpassword" component={GlömtLösenord} />
+        <Mainmenu MissingPage= {MissingPage}/>
       </Switch>
     </BrowserRouter>
   );

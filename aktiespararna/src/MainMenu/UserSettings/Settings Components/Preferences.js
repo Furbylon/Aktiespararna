@@ -4,23 +4,18 @@ import { Link } from "react-router-dom";
 
 const Preferences = () => {
   let [max, setMax] = useState(5);
-  let [min, setMin] = useState(0);
-  let [industries, setIndustries] = useState(mock.slice(min, max));
-
-  let handleSubmit = () => {};
+  let [industries, setIndustries] = useState(mock.slice(0, max));
 
   let ImplementBank = () => {
     alert("Integrera Bank :)");
   };
 
   let ShowMore = (e) => {
-    e.preventDefault();
     let value = parseInt(e.target.value);
-    console.log(value);
-
     setMax(value);
-    setIndustries(mock.slice(min, max));
+    setIndustries(mock.slice(0, max));
   };
+
   let currentPreferences = (companies) => {
     return (
       <div id="preferences" key={companies.id}>
@@ -34,8 +29,8 @@ const Preferences = () => {
     <div>
       <form>
         <p>Mina prefererade industrier att investera inom:</p>
-        <button type={"button"} onClick={ShowMore} value={parseInt(max + 5)}>
-          Visa mer
+        <button id={"add"} type={"button"} value={max + 5} onClick={ShowMore}>
+          Visa fler industrier
         </button>
         {industries.map(currentPreferences)}
         <br />
