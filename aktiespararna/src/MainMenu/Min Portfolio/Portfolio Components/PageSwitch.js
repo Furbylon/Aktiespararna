@@ -1,28 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const PageSwitch = (props) => {
-  let SetButtons = () => {
-    let arr = [];
+  let [numberButtons, setNumberButton] = useState();
+  let buttonArr = [];
+
+  let NativeButtons = () => {
     for (let i = 1; i <= 5; i++) {
-      arr.push(i);
+      buttonArr.push(i);
     }
-    let buttons = [];
-    buttons = arr.map((value) => (
-      <button
-        type={"button"}
-        value={props.shownData * value}
-        id="pageButton"
-        key={value}
-      >
+    if (!buttonArr.includes(props.currentPage / 10)) {
+      buttonArr.push(props.currentPage / 10)
+      console.log(buttonArr)
+    }
+    numberButtons = buttonArr.map((value) => (
+      <button value={props.shownData * value} id="pageButton" key={value}>
         {value}
       </button>
     ));
-    return buttons;
+    return numberButtons;
   };
-
   let UpdatePage = (e) => {
     let value = parseInt(e.target.value);
-    if(props.pagesArray.includes(value)) {
+    if (e.target.id === "update") {
+      setNumberButton(
+        buttonArr.map((value) => (
+          <button
+            value={props.shownData * value * 2}
+            id="pageButton"
+            key={value * 2}
+          >
+            {value * 2}
+          </button>
+        ))
+      );
+    }
+    if (props.pagesArray.includes(value)) {
       props.setCurrentPage(value);
       props.setCurrentData(props.data.slice(value - props.shownData, value));
     }
@@ -40,7 +52,14 @@ const PageSwitch = (props) => {
           >
             {"<"}
           </button>
-          <SetButtons />
+          <NativeButtons />
+          <button
+            id={"update"}
+            type={"button"}
+            value={props.currentPage + props.shownData}
+          >
+            ...
+          </button>
           <button
             id={"forward"}
             type={"button"}
@@ -55,24 +74,20 @@ const PageSwitch = (props) => {
   } else {
     return (
       <div>
+        <form />
         <form onClick={UpdatePage} id={"pageSwitchForm"}>
           <button
             id={"back"}
             type={"button"}
             value={props.currentPage - props.shownData}
-            form={"pageSwitchForm"}
           >
             {"<"}
           </button>
-          <SetButtons />
-          <button type={"button"} form={"pageSwitchForm"}>
-            ...
-          </button>
+          <NativeButtons />
           <button
             id={"foward"}
             type={"button"}
             value={props.currentPage + props.shownData}
-            form={"pageSwitchForm"}
           >
             {">"}
           </button>

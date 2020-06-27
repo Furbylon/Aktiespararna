@@ -1,26 +1,31 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import mock from "../../../data/JSON/mock.json";
 
-
 let PercentageBar = () => {
-  let values = mock.slice(0, 4);
+  let maxVal = mock.length;
+  let [companyShares, setCompanyShares] = useState(mock.slice(0, 4));
+  let [others, setOthers] = useState(mock.slice(5, maxVal));
+
   let sum = 0;
   mock.map((values) => {
-    return(
-      (sum += values.Shares)
-    )
+    return (sum += values.Balance);
   });
-  console.log(sum)
+
   const addIndustry = (companies) => {
     return (
       <div key={companies.id}>
-        <div style = {{width: companies.Shares/sum * 100 + "%"}} className="shares first">{companies.Shares / sum * 100 + "%"}</div>
+        <div
+          style={{ width: (companies.Balance / sum) * 100 + "%" }}
+          className="shares first"
+        >
+          {(companies.Balance / sum) * 100 + "%"}
+        </div>
       </div>
     );
   };
   return (
     <div>
-      <div>{values.map(addIndustry)}</div>
+      <div>{companyShares.map(addIndustry)}</div>
       <h1>{sum} SEK</h1>
     </div>
   );

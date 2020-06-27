@@ -79,24 +79,16 @@
   color: white;
 }
 .first {
-  width: 90%;
   background-color: #4caf50;
 }
 .second {
-  width: 80%;
   background-color: #2196f3;
 }
 .third {
-  width: 65%;
   background-color: #f44336;
 }
 .fourth {
-  width: 60%;
   background-color: #808080;
-}
-
-#industryColours {
-  background-color: #f44336;
 }
 /* CSS FOR SIDEBAR */
 #sidebarButton {
