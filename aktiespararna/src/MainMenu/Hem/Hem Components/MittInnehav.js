@@ -1,19 +1,27 @@
 import React, { useState, useEffect } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import mock from "../../../data/JSON/mock.json";
 import IndustryPercentage from "../Hem Components/IndustryPrecentage";
 import Header from "../../Components/Header";
-import LastUpdate from "../../Components/LastUpdate"
+import LastUpdate from "../../Components/LastUpdate";
 
 const MittInnehav = (newValue) => {
   let [values, setValues] = useState(mock.slice(0, 4));
-  const CheckIfValuesExist = (companies) => {
+  let companyColours = [
+    {colour: "rgb(58, 145, 116)" },
+       {colour:  "rgb(97, 73, 165)" },
+       {colour:  "rgb(173, 32, 32)" },
+       {colour:  "rgb(193, 224, 81)" },
+     ];
+  const CheckIfValuesExist = (companies, index) => {
     if (values.length !== 0) {
       return (
         <div key={companies.id}>
-            <p>
-              {companies.Industry} {companies.Balance} SEK
-            </p>
+        <div style={{background:(companyColours[index].colour), width: "200px"}}>
+          <p>
+            {companies.Industry} {companies.Balance} SEK
+          </p>
+          </div>
         </div>
       );
     } else {
@@ -28,12 +36,12 @@ const MittInnehav = (newValue) => {
   return (
     <div id="mittInnehav" style={{ position: "relative" }}>
       <div>
-        <Header head={"Mitt Innehav"}/>
-        <p style = {{fontWeight: "lighter"}}>Senast uppdaterad: </p>
-        <LastUpdate/>
-        <IndustryPercentage />
+        <Header head={"Mitt Innehav"} />
+        <p style={{ fontWeight: "lighter" }}>Senast uppdaterad: </p>
+        <LastUpdate />
+        <IndustryPercentage companyColours={companyColours}/>
         {values.map(CheckIfValuesExist)}
-        <p>Övrigt: 60 000 SEK </p>
+        <p style={{background: ("rgb(0, 162, 255)"), width: "200px", backgroundSize: "20%"}}>Övrigt: 60 000 SEK </p>
         <Link to="/mainmenu/portfolio">Min portfölj</Link>
       </div>
     </div>

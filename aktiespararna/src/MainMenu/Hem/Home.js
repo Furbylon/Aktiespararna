@@ -9,7 +9,7 @@ const Hem = () => {
   return (
     <div id="home">
       <div id="homeHeader">
-        <Header head={"Aktiespararna - Ditt aktieverktyg"} />
+        <Header head={"Aktiespararna - Ditt aktivitetsverktyg"} />
       </div>
       <VälkomstMeddelande />
       <div id="profilOchInnehav">

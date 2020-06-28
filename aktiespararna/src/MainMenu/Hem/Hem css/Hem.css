@@ -72,30 +72,23 @@
   background-color: #ddd;
 }
 
-.shares {
-  text-align: left;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
+.stackGraph {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
 }
-.first {
-  background-color: #4caf50;
-}
-.second {
-  background-color: #2196f3;
-}
-.third {
-  background-color: #f44336;
-}
-.fourth {
-  background-color: #808080;
+.stackGraph > div {
+  background-color: #f1f1f1;
+  text-align: center;
+  line-height: 75px;
+  font-size: 10px;
 }
 /* CSS FOR SIDEBAR */
 #sidebarButton {
   margin-left: 5px;
 }
 #mySideBar {
-  border-right: solid 1px black;
+  border-right: solid 1px rgb(0, 0, 0);
   height: 100%;
   width: 0px;
   position: fixed;
