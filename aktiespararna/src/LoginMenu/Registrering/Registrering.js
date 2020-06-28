@@ -10,9 +10,9 @@ const Registration = (props) => {
       e.target.elements.password.value ===
       e.target.elements.confirmPassword.value
     ) {
-      props.setUserName(e.target.elements.username.value);
-      props.setPassword(e.target.elements.password.value);
-      props.setEmail(e.target.elements.email.value);
+      props.setUsername(e.target.elements.username.value)
+      props.setPassword(e.target.elements.password.value)
+      props.setEmail(e.target.elements.email.value)
       alert("created new account");
     } else { 
       alert("Password does not match");

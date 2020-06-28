@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import Mainmenu from "./MainMenu/MainMenu";
 
 const Main = () => {
-  let [username, setUsername] = useState("carl");
+  let [username, setUsername] = useState();
   let [password, setPassword] = useState();
   let [email, setEmail] = useState();
 
@@ -23,24 +23,12 @@ const Main = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route
-          path="/"
-          component={() => <Login username={username} password={password} />}
-          exact={true}
-        />
-        <Route
-          path="/registration"
-          render={() => 
-            <Registrering
-              username={username}
-              setUsername={setUsername}
-              setPassword={setPassword}
-              setEmail={setEmail}
-            />
-          }
-        />
-        <Route path="/forgotpassword" component={GlömtLösenord} />
-        <Mainmenu MissingPage={MissingPage} />
+        <Route path="/" component={Login} exact={true} />
+        <Route path="/registration" render={() => (
+          <Registrering username={username} setUsername={setUsername} setPassword={setPassword} setEmail={setEmail}/>
+        )} />
+        <Route path="/forgotpassword" component={(GlömtLösenord)} />
+        <Mainmenu MissingPage={MissingPage}/>
       </Switch>
     </BrowserRouter>
   );
