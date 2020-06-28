@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import mock from "../../../data/JSON/mock.json";
 
-let PercentageBar = (colours) => {
-  let [preferredCompanies, setPreferredCompanies] = useState(mock.slice(0, 4));
-
-  let arr = [];
-  arr.push(preferredCompanies);
+let PercentageBar = (props) => {
+  console.log(props.preferredCompanies)
   let sum = 0;
   mock.map((values) => {
     return (sum += values.Balance);
@@ -13,11 +10,11 @@ let PercentageBar = (colours) => {
 
   const percentageGraph = (companies, index) => {
     return (
-      <div key={preferredCompanies[index].id}>
+      <div key={props.preferredCompanies[index].id}>
         <div
           style={{
-            width: (preferredCompanies[index].Balance / sum) * 1000,
-            background: colours.companyColours[index].colour,
+            width: (props.preferredCompanies[index].Balance / sum) * 1000,
+            background: props.companyColours[index].colour,
           }}
         >
           ...
@@ -29,7 +26,7 @@ let PercentageBar = (colours) => {
   return (
     <div>
       <div className={"stackGraph"}>
-        {preferredCompanies.map(percentageGraph)}
+        {props.preferredCompanies.map(percentageGraph)}
       </div>
       <h1>{sum} SEK</h1>
     </div>

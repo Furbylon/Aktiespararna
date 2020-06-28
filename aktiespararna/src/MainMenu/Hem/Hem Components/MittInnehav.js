@@ -7,18 +7,17 @@ import LastUpdate from "../../Components/LastUpdate";
 import LinkTo from "./LinkTo";
 
 const MittInnehav = () => {
-  let [values, setValues] = useState(mock.slice(0, 4));
+  let [preferredCompanies, setPreferredCompanies] = useState(mock.slice(0, 4));
 
   let max = mock.length;
 
-  let [remainingCompanies, setRemainingCompanies] = useState(
+  let remainingCompanies = (
     mock.slice(5, max)
   );
   let sumOfRemaining = 0;
-  remainingCompanies.map((values, index) => {
+  remainingCompanies.map((values) => {
     return (sumOfRemaining += values.Balance);
   });
-  console.log(sumOfRemaining);
 
   let companyColours = [
     { colour: "rgb(58, 145, 116)" },
@@ -27,7 +26,7 @@ const MittInnehav = () => {
     { colour: "rgb(193, 224, 81)" },
   ];
   const CheckIfValuesExist = (companies, index) => {
-    if (values.length !== 0) {
+    if (preferredCompanies.length !== 0) {
       return (
         <div key={companies.id}>
           <div
@@ -55,8 +54,8 @@ const MittInnehav = () => {
         <LinkTo link={"/mainmenu/portfolio"} tag={"Portfolio"} />
         <p style={{ fontWeight: "lighter" }}>Senast uppdaterad: </p>
         <LastUpdate />
-        <IndustryPercentage companyColours={companyColours} />
-        {values.map(CheckIfValuesExist)}
+        <IndustryPercentage companyColours={companyColours} preferredCompanies={preferredCompanies}/>
+        {preferredCompanies.map(CheckIfValuesExist)}
         <p
           style={{
             background: "rgb(0, 162, 255)",
