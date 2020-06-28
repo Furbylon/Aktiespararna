@@ -5,7 +5,7 @@ import PasswordChange from "../Settings Components/PasswordChange";
 import Preferences from "../Settings Components/Preferences";
 import { NavLink, Route } from "react-router-dom";
 
-const SettingsFrame = () => {
+const SettingsFrame = (props) => {
   const SettingsHead = () => {
     return (
       <div>
@@ -47,9 +47,19 @@ const SettingsFrame = () => {
         <Route path="/mainMenu/settings/profile" component={UserSettings} />
         <Route
           path="/mainMenu/settings/passwordchange"
-          component={PasswordChange}
+          render={() => (
+            <PasswordChange
+              password={props.password}
+              setPassword={props.setPassword}
+            />
+          )}
         />
-        <Route path="/mainMenu/settings/preferences" component={Preferences} />
+        <Route path="/mainMenu/settings/preferences" render={() => (
+            <Preferences
+              preferredValues={props.preferredValues}
+              setPreferredValues={props.setPreferredValues}
+            />
+          )} />
       </div>
     );
   };
