@@ -38,7 +38,7 @@ const Preferences = () => {
           Integrera bank
         </Link>
         <br />
-        <button>Spara</button>
+        <input type ="button" value="Spara"></input>
       </form>
     </div>
   );

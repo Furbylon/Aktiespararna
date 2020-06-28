@@ -4,10 +4,22 @@ import mock from "../../../data/JSON/mock.json";
 import IndustryPercentage from "../Hem Components/IndustryPrecentage";
 import Header from "../../Components/Header";
 import LastUpdate from "../../Components/LastUpdate";
-import LinkTo from "./LinkTo"
+import LinkTo from "./LinkTo";
 
-const MittInnehav = (newValue) => {
+const MittInnehav = () => {
   let [values, setValues] = useState(mock.slice(0, 4));
+
+  let max = mock.length;
+
+  let [remainingCompanies, setRemainingCompanies] = useState(
+    mock.slice(5, max)
+  );
+  let sumOfRemaining = 0;
+  remainingCompanies.map((values, index) => {
+    return (sumOfRemaining += values.Balance);
+  });
+  console.log(sumOfRemaining);
+
   let companyColours = [
     { colour: "rgb(58, 145, 116)" },
     { colour: "rgb(97, 73, 165)" },
@@ -40,7 +52,7 @@ const MittInnehav = (newValue) => {
     <div id="mittInnehav" style={{ position: "relative" }}>
       <div>
         <Header head={"Mitt Innehav"} />
-        <LinkTo link={"/mainmenu/portfolio"} tag={"Portfolio"}/>
+        <LinkTo link={"/mainmenu/portfolio"} tag={"Portfolio"} />
         <p style={{ fontWeight: "lighter" }}>Senast uppdaterad: </p>
         <LastUpdate />
         <IndustryPercentage companyColours={companyColours} />
@@ -52,7 +64,7 @@ const MittInnehav = (newValue) => {
             backgroundSize: "20%",
           }}
         >
-          Övrigt: 60 000 SEK{" "}
+          Övrigt: {sumOfRemaining} SEK
         </p>
       </div>
     </div>
