@@ -1,7 +1,8 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import aktielogoo from "../Login/img/aktielogoo.png";
 import "./RegistreringStyle.css";
-import user from "../../data/JSON/user.json";
+import { Link } from "react-router-dom";
+
 
 const Registration = (props) => {
   const checkAccount = (e) => {
@@ -36,6 +37,9 @@ const Registration = (props) => {
         <br></br>
         <button>Register</button>
       </form>
+      <div id="link">
+      <Link to="/">Start page</Link>
+    </div>
     </div>
   );
 };

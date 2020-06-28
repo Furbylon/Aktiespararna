@@ -10,9 +10,8 @@ const Login = (props) => {
   const history = useHistory();
 
   const onSubmit = (data) => {
-    console.log(props.match.params.username)
     if (
-      (data.username && data.password) === (props.match.params.username && props.match.params.password)
+      (data.username && data.password) === (props.username && props.password)
     ) {
       return history.push("/mainMenu/home");
     } else {
