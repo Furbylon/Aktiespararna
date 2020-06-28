@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import user from "../../../data/JSON/user.json";
+import React from "react";
 
 const PasswordChange = (props) => {
   console.log(props.password);
@@ -13,7 +12,7 @@ const PasswordChange = (props) => {
       ) {
         props.setPassword(e.target.elements.newPassword.value);
       } else {
-        alert("Password doesn't match")
+        alert("Password doesn't match");
       }
     } else {
       alert("Incorrect Password");
@@ -23,11 +22,11 @@ const PasswordChange = (props) => {
     <div id="passwordChange">
       <form onSubmit={changePassword}>
         <p>Nuvarande lösenord</p>
-        <input id="currentPassword" type="text" required/>
+        <input id="currentPassword" type="text" required />
         <p>Nytt lösenord</p>
-        <input id="newPassword" type="text" required/>
+        <input id="newPassword" type="text" required />
         <p>Bekräfta nytt lösenord</p>
-        <input id="confirmPassword" type="text" required/>
+        <input id="confirmPassword" type="text" required />
         <button id="savePasswordChange">Spara</button>
       </form>
     </div>

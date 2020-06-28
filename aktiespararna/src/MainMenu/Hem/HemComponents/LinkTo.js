@@ -9,7 +9,10 @@ const LinkTo = (props) => {
   return (
     <div>
       <button id={"linkTo"} onClick={handleClick}>
-        <Link to={props.link}> {props.tag}</Link>
+        <Link className="links" to={props.link}>
+          {" "}
+          {props.tag}
+        </Link>
       </button>
     </div>
   );
