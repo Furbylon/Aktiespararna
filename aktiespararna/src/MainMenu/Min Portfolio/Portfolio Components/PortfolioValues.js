@@ -8,9 +8,14 @@ const portfolioValues = ({
   ownership,
   votingPower,
   industry,
+  
 }) => {
+
+  const downloadValue = () => {
+    alert("Downloading values for " + companyName)
+  } 
   return (
-    <tr id= "portfolioGrid">
+    <tr id="portfolioGrid">
       <td>
         <p>{companyName}</p>
       </td>
@@ -33,7 +38,9 @@ const portfolioValues = ({
         <p>{industry}</p>
       </td>
       <td>
-      <button id={"downloadButton"}>Ladda ner</button>
+        <button onClick={downloadValue} id={"downloadButton"}>
+          Ladda ner
+        </button>
       </td>
     </tr>
   );

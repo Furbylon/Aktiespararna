@@ -115,5 +115,788 @@
   "Ownership": 1.93,
   "VotingPower": 0.56,
   "Industry": "Major Banks"
+}, {
+  "id": 14,
+  "Company": "Twitterbeat",
+  "StockSector": "Consumer Services",
+  "Balance": 6363,
+  "Shares": 240,
+  "Ownership": 4.15,
+  "VotingPower": 4.59,
+  "Industry": "Real Estate Investment Trusts"
+}, {
+  "id": 15,
+  "Company": "Voolith",
+  "StockSector": "Finance",
+  "Balance": 805,
+  "Shares": 697,
+  "Ownership": 4.89,
+  "VotingPower": 0.58,
+  "Industry": "Finance: Consumer Services"
+}, {
+  "id": 16,
+  "Company": "Skyvu",
+  "StockSector": "Technology",
+  "Balance": 6515,
+  "Shares": 272,
+  "Ownership": 4.34,
+  "VotingPower": 2.15,
+  "Industry": "EDP Services"
+}, {
+  "id": 17,
+  "Company": "Divanoodle",
+  "StockSector": "n/a",
+  "Balance": 7562,
+  "Shares": 918,
+  "Ownership": 2.74,
+  "VotingPower": 0.92,
+  "Industry": "n/a"
+}, {
+  "id": 18,
+  "Company": "Yabox",
+  "StockSector": "Capital Goods",
+  "Balance": 8564,
+  "Shares": 722,
+  "Ownership": 1.68,
+  "VotingPower": 4.17,
+  "Industry": "Metal Fabrications"
+}, {
+  "id": 19,
+  "Company": "Realblab",
+  "StockSector": "Energy",
+  "Balance": 3512,
+  "Shares": 457,
+  "Ownership": 0.04,
+  "VotingPower": 4.87,
+  "Industry": "Oil Refining/Marketing"
+}, {
+  "id": 20,
+  "Company": "Livepath",
+  "StockSector": "n/a",
+  "Balance": 2462,
+  "Shares": 237,
+  "Ownership": 1.96,
+  "VotingPower": 3.48,
+  "Industry": "n/a"
+}, {
+  "id": 21,
+  "Company": "Wordware",
+  "StockSector": "Energy",
+  "Balance": 8602,
+  "Shares": 791,
+  "Ownership": 3.08,
+  "VotingPower": 1.91,
+  "Industry": "Integrated oil Companies"
+}, {
+  "id": 22,
+  "Company": "Zoombox",
+  "StockSector": "n/a",
+  "Balance": 6471,
+  "Shares": 668,
+  "Ownership": 3.95,
+  "VotingPower": 1.45,
+  "Industry": "n/a"
+}, {
+  "id": 23,
+  "Company": "Jaxspan",
+  "StockSector": "Consumer Services",
+  "Balance": 263,
+  "Shares": 377,
+  "Ownership": 1.26,
+  "VotingPower": 3.11,
+  "Industry": "Movies/Entertainment"
+}, {
+  "id": 24,
+  "Company": "Katz",
+  "StockSector": "n/a",
+  "Balance": 5642,
+  "Shares": 598,
+  "Ownership": 2.25,
+  "VotingPower": 4.75,
+  "Industry": "n/a"
+}, {
+  "id": 25,
+  "Company": "Blogtag",
+  "StockSector": "Finance",
+  "Balance": 8201,
+  "Shares": 448,
+  "Ownership": 4.78,
+  "VotingPower": 1.21,
+  "Industry": "Major Banks"
+}, {
+  "id": 26,
+  "Company": "Youspan",
+  "StockSector": "Technology",
+  "Balance": 8428,
+  "Shares": 688,
+  "Ownership": 2.12,
+  "VotingPower": 0.29,
+  "Industry": "Computer Software: Programming, Data Processing"
+}, {
+  "id": 27,
+  "Company": "Brainsphere",
+  "StockSector": "Finance",
+  "Balance": 7599,
+  "Shares": 443,
+  "Ownership": 0.33,
+  "VotingPower": 3.98,
+  "Industry": "Property-Casualty Insurers"
+}, {
+  "id": 28,
+  "Company": "Voomm",
+  "StockSector": "Finance",
+  "Balance": 955,
+  "Shares": 944,
+  "Ownership": 2.98,
+  "VotingPower": 1.35,
+  "Industry": "Major Banks"
+}, {
+  "id": 29,
+  "Company": "Quaxo",
+  "StockSector": "Capital Goods",
+  "Balance": 9194,
+  "Shares": 225,
+  "Ownership": 3.24,
+  "VotingPower": 3.89,
+  "Industry": "Industrial Specialties"
+}, {
+  "id": 30,
+  "Company": "Rhyzio",
+  "StockSector": "n/a",
+  "Balance": 2014,
+  "Shares": 704,
+  "Ownership": 3.73,
+  "VotingPower": 4.56,
+  "Industry": "n/a"
+}, {
+  "id": 31,
+  "Company": "Kwimbee",
+  "StockSector": "Basic Industries",
+  "Balance": 7359,
+  "Shares": 474,
+  "Ownership": 1.81,
+  "VotingPower": 4.59,
+  "Industry": "Major Chemicals"
+}, {
+  "id": 32,
+  "Company": "Jaxnation",
+  "StockSector": "Health Care",
+  "Balance": 3887,
+  "Shares": 679,
+  "Ownership": 1.0,
+  "VotingPower": 1.96,
+  "Industry": "Major Pharmaceuticals"
+}, {
+  "id": 33,
+  "Company": "Yacero",
+  "StockSector": "Health Care",
+  "Balance": 8268,
+  "Shares": 546,
+  "Ownership": 2.17,
+  "VotingPower": 1.96,
+  "Industry": "Medical/Dental Instruments"
+}, {
+  "id": 34,
+  "Company": "Omba",
+  "StockSector": "n/a",
+  "Balance": 7718,
+  "Shares": 536,
+  "Ownership": 3.8,
+  "VotingPower": 3.14,
+  "Industry": "n/a"
+}, {
+  "id": 35,
+  "Company": "Jabberstorm",
+  "StockSector": "n/a",
+  "Balance": 7343,
+  "Shares": 913,
+  "Ownership": 4.41,
+  "VotingPower": 0.14,
+  "Industry": "n/a"
+}, {
+  "id": 36,
+  "Company": "Mynte",
+  "StockSector": "n/a",
+  "Balance": 8443,
+  "Shares": 445,
+  "Ownership": 0.68,
+  "VotingPower": 4.91,
+  "Industry": "n/a"
+}, {
+  "id": 37,
+  "Company": "Oyondu",
+  "StockSector": "Finance",
+  "Balance": 6602,
+  "Shares": 872,
+  "Ownership": 0.11,
+  "VotingPower": 3.22,
+  "Industry": "Major Banks"
+}, {
+  "id": 38,
+  "Company": "Shuffledrive",
+  "StockSector": "Capital Goods",
+  "Balance": 8831,
+  "Shares": 221,
+  "Ownership": 2.53,
+  "VotingPower": 1.63,
+  "Industry": "Electrical Products"
+}, {
+  "id": 39,
+  "Company": "DabZ",
+  "StockSector": "Health Care",
+  "Balance": 1389,
+  "Shares": 814,
+  "Ownership": 2.31,
+  "VotingPower": 3.89,
+  "Industry": "Major Pharmaceuticals"
+}, {
+  "id": 40,
+  "Company": "Flipstorm",
+  "StockSector": "Consumer Durables",
+  "Balance": 9023,
+  "Shares": 687,
+  "Ownership": 2.19,
+  "VotingPower": 2.46,
+  "Industry": "Telecommunications Equipment"
+}, {
+  "id": 41,
+  "Company": "Thoughtsphere",
+  "StockSector": "Technology",
+  "Balance": 6686,
+  "Shares": 625,
+  "Ownership": 4.03,
+  "VotingPower": 3.03,
+  "Industry": "Computer Software: Prepackaged Software"
+}, {
+  "id": 42,
+  "Company": "Skyndu",
+  "StockSector": "n/a",
+  "Balance": 109,
+  "Shares": 509,
+  "Ownership": 2.66,
+  "VotingPower": 3.74,
+  "Industry": "n/a"
+}, {
+  "id": 43,
+  "Company": "Vidoo",
+  "StockSector": "Finance",
+  "Balance": 3258,
+  "Shares": 967,
+  "Ownership": 1.03,
+  "VotingPower": 3.32,
+  "Industry": "Finance: Consumer Services"
+}, {
+  "id": 44,
+  "Company": "Thoughtworks",
+  "StockSector": "Transportation",
+  "Balance": 2566,
+  "Shares": 909,
+  "Ownership": 1.73,
+  "VotingPower": 4.81,
+  "Industry": "Transportation Services"
+}, {
+  "id": 45,
+  "Company": "Twitterwire",
+  "StockSector": "Consumer Services",
+  "Balance": 7394,
+  "Shares": 358,
+  "Ownership": 2.94,
+  "VotingPower": 0.24,
+  "Industry": "Other Consumer Services"
+}, {
+  "id": 46,
+  "Company": "Quamba",
+  "StockSector": "Transportation",
+  "Balance": 3693,
+  "Shares": 582,
+  "Ownership": 2.24,
+  "VotingPower": 0.07,
+  "Industry": "Oil Refining/Marketing"
+}, {
+  "id": 47,
+  "Company": "Linkbridge",
+  "StockSector": "n/a",
+  "Balance": 1344,
+  "Shares": 358,
+  "Ownership": 2.69,
+  "VotingPower": 3.94,
+  "Industry": "n/a"
+}, {
+  "id": 48,
+  "Company": "Fivechat",
+  "StockSector": "Technology",
+  "Balance": 9818,
+  "Shares": 336,
+  "Ownership": 4.74,
+  "VotingPower": 3.49,
+  "Industry": "EDP Services"
+}, {
+  "id": 49,
+  "Company": "Voolia",
+  "StockSector": "Consumer Services",
+  "Balance": 7395,
+  "Shares": 274,
+  "Ownership": 0.46,
+  "VotingPower": 2.87,
+  "Industry": "Clothing/Shoe/Accessory Stores"
+}, {
+  "id": 50,
+  "Company": "Voonix",
+  "StockSector": "Consumer Services",
+  "Balance": 9766,
+  "Shares": 774,
+  "Ownership": 2.92,
+  "VotingPower": 4.47,
+  "Industry": "Hotels/Resorts"
+}, {
+  "id": 51,
+  "Company": "Feedmix",
+  "StockSector": "Consumer Services",
+  "Balance": 9397,
+  "Shares": 579,
+  "Ownership": 3.17,
+  "VotingPower": 4.85,
+  "Industry": "Restaurants"
+}, {
+  "id": 52,
+  "Company": "Zoombeat",
+  "StockSector": "Finance",
+  "Balance": 9687,
+  "Shares": 271,
+  "Ownership": 0.4,
+  "VotingPower": 4.88,
+  "Industry": "Property-Casualty Insurers"
+}, {
+  "id": 53,
+  "Company": "Edgepulse",
+  "StockSector": "Health Care",
+  "Balance": 7402,
+  "Shares": 697,
+  "Ownership": 4.36,
+  "VotingPower": 2.51,
+  "Industry": "Biotechnology: Biological Products (No Diagnostic Substances)"
+}, {
+  "id": 54,
+  "Company": "Yambee",
+  "StockSector": "Capital Goods",
+  "Balance": 8818,
+  "Shares": 479,
+  "Ownership": 2.11,
+  "VotingPower": 2.48,
+  "Industry": "Construction/Ag Equipment/Trucks"
+}, {
+  "id": 55,
+  "Company": "Photobug",
+  "StockSector": "n/a",
+  "Balance": 1882,
+  "Shares": 425,
+  "Ownership": 1.9,
+  "VotingPower": 1.19,
+  "Industry": "n/a"
+}, {
+  "id": 56,
+  "Company": "Izio",
+  "StockSector": "Health Care",
+  "Balance": 6950,
+  "Shares": 963,
+  "Ownership": 1.08,
+  "VotingPower": 1.05,
+  "Industry": "Medical Electronics"
+}, {
+  "id": 57,
+  "Company": "Demimbu",
+  "StockSector": "Finance",
+  "Balance": 2850,
+  "Shares": 264,
+  "Ownership": 1.61,
+  "VotingPower": 0.04,
+  "Industry": "Major Banks"
+}, {
+  "id": 58,
+  "Company": "Kwimbee",
+  "StockSector": "n/a",
+  "Balance": 4425,
+  "Shares": 839,
+  "Ownership": 1.34,
+  "VotingPower": 4.3,
+  "Industry": "n/a"
+}, {
+  "id": 59,
+  "Company": "Trudeo",
+  "StockSector": "Health Care",
+  "Balance": 9755,
+  "Shares": 506,
+  "Ownership": 4.68,
+  "VotingPower": 3.41,
+  "Industry": "Medical/Dental Instruments"
+}, {
+  "id": 60,
+  "Company": "Zoomlounge",
+  "StockSector": "Consumer Services",
+  "Balance": 9450,
+  "Shares": 993,
+  "Ownership": 4.61,
+  "VotingPower": 0.89,
+  "Industry": "Marine Transportation"
+}, {
+  "id": 61,
+  "Company": "Livefish",
+  "StockSector": "n/a",
+  "Balance": 3738,
+  "Shares": 583,
+  "Ownership": 2.23,
+  "VotingPower": 3.73,
+  "Industry": "n/a"
+}, {
+  "id": 62,
+  "Company": "Minyx",
+  "StockSector": "Technology",
+  "Balance": 9100,
+  "Shares": 851,
+  "Ownership": 3.58,
+  "VotingPower": 0.31,
+  "Industry": "Semiconductors"
+}, {
+  "id": 63,
+  "Company": "Topicshots",
+  "StockSector": "Consumer Non-Durables",
+  "Balance": 2646,
+  "Shares": 509,
+  "Ownership": 3.38,
+  "VotingPower": 3.52,
+  "Industry": "Shoe Manufacturing"
+}, {
+  "id": 64,
+  "Company": "Jayo",
+  "StockSector": "Health Care",
+  "Balance": 2540,
+  "Shares": 504,
+  "Ownership": 0.16,
+  "VotingPower": 1.63,
+  "Industry": "Biotechnology: Commercial Physical & Biological Resarch"
+}, {
+  "id": 65,
+  "Company": "Roomm",
+  "StockSector": "Health Care",
+  "Balance": 6191,
+  "Shares": 842,
+  "Ownership": 0.52,
+  "VotingPower": 2.16,
+  "Industry": "Major Pharmaceuticals"
+}, {
+  "id": 66,
+  "Company": "Oyope",
+  "StockSector": "Technology",
+  "Balance": 9559,
+  "Shares": 856,
+  "Ownership": 3.8,
+  "VotingPower": 0.77,
+  "Industry": "Industrial Machinery/Components"
+}, {
+  "id": 67,
+  "Company": "Camido",
+  "StockSector": "n/a",
+  "Balance": 2100,
+  "Shares": 647,
+  "Ownership": 0.15,
+  "VotingPower": 4.73,
+  "Industry": "n/a"
+}, {
+  "id": 68,
+  "Company": "Wordpedia",
+  "StockSector": "n/a",
+  "Balance": 2470,
+  "Shares": 734,
+  "Ownership": 2.87,
+  "VotingPower": 2.76,
+  "Industry": "n/a"
+}, {
+  "id": 69,
+  "Company": "Quinu",
+  "StockSector": "Technology",
+  "Balance": 2791,
+  "Shares": 910,
+  "Ownership": 4.11,
+  "VotingPower": 4.44,
+  "Industry": "Computer Software: Prepackaged Software"
+}, {
+  "id": 70,
+  "Company": "Trilith",
+  "StockSector": "Finance",
+  "Balance": 8066,
+  "Shares": 870,
+  "Ownership": 0.2,
+  "VotingPower": 3.71,
+  "Industry": "Finance: Consumer Services"
+}, {
+  "id": 71,
+  "Company": "Voonix",
+  "StockSector": "Finance",
+  "Balance": 6324,
+  "Shares": 123,
+  "Ownership": 0.17,
+  "VotingPower": 2.83,
+  "Industry": "Investment Managers"
+}, {
+  "id": 72,
+  "Company": "Chatterbridge",
+  "StockSector": "Health Care",
+  "Balance": 7608,
+  "Shares": 493,
+  "Ownership": 2.72,
+  "VotingPower": 3.22,
+  "Industry": "Biotechnology: Commercial Physical & Biological Resarch"
+}, {
+  "id": 73,
+  "Company": "Realbuzz",
+  "StockSector": "Health Care",
+  "Balance": 1988,
+  "Shares": 859,
+  "Ownership": 1.54,
+  "VotingPower": 4.62,
+  "Industry": "Biotechnology: Biological Products (No Diagnostic Substances)"
+}, {
+  "id": 74,
+  "Company": "Blogspan",
+  "StockSector": "Basic Industries",
+  "Balance": 9186,
+  "Shares": 374,
+  "Ownership": 3.66,
+  "VotingPower": 3.83,
+  "Industry": "Mining & Quarrying of Nonmetallic Minerals (No Fuels)"
+}, {
+  "id": 75,
+  "Company": "Twitterbeat",
+  "StockSector": "Technology",
+  "Balance": 9997,
+  "Shares": 710,
+  "Ownership": 0.69,
+  "VotingPower": 1.8,
+  "Industry": "Computer Communications Equipment"
+}, {
+  "id": 76,
+  "Company": "Ailane",
+  "StockSector": "Energy",
+  "Balance": 6858,
+  "Shares": 708,
+  "Ownership": 2.47,
+  "VotingPower": 1.08,
+  "Industry": "Natural Gas Distribution"
+}, {
+  "id": 77,
+  "Company": "Pixonyx",
+  "StockSector": "Technology",
+  "Balance": 9713,
+  "Shares": 474,
+  "Ownership": 3.95,
+  "VotingPower": 2.54,
+  "Industry": "EDP Services"
+}, {
+  "id": 78,
+  "Company": "Devbug",
+  "StockSector": "Health Care",
+  "Balance": 5949,
+  "Shares": 780,
+  "Ownership": 3.61,
+  "VotingPower": 1.87,
+  "Industry": "Precision Instruments"
+}, {
+  "id": 79,
+  "Company": "Eayo",
+  "StockSector": "n/a",
+  "Balance": 8294,
+  "Shares": 186,
+  "Ownership": 3.45,
+  "VotingPower": 3.63,
+  "Industry": "n/a"
+}, {
+  "id": 80,
+  "Company": "LiveZ",
+  "StockSector": "Public Utilities",
+  "Balance": 3833,
+  "Shares": 395,
+  "Ownership": 0.3,
+  "VotingPower": 1.08,
+  "Industry": "Electric Utilities: Central"
+}, {
+  "id": 81,
+  "Company": "Bubbletube",
+  "StockSector": "Finance",
+  "Balance": 3853,
+  "Shares": 384,
+  "Ownership": 4.28,
+  "VotingPower": 0.49,
+  "Industry": "Business Services"
+}, {
+  "id": 82,
+  "Company": "Thoughtblab",
+  "StockSector": "Consumer Services",
+  "Balance": 7367,
+  "Shares": 743,
+  "Ownership": 3.6,
+  "VotingPower": 2.57,
+  "Industry": "Newspapers/Magazines"
+}, {
+  "id": 83,
+  "Company": "Rooxo",
+  "StockSector": "Consumer Services",
+  "Balance": 2813,
+  "Shares": 687,
+  "Ownership": 2.69,
+  "VotingPower": 2.87,
+  "Industry": "Services-Misc. Amusement & Recreation"
+}, {
+  "id": 84,
+  "Company": "Blogtag",
+  "StockSector": "Finance",
+  "Balance": 7929,
+  "Shares": 781,
+  "Ownership": 4.6,
+  "VotingPower": 1.89,
+  "Industry": "Real Estate"
+}, {
+  "id": 85,
+  "Company": "Teklist",
+  "StockSector": "Consumer Services",
+  "Balance": 1324,
+  "Shares": 875,
+  "Ownership": 2.51,
+  "VotingPower": 1.64,
+  "Industry": "Other Consumer Services"
+}, {
+  "id": 86,
+  "Company": "Fiveclub",
+  "StockSector": "Health Care",
+  "Balance": 3605,
+  "Shares": 387,
+  "Ownership": 4.97,
+  "VotingPower": 4.69,
+  "Industry": "Biotechnology: Biological Products (No Diagnostic Substances)"
+}, {
+  "id": 87,
+  "Company": "Vitz",
+  "StockSector": "Consumer Durables",
+  "Balance": 3467,
+  "Shares": 979,
+  "Ownership": 3.38,
+  "VotingPower": 4.21,
+  "Industry": "Office Equipment/Supplies/Services"
+}, {
+  "id": 88,
+  "Company": "Linklinks",
+  "StockSector": "Consumer Services",
+  "Balance": 1536,
+  "Shares": 782,
+  "Ownership": 1.49,
+  "VotingPower": 1.68,
+  "Industry": "Department/Specialty Retail Stores"
+}, {
+  "id": 89,
+  "Company": "Yodo",
+  "StockSector": "n/a",
+  "Balance": 4215,
+  "Shares": 980,
+  "Ownership": 1.02,
+  "VotingPower": 3.1,
+  "Industry": "n/a"
+}, {
+  "id": 90,
+  "Company": "Yakidoo",
+  "StockSector": "Technology",
+  "Balance": 6739,
+  "Shares": 738,
+  "Ownership": 2.33,
+  "VotingPower": 1.94,
+  "Industry": "Computer Software: Prepackaged Software"
+}, {
+  "id": 91,
+  "Company": "Yadel",
+  "StockSector": "Technology",
+  "Balance": 1805,
+  "Shares": 220,
+  "Ownership": 4.17,
+  "VotingPower": 3.81,
+  "Industry": "Semiconductors"
+}, {
+  "id": 92,
+  "Company": "Dabjam",
+  "StockSector": "n/a",
+  "Balance": 6396,
+  "Shares": 341,
+  "Ownership": 4.47,
+  "VotingPower": 0.99,
+  "Industry": "n/a"
+}, {
+  "id": 93,
+  "Company": "Quimm",
+  "StockSector": "n/a",
+  "Balance": 5885,
+  "Shares": 560,
+  "Ownership": 2.65,
+  "VotingPower": 2.98,
+  "Industry": "n/a"
+}, {
+  "id": 94,
+  "Company": "Trilia",
+  "StockSector": "Consumer Services",
+  "Balance": 2682,
+  "Shares": 776,
+  "Ownership": 1.6,
+  "VotingPower": 0.82,
+  "Industry": "Marine Transportation"
+}, {
+  "id": 95,
+  "Company": "Devshare",
+  "StockSector": "Miscellaneous",
+  "Balance": 4034,
+  "Shares": 274,
+  "Ownership": 2.03,
+  "VotingPower": 0.05,
+  "Industry": "Business Services"
+}, {
+  "id": 96,
+  "Company": "Realbridge",
+  "StockSector": "n/a",
+  "Balance": 9919,
+  "Shares": 518,
+  "Ownership": 3.2,
+  "VotingPower": 1.67,
+  "Industry": "n/a"
+}, {
+  "id": 97,
+  "Company": "Oloo",
+  "StockSector": "Health Care",
+  "Balance": 4804,
+  "Shares": 765,
+  "Ownership": 1.98,
+  "VotingPower": 2.28,
+  "Industry": "Biotechnology: Biological Products (No Diagnostic Substances)"
+}, {
+  "id": 98,
+  "Company": "Thoughtbeat",
+  "StockSector": "Consumer Services",
+  "Balance": 731,
+  "Shares": 361,
+  "Ownership": 0.99,
+  "VotingPower": 4.29,
+  "Industry": "Department/Specialty Retail Stores"
+}, {
+  "id": 99,
+  "Company": "Dabvine",
+  "StockSector": "Technology",
+  "Balance": 5839,
+  "Shares": 253,
+  "Ownership": 4.76,
+  "VotingPower": 4.8,
+  "Industry": "Semiconductors"
+}, {
+  "id": 100,
+  "Company": "Trudeo",
+  "StockSector": "Technology",
+  "Balance": 9459,
+  "Shares": 149,
+  "Ownership": 3.21,
+  "VotingPower": 1.36,
+  "Industry": "Computer Communications Equipment"
 }
 ]
