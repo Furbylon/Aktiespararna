@@ -5,9 +5,8 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import "../Glömt lösenord/ForgottenPassword.css";
 
-export default function ForgottenPassword() {
+const ForgottenPassword = () => {
   const { register, handleSubmit } = useForm();
-
   const onSubmit = (data) => {
     if (
       JSON.stringify(data.username && data.email) ===
@@ -53,4 +52,6 @@ export default function ForgottenPassword() {
       </div>
     </div>
   );
-}
+};
+
+export default ForgottenPassword;
