@@ -1,5 +1,4 @@
 import React from "react";
-import LastUpdate from "../Components/LastUpdate";
 
 const HemHeader = ({ head }) => {
   return (

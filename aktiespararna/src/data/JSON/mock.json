@@ -20,7 +20,7 @@
   "id": 3,
   "Company": "Voonder",
   "StockSector": "Energy",
-  "Balance": 5048,
+  "Balance": 548,
   "Shares": 962,
   "Ownership": 0.77,
   "VotingPower": 1.8,
@@ -33,7 +33,7 @@
   "Shares": 596,
   "Ownership": 2.48,
   "VotingPower": 0.94,
-  "Industry": "Real Estate Investment"
+  "Industry": "Real Estate Investment Trusts"
 }, {
   "id": 5,
   "Company": "Photolist",
@@ -70,5 +70,50 @@
   "Ownership": 2.18,
   "VotingPower": 4.15,
   "Industry": "Savings Institutions"
+}, {
+  "id": 9,
+  "Company": "Katz",
+  "StockSector": "n/a",
+  "Balance": 9702,
+  "Shares": 252,
+  "Ownership": 0.69,
+  "VotingPower": 2.92,
+  "Industry": "n/a"
+}, {
+  "id": 10,
+  "Company": "Aimbu",
+  "StockSector": "Miscellaneous",
+  "Balance": 4195,
+  "Shares": 494,
+  "Ownership": 3.85,
+  "VotingPower": 0.21,
+  "Industry": "Industrial Machinery/Components"
+}, {
+  "id": 11,
+  "Company": "Kwideo",
+  "StockSector": "Consumer Services",
+  "Balance": 8456,
+  "Shares": 549,
+  "Ownership": 2.36,
+  "VotingPower": 4.36,
+  "Industry": "Hotels/Resorts"
+}, {
+  "id": 12,
+  "Company": "Skimia",
+  "StockSector": "Consumer Services",
+  "Balance": 9413,
+  "Shares": 892,
+  "Ownership": 1.53,
+  "VotingPower": 3.25,
+  "Industry": "Clothing/Shoe/Accessory Stores"
+}, {
+  "id": 13,
+  "Company": "Browsetype",
+  "StockSector": "Finance",
+  "Balance": 987,
+  "Shares": 116,
+  "Ownership": 1.93,
+  "VotingPower": 0.56,
+  "Industry": "Major Banks"
 }
 ]

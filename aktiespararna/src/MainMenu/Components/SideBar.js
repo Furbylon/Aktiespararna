@@ -8,7 +8,7 @@ const Sidebar = () => {
   const closeNavigation = () => {
     document.getElementById("mySideBar").style.width = "0px";
     document.getElementById("mainMenu").style.marginLeft = "0px";
-    document.getElementById("sidebarButton").innerHTML = "close";
+    document.getElementById("sidebarButton").innerHTML = "Open sidebar";
   };
   const Routes = () => (
     <div id="sidebarButtons">

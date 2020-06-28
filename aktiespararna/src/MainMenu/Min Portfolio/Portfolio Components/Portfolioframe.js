@@ -13,7 +13,7 @@ const PortfolioFrame = () => {
   let divided = totalData / 10;
   let pagesArray = [];
   for (let i = 1; i <= divided; i++) {
-    pagesArray.push(i *10);
+    pagesArray.push(i * 10);
   }
   
   if (currentData.length !== 0) {
