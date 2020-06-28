@@ -5,13 +5,15 @@ import profileList from "../../../data/JSON/profil.json";
 const Profile = () => {
   let [profile, setProfile] = useState(profileList.slice(0, 1));
 
-  let handleSubmit = (e) => {};
+  let updateProfile = (e) => {
+
+  };
   let currentProfile = (profile) => {
     return (
       <div key={profile.username}>
         <div id="userProfile"></div>
         <img src={profile.pictureURL} alt="profilePic" id="profilePic"></img>
-        <form name="input" onSubmit={handleSubmit()}>
+        <form name="input" onSubmit={updateProfile}>
           Förnamn
           <input
             type="text"

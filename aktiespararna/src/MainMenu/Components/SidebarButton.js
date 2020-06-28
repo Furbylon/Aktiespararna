@@ -9,6 +9,8 @@ const SidebarButton = () => {
     } else {
       document.getElementById("mySideBar").style.width = "0px";
       document.getElementById("mainMenu").style.marginLeft = "0px";
+      document.getElementById("sidebarButton").innerHTML = "Open sidebar";
+
     }
   };
   return (
