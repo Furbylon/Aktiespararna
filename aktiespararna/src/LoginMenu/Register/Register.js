@@ -1,7 +1,6 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import aktielogoo from "../Login/img/aktielogoo.png";
 import "./Register.css";
-import user from "../../data/JSON/user.json";
 
 const Registration = (props) => {
   const checkAccount = (e) => {

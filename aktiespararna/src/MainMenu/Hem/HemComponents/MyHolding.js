@@ -6,7 +6,7 @@ import LastUpdate from "../../Components/LastUpdate";
 import LinkTo from "./LinkTo";
 
 const MittInnehav = () => {
-  let [preferredCompanies, setPreferredCompanies] = useState(mock.slice(0, 4));
+  let [preferredCompanies] = useState(mock.slice(0, 4));
 
   let max = mock.length;
 
