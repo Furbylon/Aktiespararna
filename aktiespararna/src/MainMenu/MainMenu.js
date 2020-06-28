@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import Home from "./Hem/Home";
 import Portfolio from "./Min Portfolio/Portfolio";
 import Settings from "./UserSettings/Settings";
-import {Route} from "react-router-dom";
+import { Route } from "react-router-dom";
 import Sidebar from "../MainMenu/Components/SideBar";
 
 const MainMenu = (props) => {

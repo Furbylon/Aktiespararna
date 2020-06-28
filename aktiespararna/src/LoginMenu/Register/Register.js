@@ -1,8 +1,7 @@
 import React from "react";
 import aktielogoo from "../Login/img/aktielogoo.png";
-import "./RegistreringStyle.css";
+import "./Register.css";
 import { Link } from "react-router-dom";
-
 
 const Registration = (props) => {
   const checkAccount = (e) => {
@@ -11,9 +10,9 @@ const Registration = (props) => {
       e.target.elements.password.value ===
       e.target.elements.confirmPassword.value
     ) {
-      props.setUsername(e.target.elements.username.value)
-      props.setPassword(e.target.elements.password.value)
-      props.setEmail(e.target.elements.email.value)
+      props.setUsername(e.target.elements.username.value);
+      props.setPassword(e.target.elements.password.value);
+      props.setEmail(e.target.elements.email.value);
       alert("created new account");
     } else {
       alert("Password does not match");
@@ -24,7 +23,7 @@ const Registration = (props) => {
       <img id="logo" src={aktielogoo} alt="logo" />
       <form onSubmit={checkAccount}>
         <p> Registrera ett konto</p>
-        <br></br>
+        <br />
         <p>Username:</p>
         <input id="username" type="text" required />
         <p>email:</p>
@@ -33,13 +32,13 @@ const Registration = (props) => {
         <input id="password" type="password" required />
         <p>Confirm password:</p>
         <input id="confirmPassword" type="password" required />
-        <br></br>
-        <br></br>
+        <br />
+        <br />
         <button>Register</button>
       </form>
       <div id="link">
-      <Link to="/">Start page</Link>
-    </div>
+        <Link to="/">Start page</Link>
+      </div>
     </div>
   );
 };

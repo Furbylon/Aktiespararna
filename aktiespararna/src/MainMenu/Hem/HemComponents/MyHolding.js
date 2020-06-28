@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import mock from "../../../data/JSON/mock.json";
-import IndustryPercentage from "../Hem Components/IndustryPrecentage";
+import IndustryPercentage from "./IndustryPercentage";
 import Header from "../../Components/Header";
 import LastUpdate from "../../Components/LastUpdate";
 import LinkTo from "./LinkTo";
 
 const MittInnehav = () => {
-  let [preferredCompanies, setPreferredCompanies] = useState(mock.slice(0, 4));
+  let [preferredCompanies] = useState(mock.slice(0, 4));
 
   let max = mock.length;
 

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import profileList from "../../../data/JSON/profil.json";
-import ProfileValues from "../Hem Components/ProfileValues";
+import ProfileValues from "./ProfileValues";
 import Header from "../../Components/Header";
-import LinkTo from "./LinkTo"
+import LinkTo from "./LinkTo";
 
 const HemProfil = () => {
-  let [profile, setProfile] = useState(profileList.slice(0, 1));
+  let [profile] = useState(profileList.slice(0, 1));
 
   const showProfile = (profile) => {
     return (
@@ -29,7 +29,7 @@ const HemProfil = () => {
   };
   return (
     <div id="homeProfile" style={{ position: "relative" }}>
-    <LinkTo link={"/mainmenu/settings/profile"} tag={"Redigera"}/>
+      <LinkTo link={"/mainmenu/settings/profile"} tag={"Redigera"} />
       <Header head={"Min Profil"} />
 
       <div id="profileInformation">{profile.map(showProfile)}</div>

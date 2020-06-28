@@ -3,11 +3,9 @@ import "../UserSettings css/UserProfile.css";
 import profileList from "../../../data/JSON/profil.json";
 
 const Profile = () => {
-  let [profile, setProfile] = useState(profileList.slice(0, 1));
+  let [profile] = useState(profileList.slice(0, 1));
 
-  let updateProfile = (e) => {
-
-  };
+  let updateProfile = (e) => {};
   let currentProfile = (profile) => {
     return (
       <div key={profile.username}>
