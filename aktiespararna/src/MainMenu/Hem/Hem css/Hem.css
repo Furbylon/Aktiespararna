@@ -166,3 +166,6 @@ a {
   cursor: pointer;
   border: hidden;
 }
+#profile {
+  border-radius: 50%;
+}
