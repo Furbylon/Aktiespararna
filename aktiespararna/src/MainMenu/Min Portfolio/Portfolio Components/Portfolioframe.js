@@ -15,64 +15,65 @@ const PortfolioFrame = () => {
   for (let i = 1; i <= divided; i++) {
     pagesArray.push(i * 10);
   }
-  
+
   if (currentData.length !== 0) {
     return (
       <div>
-        <p>Visar {currentPage-9} - {currentPage} av {totalData}</p>
-      <div className="portfolioFrames">
-        <table className="portfolioTable" style={{ position: "relative" }}>
-          <thead>
-            <tr id="firstRow">
-              <td>Företag</td>
-              <td>Aktietyp</td>
-              <td>Innehav</td>
-              <td>Antal Aktier</td>
-              <td>Ägarandel</td>
-              <td>Röstvärde</td>
-              <td>Industri</td>
-              <td>Ladda ner</td>
-            </tr>
-          </thead>
-          <tbody>
-            {currentData.map((company, key) => {
-              return (
-                <PortfolioStructure
-                  key={key}
-                  companyName={company.Company}
-                  stockSector={company.StockSector}
-                  balance={company.Balance}
-                  shares={company.Shares}
-                  ownership={company.Ownership}
-                  votingPower={company.VotingPower}
-                  industry={company.Industry}
-                />
-              );
-            })}
-          </tbody>
-        </table>
-        <div id="pageSwitch">
-          <PageSwitch
-            shownData={shownData}
-            totalData={totalData}
-            currentData={currentData}
-            setCurrentData={setCurrentData}
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-            data={data}
-            pagesArray={pagesArray}
-
-          />
-          <SelectBox
-            totalData={totalData}
-            currentData={currentData}
-            setCurrentData={setCurrentData}
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-            data={data}
-          />
+        <p>
+          Visar {currentPage - 9} - {currentPage} av {totalData}
+        </p>
+        <div className="portfolioFrames">
+          <table className="portfolioTable" style={{ position: "relative" }}>
+            <thead>
+              <tr id="firstRow">
+                <td>Företag</td>
+                <td>Aktietyp</td>
+                <td>Innehav</td>
+                <td>Antal Aktier</td>
+                <td>Ägarandel</td>
+                <td>Röstvärde</td>
+                <td>Industri</td>
+                <td>Ladda ner</td>
+              </tr>
+            </thead>
+            <tbody>
+              {currentData.map((company, key) => {
+                return (
+                  <PortfolioStructure
+                    key={key}
+                    companyName={company.Company}
+                    stockSector={company.StockSector}
+                    balance={company.Balance}
+                    shares={company.Shares}
+                    ownership={company.Ownership}
+                    votingPower={company.VotingPower}
+                    industry={company.Industry}
+                  />
+                );
+              })}
+            </tbody>
+          </table>
+          <div id="pageSwitch">
+            <PageSwitch
+              shownData={shownData}
+              totalData={totalData}
+              currentData={currentData}
+              setCurrentData={setCurrentData}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+              data={data}
+              pagesArray={pagesArray}
+            />
+            <SelectBox
+              totalData={totalData}
+              currentData={currentData}
+              setCurrentData={setCurrentData}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+              data={data}
+            />
+          </div>
         </div>
-      </div>
       </div>
     );
   } else {

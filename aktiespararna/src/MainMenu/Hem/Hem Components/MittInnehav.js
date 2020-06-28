@@ -11,9 +11,7 @@ const MittInnehav = () => {
 
   let max = mock.length;
 
-  let remainingCompanies = (
-    mock.slice(5, max)
-  );
+  let remainingCompanies = mock.slice(5, max);
   let sumOfRemaining = 0;
   remainingCompanies.map((values) => {
     return (sumOfRemaining += values.Balance);
@@ -54,7 +52,10 @@ const MittInnehav = () => {
         <LinkTo link={"/mainmenu/portfolio"} tag={"Portfolio"} />
         <p style={{ fontWeight: "lighter" }}>Senast uppdaterad: </p>
         <LastUpdate />
-        <IndustryPercentage companyColours={companyColours} preferredCompanies={preferredCompanies}/>
+        <IndustryPercentage
+          companyColours={companyColours}
+          preferredCompanies={preferredCompanies}
+        />
         {preferredCompanies.map(CheckIfValuesExist)}
         <p
           style={{

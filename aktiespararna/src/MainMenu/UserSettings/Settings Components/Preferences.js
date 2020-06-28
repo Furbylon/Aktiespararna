@@ -10,7 +10,7 @@ const Preferences = () => {
     alert("Integrera Bank :)");
   };
 
-  let ShowMore = (e) => {
+  const ShowMore = (e) => {
     let value = parseInt(e.target.value);
     setMax(value);
     setIndustries(mock.slice(0, max));
@@ -38,7 +38,7 @@ const Preferences = () => {
           Integrera bank
         </Link>
         <br />
-        <input type ="button" value="Spara"></input>
+        <input type="button" value="Spara"></input>
       </form>
     </div>
   );
