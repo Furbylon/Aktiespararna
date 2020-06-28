@@ -1,9 +1,9 @@
 import React from "react";
 import aktielogoo from "../Login/img/aktielogoo.png";
-import userData from "../../../src/data/JSON/user.json";
+import userData from "../../data/JSON/user.json";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import "../Glömt lösenord/ForgottenPassword.css";
+import "./ForgottenPassword.css";
 
 const ForgottenPassword = () => {
   const { register, handleSubmit } = useForm();

@@ -1,6 +1,6 @@
 import React from "react";
 import LogoutButton from "./LogoutButton";
-import SidebarButton from "./SidebarButton"
+import SidebarButton from "./SidebarButton";
 
 import { NavLink } from "react-router-dom";
 
@@ -47,11 +47,11 @@ const Sidebar = () => {
 
   return (
     <div>
-    <div id="mySideBar">
-      <Routes />
-      <LogoutButton />
-    </div>
-    <SidebarButton/>
+      <div id="mySideBar">
+        <Routes />
+        <LogoutButton />
+      </div>
+      <SidebarButton />
     </div>
   );
 };

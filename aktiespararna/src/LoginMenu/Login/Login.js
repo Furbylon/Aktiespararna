@@ -2,7 +2,7 @@ import React from "react";
 import aktielogoo from "./img/aktielogoo.png";
 import { useForm } from "react-hook-form";
 import { Link, useHistory } from "react-router-dom";
-import "../Login/LoginStyle.css";
+import "../Login/Login.css";
 
 const Login = (props) => {
   const { register, handleSubmit } = useForm();
@@ -10,9 +10,10 @@ const Login = (props) => {
   const history = useHistory();
 
   const onSubmit = (data) => {
-    console.log(props.match.params.username)
+    console.log(props.match.params.username);
     if (
-      (data.username && data.password) === (props.match.params.username && props.match.params.password)
+      (data.username && data.password) ===
+      (props.match.params.username && props.match.params.password)
     ) {
       return history.push("/mainMenu/home");
     } else {

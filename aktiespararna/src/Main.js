@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import Login from "./LoginMenu/Login/Login";
-import Registrering from "./LoginMenu/Registrering/Registrering";
-import GlömtLösenord from "./LoginMenu/Glömt lösenord/GlömtLösenord";
+import Registrering from "./LoginMenu/Register/Register";
+import GlömtLösenord from "./LoginMenu/ForgottenPassword/ForgottenPassword";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import Mainmenu from "./MainMenu/MainMenu";
 
@@ -24,11 +24,19 @@ const Main = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" component={Login} exact={true} />
-        <Route path="/registration" render={() => (
-          <Registrering username={username} setUsername={setUsername} setPassword={setPassword} setEmail={setEmail}/>
-        )} />
-        <Route path="/forgotpassword" component={(GlömtLösenord)} />
-        <Mainmenu MissingPage={MissingPage}/>
+        <Route
+          path="/registration"
+          render={() => (
+            <Registrering
+              username={username}
+              setUsername={setUsername}
+              setPassword={setPassword}
+              setEmail={setEmail}
+            />
+          )}
+        />
+        <Route path="/forgotpassword" component={GlömtLösenord} />
+        <Mainmenu MissingPage={MissingPage} />
       </Switch>
     </BrowserRouter>
   );

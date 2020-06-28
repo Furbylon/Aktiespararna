@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import mock from "../../../data/JSON/mock.json";
-import IndustryPercentage from "../Hem Components/IndustryPrecentage";
+import IndustryPercentage from "./IndustryPercentage";
 import Header from "../../Components/Header";
 import LastUpdate from "../../Components/LastUpdate";
 import LinkTo from "./LinkTo";

@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import aktielogoo from "../Login/img/aktielogoo.png";
-import "./RegistreringStyle.css";
+import "./Register.css";
 import user from "../../data/JSON/user.json";
 
 const Registration = (props) => {
@@ -10,9 +10,9 @@ const Registration = (props) => {
       e.target.elements.password.value ===
       e.target.elements.confirmPassword.value
     ) {
-      props.setUsername(e.target.elements.username.value)
-      props.setPassword(e.target.elements.password.value)
-      props.setEmail(e.target.elements.email.value)
+      props.setUsername(e.target.elements.username.value);
+      props.setPassword(e.target.elements.password.value);
+      props.setEmail(e.target.elements.email.value);
       alert("created new account");
     } else {
       alert("Password does not match");
