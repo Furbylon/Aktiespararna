@@ -25,15 +25,15 @@ const Login = (props) => {
         <img id="logo" src={aktielogoo} alt="logo" />
         <form name="userinput" onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="username">Username:</label>
-          <br></br>
+          <br />
           <input type="text" name="username" ref={register} required />
-          <br></br>
+          <br />
           <label htmlFor="password">Password:</label>
-          <br></br>
+          <br />
           <input type="password" name="password" ref={register} required />
-          <br></br>
+          <br />
           <input type="submit" value="Logga in" />
-          <br></br>
+          <br />
           <p>Saknar konto?</p>
           <Link to="/registration">Registrera</Link>
           <br />

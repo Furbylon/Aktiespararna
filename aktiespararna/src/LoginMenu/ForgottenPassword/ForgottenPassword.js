@@ -19,19 +19,19 @@ const ForgottenPassword = (props) => {
       <img id="logo" src={aktielogoo} alt="logo" />
       <form onSubmit={checkPassword}>
         <p htmlFor="username">Username:</p>
-        <br></br>
+        <br />
         <input type="text" id="username" placeholder="username" required />
-        <br></br>
+        <br />
         <label htmlFor="email">Email:</label>
-        <br></br>
+        <br />
         <input type="text" id="email" placeholder="Email" required />
-        <br></br>
+        <br />
         <div id="button">
           <button>Hämta lösenord</button>
         </div>
-        <br></br>
+        <br />
       </form>
-      <br></br>
+      <br />
       <div id="link">
         <Link to="/">Start page</Link>
       </div>
