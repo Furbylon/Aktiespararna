@@ -9,7 +9,17 @@ const Settings = (props) => {
       <div id="settingsHeader">
         <Header head={"Inställningar"} />
       </div>
-      <Route path="/mainMenu/settings" render={() => <SettingsFrame password ={props.password} setPassword={props.setPassword}/>}/>
+      <Route
+        path="/mainMenu/settings"
+        render={() => (
+          <SettingsFrame
+            password={props.password}
+            setPassword={props.setPassword}
+            preferredValues={props.preferredValues}
+            setPreferredValues={props.setPreferredValues}
+          />
+        )}
+      />
     </div>
   );
 };
