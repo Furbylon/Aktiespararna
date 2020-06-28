@@ -3,7 +3,7 @@ import aktielogoo from "../Login/img/aktielogoo.png";
 import userData from "../../../src/data/JSON/user.json";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import css from "../Glömt lösenord/ForgottenPassword.css";
+import "../Glömt lösenord/ForgottenPassword.css";
 
 export default function ForgottenPassword() {
   const { register, handleSubmit } = useForm();
@@ -49,7 +49,7 @@ export default function ForgottenPassword() {
       </form>
       <br></br>
       <div id="link">
-        <Link to="/login">Start page</Link>
+        <Link to="/">Start page</Link>
       </div>
     </div>
   );
