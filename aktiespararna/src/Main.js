@@ -11,9 +11,7 @@ const Main = () => {
   let [password, setPassword] = useState();
   let [email, setEmail] = useState();
 
-  useEffect(() => {
-    console.log(username, password, email);
-  });
+  
   const MissingPage = () => (
     <div>
       404 -{" "}

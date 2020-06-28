@@ -4,8 +4,7 @@ import ProfileValues from "./ProfileValues";
 import Header from "../../Components/Header";
 import LinkTo from "./LinkTo";
 
-const HemProfil = () => {
-  let [profile] = useState(profileList.slice(0, 1));
+const HemProfil = (props) => {
 
   const showProfile = (profile) => {
     return (
@@ -32,7 +31,7 @@ const HemProfil = () => {
       <LinkTo link={"/mainmenu/settings/profile"} tag={"Redigera"} />
       <Header head={"Min Profil"} />
 
-      <div id="profileInformation">{profile.map(showProfile)}</div>
+      <div id="profileInformation">{props.profile.map(showProfile)}</div>
     </div>
   );
 };

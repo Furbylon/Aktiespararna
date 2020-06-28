@@ -17,6 +17,8 @@ const Settings = (props) => {
             setPassword={props.setPassword}
             preferredValues={props.preferredValues}
             setPreferredValues={props.setPreferredValues}
+            profile={props.profile}
+            setProfile={props.setProfile}
           />
         )}
       />

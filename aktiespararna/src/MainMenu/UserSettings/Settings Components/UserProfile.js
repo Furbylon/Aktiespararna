@@ -1,78 +1,76 @@
-import React, { useState } from "react";
+import React from "react";
 import "../UserSettings css/UserProfile.css";
-import profileList from "../../../data/JSON/profil.json";
 
-const Profile = () => {
-  let [profile] = useState(profileList.slice(0, 1));
+const Profile = (props) => {
+  console.log(props.profile);
 
-  let updateProfile = (e) => {};
   let currentProfile = (profile) => {
     return (
-      <div key={profile.username}>
+      <div key={profile.id}>
         <div id="userProfile"></div>
         <img src={profile.pictureURL} alt="profilePic" id="profilePic"></img>
-        <form name="input" onSubmit={updateProfile}>
+        <form name="input">
           Förnamn
           <input
             type="text"
-            name="firstNameInput"
+            id="firstNameInput"
             placeholder={profile.firstName}
           ></input>
           <br />
           Efternamn
           <input
             type="text"
-            name="lastNameInput"
+            id="lastNameInput"
             placeholder={profile.lastName}
           ></input>
           <br />
           Personnummer
           <input
             type="text"
-            name="personalNumberInput"
+            id="personalNumberInput"
             placeholder={profile.personalNumber}
           ></input>
           <br />
           Adress
           <input
             type="text"
-            name="adressInput"
+            id="adressInput"
             placeholder={profile.address}
           ></input>
           <br />
           Postort
           <input
             type="text"
-            name="postTownInput"
+            id="postTownInput"
             placeholder={profile.postTown}
           ></input>
           <br />
           Postnummer
           <input
             type="text"
-            name="postNumberInput"
+            id="postNumberInput"
             placeholder={profile.postNumber}
           ></input>
           <br />
           Telefonnummer
           <input
             type="text"
-            name="telephoneNumberInput"
+            id="telephoneNumberInput"
             placeholder={profile.telephone}
           ></input>
           <br />
           Email
           <input
             type="text"
-            name="emailInput"
+            id="emailInput"
             placeholder={profile.email}
           ></input>
           <br />
-          <input type="submit" id="profileSaveButton" value="Save" />
+          <input type="button" id="profileSaveButton" value="Save"/>
         </form>
       </div>
     );
   };
-  return <div>{profile.map(currentProfile)}</div>;
+  return props.profile.map(currentProfile)
 };
 export default Profile;

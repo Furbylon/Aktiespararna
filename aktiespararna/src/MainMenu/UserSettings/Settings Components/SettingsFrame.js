@@ -44,7 +44,15 @@ const SettingsFrame = (props) => {
   const Routes = () => {
     return (
       <div>
-        <Route path="/mainMenu/settings/profile" component={UserSettings} />
+        <Route
+          path="/mainMenu/settings/profile"
+          render={() => (
+            <UserSettings
+              profile={props.profile}
+              setProfile={props.setProfile}
+            />
+          )}
+        />
         <Route
           path="/mainMenu/settings/passwordchange"
           render={() => (
@@ -54,12 +62,15 @@ const SettingsFrame = (props) => {
             />
           )}
         />
-        <Route path="/mainMenu/settings/preferences" render={() => (
+        <Route
+          path="/mainMenu/settings/preferences"
+          render={() => (
             <Preferences
               preferredValues={props.preferredValues}
               setPreferredValues={props.setPreferredValues}
             />
-          )} />
+          )}
+        />
       </div>
     );
   };
