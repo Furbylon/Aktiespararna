@@ -147,7 +147,8 @@ li {
   transition: 0.1s;
   font-size: 20px;
 }
-a.sideButton {
+a.sideButton,
+a.links {
   text-decoration: none;
   color: white;
   font-weight: normal;
