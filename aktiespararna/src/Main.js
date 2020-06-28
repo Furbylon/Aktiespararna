@@ -42,7 +42,7 @@ const Main = () => {
           )}
         />
         <Route path="/forgotpassword" render={() => <GlömtLösenord username={username} password={password} email={email}/>} />
-        <Mainmenu MissingPage={MissingPage} />
+        <Mainmenu MissingPage={MissingPage} password={password} setPassword={setPassword}/>
       </Switch>
     </BrowserRouter>
   );

@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 import user from "../../../data/JSON/user.json";
 
-const PasswordChange = () => {
-  let [password, setPassword] = useState(user.password);
-  console.log(password);
+const PasswordChange = (props) => {
+  console.log(props.password);
 
   const changePassword = (e) => {
     e.preventDefault();
-    if (e.target.elements.currentPassword.value === password) {
+    if (e.target.elements.currentPassword.value === props.password) {
       if (
         e.target.elements.newPassword.value ===
         e.target.elements.confirmPassword.value
       ) {
-        setPassword(e.target.elements.newPassword.value);
+        props.setPassword(e.target.elements.newPassword.value);
       } else {
         alert("Password doesn't match")
       }
