@@ -49,7 +49,7 @@ export default function ForgottenPassword() {
       </form>
       <br></br>
       <div id="link">
-        <Link to="/login">Start page</Link>
+        <Link to="/">Start page</Link>
       </div>
     </div>
   );

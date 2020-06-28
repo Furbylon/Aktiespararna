@@ -6,6 +6,10 @@ import {Route} from "react-router-dom";
 import Sidebar from "../MainMenu/Components/SideBar";
 
 const MainMenu = (props) => {
+
+ 
+
+
   return (
     <div id="mainMenu">
       <Route path="/mainMenu" component={Sidebar} />

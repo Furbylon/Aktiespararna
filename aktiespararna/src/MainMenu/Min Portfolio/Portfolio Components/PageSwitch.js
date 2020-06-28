@@ -9,8 +9,8 @@ const PageSwitch = (props) => {
       buttonArr.push(i);
     }
     if (!buttonArr.includes(props.currentPage / 10)) {
-      buttonArr.push(props.currentPage / 10)
-      console.log(buttonArr)
+      buttonArr.push(props.currentPage / 10);
+      console.log(buttonArr);
     }
     numberButtons = buttonArr.map((value) => (
       <button value={props.shownData * value} id="pageButton" key={value}>

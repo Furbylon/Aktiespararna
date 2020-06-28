@@ -1,19 +1,17 @@
-import React from "react";
+import React, {} from "react";
 import aktielogoo from "./img/aktielogoo.png";
-import userData from "../../../src/data/JSON/user.json";
 import { useForm } from "react-hook-form";
 import { Link, useHistory } from "react-router-dom";
-import "../Login/LoginStyle.css"
-export default function Login() {
+import "../Login/LoginStyle.css";
+
+const Login = (props) => {
+ 
   const { register, handleSubmit } = useForm();
+
   const history = useHistory();
 
   const onSubmit = (data) => {
-    if (
-      JSON.stringify(data.username && data.password) ===
-      JSON.stringify(userData.username && userData.password)
-    ) {
-      console.log("Success");
+    if ((data.username && data.password) === (props.username && props.password)) {
       return history.push("/mainMenu/home");
     } else {
       alert("Wrong username/password");
@@ -43,4 +41,5 @@ export default function Login() {
       </div>
     </div>
   );
-}
+};
+export default Login;

@@ -6,14 +6,14 @@ import SelectBox from "./SelectBox";
 
 const PortfolioFrame = () => {
   const shownData = 10;
-  const [currentData, setCurrentData] = useState(data.slice(0, shownData));
-  const [currentPage, setCurrentPage] = useState(10);
+  let [currentData, setCurrentData] = useState(data.slice(0, shownData));
+  let [currentPage, setCurrentPage] = useState(shownData);
 
   let totalData = data.length;
-  let divided = totalData / 10;
+  let divided = totalData / shownData;
   let pagesArray = [];
   for (let i = 1; i <= divided; i++) {
-    pagesArray.push(i * 10);
+    pagesArray.push(i * shownData);
   }
 
   if (currentData.length !== 0) {

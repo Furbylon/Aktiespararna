@@ -1,6 +1,5 @@
 import React from "react";
 import "../UserSettings css/SettingsFrame.css";
-
 import UserSettings from "../Settings Components/UserProfile";
 import PasswordChange from "../Settings Components/PasswordChange";
 import Preferences from "../Settings Components/Preferences";

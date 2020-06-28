@@ -24,11 +24,11 @@ const PasswordChange = () => {
     <div id="passwordChange">
       <form onSubmit={changePassword}>
         <p>Nuvarande lösenord</p>
-        <input id="currentPassword" type="text" required></input>
+        <input id="currentPassword" type="text" required/>
         <p>Nytt lösenord</p>
-        <input id="newPassword" type="text" required></input>
+        <input id="newPassword" type="text" required/>
         <p>Bekräfta nytt lösenord</p>
-        <input id="confirmPassword" type="text" required></input>
+        <input id="confirmPassword" type="text" required/>
         <button id="savePasswordChange">Spara</button>
       </form>
     </div>
