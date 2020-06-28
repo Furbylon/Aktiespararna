@@ -1,14 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const LogoutButton = () => {
+  const history = useHistory();
   const CloseNavigation = () => {
     document.getElementById("mySideBar").style.width = "0px";
+    history.push("/");
   };
   return (
     <div>
       <button id="logoutButton" onClick={CloseNavigation}>
-        <Link to="/">Logga ut</Link>
+        Logga ut
       </button>
     </div>
   );
