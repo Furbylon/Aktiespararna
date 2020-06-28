@@ -1,12 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const LinkTo = (props) => {
+  const history = useHistory();
+  const handleClick = () => {
+    history.push(props.link);
+  };
   return (
     <div>
-    <button id={"linkTo"}>
-    <Link to = {props.link}> {props.tag}</Link>
-  </button>
+      <button id={"linkTo"} onClick={handleClick}>
+        <Link to={props.link}> {props.tag}</Link>
+      </button>
     </div>
   );
 };
