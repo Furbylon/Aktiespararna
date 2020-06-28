@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import aktielogoo from "../Login/img/aktielogoo.png";
-import RegistrationStyle from "./RegistreringStyle.css";
+import "./RegistreringStyle.css";
 import user from "../../data/JSON/user.json";
 
 const Registration = (props) => {
@@ -14,7 +14,7 @@ const Registration = (props) => {
       props.setPassword(e.target.elements.password.value);
       props.setEmail(e.target.elements.email.value);
       alert("created new account");
-    } else { 
+    } else {
       alert("Password does not match");
     }
   };

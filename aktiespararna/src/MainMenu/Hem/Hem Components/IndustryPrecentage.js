@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import mock from "../../../data/JSON/mock.json";
 
 let PercentageBar = (props) => {
-  console.log(props.preferredCompanies)
+  console.log(props.preferredCompanies);
   let sum = 0;
   mock.map((values) => {
     return (sum += values.Balance);

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import mock from "../../../data/JSON/mock.json";
 import IndustryPercentage from "../Hem Components/IndustryPrecentage";
 import Header from "../../Components/Header";
