@@ -5,14 +5,13 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import "./ForgottenPassword.css";
 
-const ForgottenPassword = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => {
-    if (
-      JSON.stringify(data.username && data.email) ===
-      JSON.stringify(userData.username && userData.email)
-    ) {
-      alert(JSON.stringify("Your Password is: " + userData.password));
+const ForgottenPassword = (props) => {
+  const checkPassword = (e) => {
+    console.log(e.target.elements.email.value)
+    console.log(props.email)
+    e.preventDefault()
+    if ((e.target.elements.email.value) === (props.email)) {
+      alert("Your Password is: " + props.password);
     } else {
       alert("No username Found");
     }
@@ -20,29 +19,17 @@ const ForgottenPassword = () => {
   return (
     <div id="forgottenPasswordDiv" className="loginMenuPages">
       <img id="logo" src={aktielogoo} alt="logo" />
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="username">Username:</label>
+      <form onSubmit={checkPassword}>
+        <p htmlFor="username">Username:</p>
         <br></br>
-        <input
-          type="text"
-          name="username"
-          placeholder="username"
-          ref={register}
-          required
-        />
+        <input type="text" id="username" placeholder="username" required />
         <br></br>
         <label htmlFor="email">Email:</label>
         <br></br>
-        <input
-          type="text"
-          name="email"
-          placeholder="Email"
-          ref={register}
-          required
-        />
+        <input type="text" id="email" placeholder="Email" required />
         <br></br>
         <div id="button">
-          <input type="submit" value="Retrieve Password" />
+        <button>Hämta lösenord</button>
         </div>
         <br></br>
       </form>

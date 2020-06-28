@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Login from "./LoginMenu/Login/Login";
 import Registrering from "./LoginMenu/Register/Register";
@@ -11,6 +11,9 @@ const Main = () => {
   let [password, setPassword] = useState();
   let [email, setEmail] = useState();
 
+  useEffect(() => {
+    console.log(username, password, email);
+  });
   const MissingPage = () => (
     <div>
       404 -{" "}
@@ -23,7 +26,11 @@ const Main = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={Login} exact={true} />
+        <Route
+          path="/"
+          render={() => <Login username={username} password={password} />}
+          exact={true}
+        />
         <Route
           path="/registration"
           render={() => (
@@ -35,7 +42,16 @@ const Main = () => {
             />
           )}
         />
-        <Route path="/forgotpassword" component={GlömtLösenord} />
+        <Route
+          path="/forgotpassword"
+          render={() => (
+            <GlömtLösenord
+              username={username}
+              password={password}
+              email={email}
+            />
+          )}
+        />
         <Mainmenu MissingPage={MissingPage} />
       </Switch>
     </BrowserRouter>

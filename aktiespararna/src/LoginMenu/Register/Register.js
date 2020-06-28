@@ -1,6 +1,8 @@
 import React from "react";
 import aktielogoo from "../Login/img/aktielogoo.png";
 import "./Register.css";
+import { Link } from "react-router-dom";
+
 
 const Registration = (props) => {
   const checkAccount = (e) => {
@@ -35,6 +37,9 @@ const Registration = (props) => {
         <br></br>
         <button>Register</button>
       </form>
+      <div id="link">
+      <Link to="/">Start page</Link>
+    </div>
     </div>
   );
 };
