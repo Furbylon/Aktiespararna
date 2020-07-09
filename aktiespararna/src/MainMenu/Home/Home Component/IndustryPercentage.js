@@ -15,7 +15,7 @@ let PercentageBar = (props) => {
         <div
           style={{
             width: (props.preferredIndustries[index].Balance / sum) * 1000,
-            background: props.companyColours[index].colour,
+            background: props.companyColours[index].colour
           }}
         >
           ...

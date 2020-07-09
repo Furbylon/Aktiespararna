@@ -5,7 +5,7 @@ const PageSwitch = (props) => {
   let buttonArr = [];
 
   let NativeButtons = () => {
-    while(props.pagesArray.length <= 5) {
+    while (props.pagesArray.length <= 5) {
       for (let i = 1; i <= props.pagesArray.length; i++) {
         buttonArr.push(i);
       }
@@ -19,7 +19,8 @@ const PageSwitch = (props) => {
         </button>
       ));
       return numberButtons;
-    } if (props.pagesArray.length > 5) {
+    }
+    if (props.pagesArray.length > 5) {
       for (let i = 1; i <= 5; i++) {
         buttonArr.push(i);
       }
@@ -34,7 +35,7 @@ const PageSwitch = (props) => {
       ));
       return numberButtons;
     }
-    }
+  };
   let UpdatePage = (e) => {
     let value = parseInt(e.target.value);
     if (e.target.id === "update") {

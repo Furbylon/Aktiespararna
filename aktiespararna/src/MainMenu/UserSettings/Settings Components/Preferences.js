@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Preferences = (props) => {
   let [max, setMax] = useState(5);
   let [industries, setIndustries] = useState(mock.slice(0, max));
-  let all = mock
+  let all = mock;
   let ImplementBank = () => {
     alert("Integrera Bank");
   };
@@ -34,11 +34,16 @@ const Preferences = (props) => {
     checkbox.forEach((checkbox) => {
       checkedIndustries.push(checkbox.value);
     });
-    let newPreferred = []
-    let add = all.filter((values) => values.Industry.includes(checkedIndustries))
-    
-    console.log(newPreferred)
-    props.setPreferredValues(newPreferred)
+    console.log(checkedIndustries);
+    if (checkedIndustries.length <= 4) {
+      let check = mock.filter((values) => {
+        if (checkedIndustries.includes(values.Industry)) return values;
+      });
+      props.setPreferredValues(check)
+      console.log(props.preferredValues)
+    } else {
+      return alert("Kan bara ha max 4 prefererade industrier i taget");
+    }
   };
 
   return (

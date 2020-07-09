@@ -38,7 +38,7 @@ const portfolioValues = ({
         <p>{industry}</p>
       </td>
       <td>
-        <button onClick={downloadValue} id={"downloadButton"}>
+        <button onClick={downloadValue} id="downloadButton">
           Ladda ner
         </button>
       </td>

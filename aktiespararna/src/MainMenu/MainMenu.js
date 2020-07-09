@@ -10,6 +10,7 @@ import companies from "../data/JSON/mock.json";
 const MainMenu = (props) => {
   let [preferredValues, setPreferredValues] = useState(companies.slice(0, 4));
   let [profile, setProfile] = useState(data.slice(0, 1));
+  console.log(preferredValues)
   return (
     <div id="mainMenu">
       <Route path="/mainMenu" component={Sidebar} />
