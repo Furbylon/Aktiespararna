@@ -8,16 +8,23 @@ import data from "../data/JSON/profil.json";
 import companies from "../data/JSON/mock.json";
 
 const MainMenu = (props) => {
-  let [preferredValues, setPreferredValues] = useState(companies.slice(0, 4));
+  let max = companies.length;
+  let [preferredIndustries, setPreferredIndustries] = useState(companies.slice(0, 4));
   let [profile, setProfile] = useState(data.slice(0, 1));
-  console.log(preferredValues)
+  let [remainingIndustries, setRemainingIndustries] = useState(companies.slice(5, max));
+
+  console.log(preferredIndustries);
   return (
     <div id="mainMenu">
       <Route path="/mainMenu" component={Sidebar} />
       <Route
         path="/mainMenu/home"
         render={() => (
-          <Home profile={profile} preferredValues={preferredValues} />
+          <Home
+            profile={profile}
+            preferredIndustries={preferredIndustries}
+            remainingIndustries={remainingIndustries}
+          />
         )}
       />
       <Route path="/mainMenu/portfolio" component={Portfolio} />
@@ -27,8 +34,10 @@ const MainMenu = (props) => {
           <Settings
             profile={profile}
             setProfile={setProfile}
-            preferredValues={preferredValues}
-            setPreferredValues={setPreferredValues}
+            preferredIndustries={preferredIndustries}
+            setPreferredIndustries={setPreferredIndustries}
+            remainingIndustries={remainingIndustries}
+            setRemainingIndustries={setRemainingIndustries}
             password={props.password}
             setPassword={props.setPassword}
           />

@@ -1,18 +1,16 @@
 import React from "react";
-import mock from "../../../data/JSON/mock.json";
 import IndustryPercentage from "./IndustryPercentage";
 import Header from "../../Components/Header";
 import LastUpdate from "../../Components/LastUpdate";
 import LinkTo from "./LinkTo";
+import Remaining from "../Home Component/Remaining"
 
 const MyHoldings = (props) => {
-  let max = mock.length;
-
-  let remainingCompanies = mock.slice(5, max);
   let sumOfRemaining = 0;
-  remainingCompanies.map((values) => {
+  props.remainingIndustries.map((values) => {
     return (sumOfRemaining += values.Balance);
   });
+
   let spacedSum = sumOfRemaining.toLocaleString();
   let companyColours = [
     { colour: "rgb(58, 145, 116)" },
@@ -54,15 +52,7 @@ const MyHoldings = (props) => {
           preferredIndustries={props.preferredIndustries}
         />
         {props.preferredIndustries.map(CheckIfValuesExist)}
-        <p
-          style={{
-            background: "rgb(0, 162, 255)",
-            width: "200px",
-            backgroundSize: "20%",
-          }}
-        >
-          Övrigt: {spacedSum} SEK
-        </p>
+        <Remaining spacedSum ={spacedSum}/>
       </div>
     </div>
   );

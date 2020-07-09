@@ -3,7 +3,7 @@ import HomeProfile from "./Home Component/HomeProfile";
 import MyHolding from "./Home Component/MyHolding";
 import WelcomeMessage from "./Home Component/WelcomeMessage";
 import Header from "../Components/Header";
-import "./Home css/Home.css"
+import "./Home css/Home.css";
 
 const Hem = (props) => {
   return (
@@ -13,8 +13,14 @@ const Hem = (props) => {
       </div>
       <WelcomeMessage />
       <div id="profileAndHoldings">
-        <HomeProfile profile={props.profile} preferredIndustries={props.preferredValues}/>
-        <MyHolding preferredIndustries={props.preferredValues}/>
+        <HomeProfile
+          profile={props.profile}
+          preferredIndustries={props.preferredIndustries}
+        />
+        <MyHolding
+          preferredIndustries={props.preferredIndustries}
+          remainingIndustries={props.remainingIndustries}
+        />
       </div>
     </div>
   );

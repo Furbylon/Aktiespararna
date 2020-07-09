@@ -3,9 +3,13 @@ import mock from "../../../data/JSON/mock.json";
 import { Link } from "react-router-dom";
 
 const Preferences = (props) => {
+  let IndustryArr = []
+  IndustryArr = mock.map((value) => {
+    return value.Industry
+  })
+  let uniqueIndustryArr = Array.from(new Set(IndustryArr))
   let [max, setMax] = useState(5);
-  let [industries, setIndustries] = useState(mock.slice(0, max));
-  let all = mock;
+  let [industries, setIndustries] = useState(uniqueIndustryArr.slice(0, max));
   let ImplementBank = () => {
     alert("Integrera Bank");
   };
@@ -13,14 +17,14 @@ const Preferences = (props) => {
   const ShowMore = (e) => {
     let value = parseInt(e.target.value);
     setMax(value);
-    setIndustries(mock.slice(0, max));
+    setIndustries(uniqueIndustryArr.slice(0, max));
   };
 
-  let currentlyShown = (companies) => {
+  let currentlyShown = (companies, index) => {
     return (
-      <div id={companies.id} key={companies.id}>
-        <input type="checkbox" name="checkbox" value={companies.Industry} />
-        <label htmlFor={companies.id}>{companies.Industry}</label>
+      <div id={index} key={index}>
+        <input type="checkbox" name="checkbox" value={companies} />
+        <label>{companies}</label>
         <br />
       </div>
     );
@@ -39,8 +43,11 @@ const Preferences = (props) => {
       let check = mock.filter((values) => {
         if (checkedIndustries.includes(values.Industry)) return values;
       });
-      props.setPreferredValues(check)
-      console.log(props.preferredValues)
+      let remaining = mock.filter((values) => {
+        if (!checkedIndustries.includes(values.Industry)) return values;
+      });
+      props.setPreferredIndustries(check)
+      props.setRemainingIndustries(remaining)
     } else {
       return alert("Kan bara ha max 4 prefererade industrier i taget");
     }

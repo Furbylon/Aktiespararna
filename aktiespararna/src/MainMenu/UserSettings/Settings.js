@@ -15,8 +15,8 @@ const Settings = (props) => {
           <SettingsFrame
             password={props.password}
             setPassword={props.setPassword}
-            preferredValues={props.preferredValues}
-            setPreferredValues={props.setPreferredValues}
+            setPreferredIndustries={props.setPreferredIndustries}
+            setRemainingIndustries={props.setRemainingIndustries}
             profile={props.profile}
             setProfile={props.setProfile}
           />

@@ -66,8 +66,8 @@ const SettingsFrame = (props) => {
           path="/mainMenu/settings/preferences"
           render={() => (
             <Preferences
-              preferredValues={props.preferredValues}
-              setPreferredValues={props.setPreferredValues}
+            setPreferredIndustries={props.setPreferredIndustries}
+            setRemainingIndustries={props.setRemainingIndustries}
             />
           )}
         />
