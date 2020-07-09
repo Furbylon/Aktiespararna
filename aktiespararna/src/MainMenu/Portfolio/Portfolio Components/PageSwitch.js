@@ -5,20 +5,36 @@ const PageSwitch = (props) => {
   let buttonArr = [];
 
   let NativeButtons = () => {
-    for (let i = 1; i <= 5; i++) {
-      buttonArr.push(i);
+    while(props.pagesArray.length <= 5) {
+      for (let i = 1; i <= props.pagesArray.length; i++) {
+        buttonArr.push(i);
+      }
+      if (!buttonArr.includes(props.currentPage / 10)) {
+        buttonArr.push(props.currentPage / 10);
+        console.log(buttonArr);
+      }
+      numberButtons = buttonArr.map((value) => (
+        <button value={props.shownData * value} id="pageButton" key={value}>
+          {value}
+        </button>
+      ));
+      return numberButtons;
+    } if (props.pagesArray.length > 5) {
+      for (let i = 1; i <= 5; i++) {
+        buttonArr.push(i);
+      }
+      if (!buttonArr.includes(props.currentPage / 10)) {
+        buttonArr.push(props.currentPage / 10);
+        console.log(buttonArr);
+      }
+      numberButtons = buttonArr.map((value) => (
+        <button value={props.shownData * value} id="pageButton" key={value}>
+          {value}
+        </button>
+      ));
+      return numberButtons;
     }
-    if (!buttonArr.includes(props.currentPage / 10)) {
-      buttonArr.push(props.currentPage / 10);
-      console.log(buttonArr);
     }
-    numberButtons = buttonArr.map((value) => (
-      <button value={props.shownData * value} id="pageButton" key={value}>
-        {value}
-      </button>
-    ));
-    return numberButtons;
-  };
   let UpdatePage = (e) => {
     let value = parseInt(e.target.value);
     if (e.target.id === "update") {

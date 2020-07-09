@@ -15,6 +15,7 @@ const PortfolioFrame = () => {
   for (let i = 1; i <= divided; i++) {
     pagesArray.push(i * shownData);
   }
+  console.log(pagesArray.length)
 
   if (currentData.length !== 0) {
     return (

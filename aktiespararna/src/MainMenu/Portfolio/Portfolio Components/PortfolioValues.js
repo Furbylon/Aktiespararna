@@ -12,7 +12,7 @@ const portfolioValues = ({
 }) => {
 
   const downloadValue = () => {
-    alert("Downloading values for " + companyName)
+    alert("Laddar ner data för " + companyName)
   } 
   return (
     <tr id="portfolioGrid">
