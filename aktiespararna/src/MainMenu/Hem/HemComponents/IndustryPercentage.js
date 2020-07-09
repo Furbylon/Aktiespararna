@@ -2,18 +2,18 @@ import React from "react";
 import mock from "../../../data/JSON/mock.json";
 
 let PercentageBar = (props) => {
-  console.log(props.preferredCompanies);
   let sum = 0;
   mock.map((values) => {
     return (sum += values.Balance);
   });
-
+  
+  let spacedSum = sum.toLocaleString();
   const percentageGraph = (companies, index) => {
     return (
-      <div key={props.preferredCompanies[index].id}>
+      <div key={props.preferredIndustries[index].id}>
         <div
           style={{
-            width: (props.preferredCompanies[index].Balance / sum) * 1000,
+            width: (props.preferredIndustries[index].Balance / sum) * 1000,
             background: props.companyColours[index].colour,
           }}
         >
@@ -26,9 +26,9 @@ let PercentageBar = (props) => {
   return (
     <div>
       <div className={"stackGraph"}>
-        {props.preferredCompanies.map(percentageGraph)}
+        {props.preferredIndustries.map(percentageGraph)}
       </div>
-      <h1>{sum} SEK</h1>
+      <h1>{spacedSum} SEK</h1>
     </div>
   );
 };

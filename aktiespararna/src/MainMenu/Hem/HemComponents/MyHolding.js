@@ -5,9 +5,7 @@ import Header from "../../Components/Header";
 import LastUpdate from "../../Components/LastUpdate";
 import LinkTo from "./LinkTo";
 
-const MittInnehav = () => {
-  let [preferredCompanies] = useState(mock.slice(0, 4));
-
+const MittInnehav = (props) => {
   let max = mock.length;
 
   let remainingCompanies = mock.slice(5, max);
@@ -15,7 +13,7 @@ const MittInnehav = () => {
   remainingCompanies.map((values) => {
     return (sumOfRemaining += values.Balance);
   });
-
+  let spacedSum = sumOfRemaining.toLocaleString();
   let companyColours = [
     { colour: "rgb(58, 145, 116)" },
     { colour: "rgb(97, 73, 165)" },
@@ -23,7 +21,7 @@ const MittInnehav = () => {
     { colour: "rgb(193, 224, 81)" },
   ];
   const CheckIfValuesExist = (companies, index) => {
-    if (preferredCompanies.length !== 0) {
+    if (props.preferredIndustries.length !== 0) {
       return (
         <div key={companies.id}>
           <div
@@ -53,9 +51,9 @@ const MittInnehav = () => {
         <LastUpdate />
         <IndustryPercentage
           companyColours={companyColours}
-          preferredCompanies={preferredCompanies}
+          preferredIndustries={props.preferredIndustries}
         />
-        {preferredCompanies.map(CheckIfValuesExist)}
+        {props.preferredIndustries.map(CheckIfValuesExist)}
         <p
           style={{
             background: "rgb(0, 162, 255)",
@@ -63,7 +61,7 @@ const MittInnehav = () => {
             backgroundSize: "20%",
           }}
         >
-          Övrigt: {sumOfRemaining} SEK
+          Övrigt: {spacedSum} SEK
         </p>
       </div>
     </div>

@@ -5,10 +5,9 @@ import { Link } from "react-router-dom";
 const Preferences = (props) => {
   let [max, setMax] = useState(5);
   let [industries, setIndustries] = useState(mock.slice(0, max));
-
-
+  let all = mock
   let ImplementBank = () => {
-    alert("Integrera Bank :)");
+    alert("Integrera Bank");
   };
 
   const ShowMore = (e) => {
@@ -17,27 +16,34 @@ const Preferences = (props) => {
     setIndustries(mock.slice(0, max));
   };
 
-
   let currentlyShown = (companies) => {
     return (
-      <div id="preferences" key={companies.id} value={companies.Industry}>
-        <input id="preferenceBox" type="checkbox" value={companies.Industry}/>
-        {companies.Industry}
+      <div id={companies.id} key={companies.id}>
+        <input type="checkbox" name="checkbox" value={companies.Industry} />
+        <label htmlFor={companies.id}>{companies.Industry}</label>
         <br />
       </div>
     );
   };
+
   let addPreferred = (e) => {
-    let checkbox = document.getElementById("preferenceBox")
-    console.log(checkbox.checked)
-    if(checkbox.checked) {
-      console.log(checkbox)
-      props.setPreferredValues(checkbox.value);
-    }
+    e.preventDefault();
+
+    let checkbox = document.querySelectorAll('input[name="checkbox"]:checked');
+    let checkedIndustries = [];
+    checkbox.forEach((checkbox) => {
+      checkedIndustries.push(checkbox.value);
+    });
+    let newPreferred = []
+    let add = all.filter((values) => values.Industry.includes(checkedIndustries))
+    
+    console.log(newPreferred)
+    props.setPreferredValues(newPreferred)
   };
+
   return (
     <div>
-      <form>
+      <form onSubmit={addPreferred}>
         <p>Mina prefererade industrier att investera inom:</p>
         <button id={"add"} type={"button"} value={max + 5} onClick={ShowMore}>
           Visa fler industrier
@@ -48,7 +54,7 @@ const Preferences = (props) => {
           Integrera bank
         </Link>
         <br />
-        <input type="button" value="Spara" onClick={addPreferred}></input>
+        <input type="submit" value="Spara"></input>
       </form>
     </div>
   );

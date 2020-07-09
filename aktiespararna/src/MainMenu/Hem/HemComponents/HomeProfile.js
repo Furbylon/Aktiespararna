@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import profileList from "../../../data/JSON/profil.json";
+import React from "react";
 import ProfileValues from "./ProfileValues";
 import Header from "../../Components/Header";
 import LinkTo from "./LinkTo";
 
 const HemProfil = (props) => {
-
   const showProfile = (profile) => {
+
     return (
       <ProfileValues
         key={profile.id}
@@ -14,10 +13,10 @@ const HemProfil = (props) => {
         firstName={profile.firstName}
         lastName={profile.lastName}
         personalNumber={profile.personalNumber}
-        industry1={profile.industries[0]}
-        industry2={profile.industries[1]}
-        industry3={profile.industries[2]}
-        industry4={profile.industries[3]}
+        industry1={props.preferredIndustries[0].Industry}
+        industry2={props.preferredIndustries[1].Industry}
+        industry3={props.preferredIndustries[2].Industry}
+        industry4={props.preferredIndustries[3].Industry}
         telephoneNumber={profile.telephone}
         email={profile.email}
         address={profile.address}

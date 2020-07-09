@@ -13,8 +13,8 @@ const Hem = (props) => {
       </div>
       <VälkomstMeddelande />
       <div id="profilOchInnehav">
-        <HemProfil profile={props.profile}/>
-        <MittInnehav/>
+        <HemProfil profile={props.profile} preferredIndustries={props.preferredValues}/>
+        <MittInnehav preferredIndustries={props.preferredValues}/>
       </div>
     </div>
   );

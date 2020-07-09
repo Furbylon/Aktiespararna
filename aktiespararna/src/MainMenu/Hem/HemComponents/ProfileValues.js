@@ -32,9 +32,13 @@ const ProfileValues = ({
       </div>
       <div>
         <h4>Föredragna industrier:</h4>
-        <p>
-          {industry1} {industry2} {industry3} {industry4}
-        </p>
+        {industry1}
+        <br/>
+        {industry2}
+        <br/>
+        {industry3}
+        <br/>
+        {industry4}
       </div>
       <div>
         <br />

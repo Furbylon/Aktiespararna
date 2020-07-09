@@ -2,75 +2,87 @@ import React from "react";
 import "../UserSettings css/UserProfile.css";
 
 const Profile = (props) => {
-  console.log(props.profile);
-
+  let updateProfile = (e) => {
+    e.preventDefault();
+    
+  };
   let currentProfile = (profile) => {
     return (
       <div key={profile.id}>
-        <div id="userProfile"></div>
-        <img src={profile.pictureURL} alt="profilePic" id="profilePic"></img>
-        <form name="input">
+        <form id="profileForm" onSubmit={updateProfile}>
+        
+          <img src={profile.pictureURL} alt="profilePic" id="profilePic"></img>
+          <br />
           Förnamn
           <input
             type="text"
-            id="firstNameInput"
+            name="firstNameInput"
+            value={props.firstName}
             placeholder={profile.firstName}
+            onChange={updateProfile}
           ></input>
           <br />
           Efternamn
           <input
             type="text"
-            id="lastNameInput"
+            name="lastNameInput"
+            value={props.lastName}
             placeholder={profile.lastName}
           ></input>
           <br />
           Personnummer
           <input
             type="text"
-            id="personalNumberInput"
+            name="personalNumberInput"
+            value={props.personalNumber}
             placeholder={profile.personalNumber}
           ></input>
           <br />
           Adress
           <input
             type="text"
-            id="adressInput"
+            name="adressInput"
+            value={props.address}
             placeholder={profile.address}
           ></input>
           <br />
           Postort
           <input
             type="text"
-            id="postTownInput"
+            name="postTownInput"
+            value={props.postTown}
             placeholder={profile.postTown}
           ></input>
           <br />
           Postnummer
           <input
             type="text"
-            id="postNumberInput"
+            name="postNumberInput"
+            value={props.postNumber}
             placeholder={profile.postNumber}
           ></input>
           <br />
           Telefonnummer
           <input
             type="text"
-            id="telephoneNumberInput"
+            name="telephoneNumberInput"
+            value={props.telephone}
             placeholder={profile.telephone}
           ></input>
           <br />
           Email
           <input
             type="text"
-            id="emailInput"
+            name="emailInput"
+            value={props.email}
             placeholder={profile.email}
           ></input>
           <br />
-          <input type="button" id="profileSaveButton" value="Save"/>
+          <input type="submit" id="profileSaveButton" value="Save" />
         </form>
       </div>
     );
   };
-  return props.profile.map(currentProfile)
+  return props.profile.map(currentProfile);
 };
 export default Profile;

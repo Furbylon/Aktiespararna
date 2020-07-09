@@ -1,8 +1,6 @@
 import React from "react";
 
 const PasswordChange = (props) => {
-  console.log(props.password);
-
   const changePassword = (e) => {
     e.preventDefault();
     if (e.target.elements.currentPassword.value === props.password) {

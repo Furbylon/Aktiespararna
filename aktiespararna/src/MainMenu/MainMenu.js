@@ -5,9 +5,10 @@ import Settings from "./UserSettings/Settings";
 import { Route } from "react-router-dom";
 import Sidebar from "../MainMenu/Components/SideBar";
 import data from "../data/JSON/profil.json"
+import companies from "../data/JSON/mock.json"
 
 const MainMenu = (props) => {
- let [preferredValues, setPreferredValues] = useState(0,4)
+ let [preferredValues, setPreferredValues] = useState(companies.slice(0,4))
  let [profile, setProfile] = useState(data.slice(0,1))
   return (
     <div id="mainMenu">
