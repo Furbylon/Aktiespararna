@@ -15,7 +15,7 @@ const SidebarButton = () => {
   };
   return (
     <button id="sidebarButton" onClick={openCloseNavigation}>
-      Open sidebar
+      Öppna sidofält
     </button>
   );
 };

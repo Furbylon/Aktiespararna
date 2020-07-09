@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import mock from "../../../data/JSON/mock.json";
 import IndustryPercentage from "./IndustryPercentage";
 import Header from "../../Components/Header";
 import LastUpdate from "../../Components/LastUpdate";
 import LinkTo from "./LinkTo";
 
-const MittInnehav = (props) => {
+const MyHoldings = (props) => {
   let max = mock.length;
 
   let remainingCompanies = mock.slice(5, max);
@@ -43,7 +43,7 @@ const MittInnehav = (props) => {
   };
 
   return (
-    <div id="mittInnehav" style={{ position: "relative" }}>
+    <div id="myHoldings" style={{ position: "relative" }}>
       <div>
         <Header head={"Mitt Innehav"} />
         <LinkTo link={"/mainmenu/portfolio"} tag={"Portfolio"} />
@@ -68,4 +68,4 @@ const MittInnehav = (props) => {
   );
 };
 
-export default MittInnehav;
+export default MyHoldings;

@@ -1,5 +1,5 @@
 import React from "react";
-import aktielogoo from "./img/aktielogoo.png";
+import shareLogo from "./img/aktielogoo.png";
 import { useForm } from "react-hook-form";
 import { Link, useHistory } from "react-router-dom";
 import "../Login/Login.css";
@@ -22,7 +22,7 @@ const Login = (props) => {
   return (
     <div id="loginDiv" className="loginMenuPages">
       <div id="loginForm">
-        <img id="logo" src={aktielogoo} alt="logo" />
+        <img id="logo" src={shareLogo} alt="logo" />
         <form name="userinput" onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="username">Username:</label>
           <br />

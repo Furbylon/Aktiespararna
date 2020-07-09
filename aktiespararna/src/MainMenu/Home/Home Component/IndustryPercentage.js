@@ -8,6 +8,7 @@ let PercentageBar = (props) => {
   });
   
   let spacedSum = sum.toLocaleString();
+  
   const percentageGraph = (companies, index) => {
     return (
       <div key={props.preferredIndustries[index].id}>

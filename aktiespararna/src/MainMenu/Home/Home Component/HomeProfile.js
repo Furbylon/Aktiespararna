@@ -3,7 +3,7 @@ import ProfileValues from "./ProfileValues";
 import Header from "../../Components/Header";
 import LinkTo from "./LinkTo";
 
-const HemProfil = (props) => {
+const homeProfile = (props) => {
   const showProfile = (profile) => {
 
     return (
@@ -34,4 +34,4 @@ const HemProfil = (props) => {
     </div>
   );
 };
-export default HemProfil;
+export default homeProfile;

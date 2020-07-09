@@ -14,7 +14,7 @@ const PageSelect = (props) => {
 
   let UpdatePage = (e) => {
     props.setCurrentPage(e.target.value);
-    console.log(e.target.value)
+    console.log(e.target.value);
     props.setCurrentData(props.data.slice(e.target.value - 10, e.target.value));
   };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import aktielogoo from "../Login/img/aktielogoo.png";
+import shareLogo from "../Login/img/aktielogoo.png";
 import { Link } from "react-router-dom";
 import "./ForgottenPassword.css";
 
@@ -16,7 +16,7 @@ const ForgottenPassword = (props) => {
   };
   return (
     <div id="forgottenPasswordDiv" className="loginMenuPages">
-      <img id="logo" src={aktielogoo} alt="logo" />
+      <img id="logo" src={shareLogo} alt="logo" />
       <form onSubmit={checkPassword}>
         <p htmlFor="username">Username:</p>
         <br />
@@ -33,7 +33,7 @@ const ForgottenPassword = (props) => {
       </form>
       <br />
       <div id="link">
-        <Link to="/">Start page</Link>
+        <Link to="/">Gå tillbaka</Link>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@
   );
 }
 
-#välkomstMeddelande {
+#welcomMessage {
   border-bottom: rgba(128, 128, 128, 0.541);
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -30,7 +30,7 @@
   margin-left: 5px;
   padding: 0px;
 }
-#profilOchInnehav {
+#profileAndHoldings {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 20px;
@@ -46,7 +46,7 @@
   margin-left: 5px;
 }
 
-#mittInnehav {
+#myHoldings {
   border-radius: 2px;
   background-color: white;
   float: left;
@@ -60,10 +60,6 @@
   width: 60px;
   border: 1px solid #ddd;
   border-radius: 10%;
-  padding: 5px;
-}
-.hemprofilHeader {
-  float: left;
   padding: 5px;
 }
 
