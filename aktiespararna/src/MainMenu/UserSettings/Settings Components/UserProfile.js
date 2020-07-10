@@ -78,7 +78,7 @@ const Profile = (props) => {
             placeholder={profile.email}
           ></input>
           <br />
-          <input type="submit" id="profileSaveButton" value="Save" />
+          <input type="submit" id="profileSaveButton" value="Spara" />
         </form>
       </div>
     );

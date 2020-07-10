@@ -3,11 +3,11 @@ import mock from "../../../data/JSON/mock.json";
 import { Link } from "react-router-dom";
 
 const Preferences = (props) => {
-  let IndustryArr = []
+  let IndustryArr = [];
   IndustryArr = mock.map((value) => {
-    return value.Industry
-  })
-  let uniqueIndustryArr = Array.from(new Set(IndustryArr))
+    return value.Industry;
+  });
+  let uniqueIndustryArr = Array.from(new Set(IndustryArr));
   let [max, setMax] = useState(5);
   let [industries, setIndustries] = useState(uniqueIndustryArr.slice(0, max));
   let ImplementBank = () => {
@@ -41,13 +41,13 @@ const Preferences = (props) => {
     console.log(checkedIndustries);
     if (checkedIndustries.length <= 4) {
       let check = mock.filter((values) => {
-        if (checkedIndustries.includes(values.Industry)) return values;
+        return checkedIndustries.includes(values.Industry);
       });
       let remaining = mock.filter((values) => {
-        if (!checkedIndustries.includes(values.Industry)) return values;
+        return !checkedIndustries.includes(values.Industry);
       });
-      props.setPreferredIndustries(check)
-      props.setRemainingIndustries(remaining)
+      props.setPreferredIndustries(check);
+      props.setRemainingIndustries(remaining);
     } else {
       return alert("Kan bara ha max 4 prefererade industrier i taget");
     }
