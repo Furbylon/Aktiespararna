@@ -9,11 +9,10 @@ import companies from "../data/JSON/mock.json";
 
 const MainMenu = (props) => {
   let max = companies.length;
-  let [preferredIndustries, setPreferredIndustries] = useState(companies.slice(0, 4));
   let [profile, setProfile] = useState(data.slice(0, 1));
+  let [preferredIndustries, setPreferredIndustries] = useState(companies.slice(0, 4));
   let [remainingIndustries, setRemainingIndustries] = useState(companies.slice(5, max));
 
-  console.log(preferredIndustries);
   return (
     <div id="mainMenu">
       <Route path="/mainMenu" component={Sidebar} />

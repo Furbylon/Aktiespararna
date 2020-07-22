@@ -4,13 +4,15 @@ import "../UserSettings css/UserProfile.css";
 const Profile = (props) => {
   let updateProfile = (e) => {
     e.preventDefault();
-    
+    props.setProfile(
+      
+    )
+    console.log(e.target.firstNameInput)
   };
   let currentProfile = (profile) => {
     return (
       <div key={profile.id}>
         <form id="profileForm" onSubmit={updateProfile}>
-        
           <img src={profile.pictureURL} alt="profilePic" id="profilePic"></img>
           <br />
           Förnamn

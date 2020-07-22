@@ -1,9 +1,9 @@
 import React from "react";
-import IndustryPercentage from "./IndustryPercentage";
+import IndustryGraph from "./IndustryGraph";
 import Header from "../../Components/Header";
 import LastUpdate from "../../Components/LastUpdate";
 import LinkTo from "./LinkTo";
-import Remaining from "../Home Component/Remaining"
+import Remaining from "./RemainingSum";
 
 const MyHoldings = (props) => {
   let sumOfRemaining = 0;
@@ -11,22 +11,47 @@ const MyHoldings = (props) => {
     return (sumOfRemaining += values.Balance);
   });
 
+  let IndustryBalance = ({ values }) => {
+    let totalBalance = values.Balance;
+    props.remainingIndustries.forEach((innerValues) => {
+      if (values.Industry === innerValues.Industry) {
+        return (totalBalance += innerValues.Balance);
+      }
+    });
+    return totalBalance.toLocaleString();
+  };
+
   let spacedSum = sumOfRemaining.toLocaleString();
   let companyColours = [
-    { colour: "rgb(58, 145, 116)" },
-    { colour: "rgb(97, 73, 165)" },
-    { colour: "rgb(173, 32, 32)" },
-    { colour: "rgb(193, 224, 81)" },
+    { colour: "rgba(255, 99, 132, 0.2)" },
+    { colour: "rgba(54, 162, 235, 0.2)" },
+    { colour: "rgba(255, 206, 86, 0.2)" },
+    { colour: "rgba(75, 192, 192, 0.2)" },
+    { colour: "rgba(153, 102, 255, 0.2)" },
+  ];
+  let borderColours = [
+    { colour: "rgba(54, 162, 235, 1)" },
+    { colour: "rgba(255, 206, 86, 1)" },
+    { colour: "rgba(75, 192, 192, 1)" },
+    { colour: "rgba(153, 102, 255, 1)" },
+    { colour: "rgba(255, 99, 132, 1)" },
   ];
   const CheckIfValuesExist = (companies, index) => {
     if (props.preferredIndustries.length !== 0) {
       return (
         <div key={companies.id}>
-          <div
-            style={{ background: companyColours[index].colour, width: "200px" }}
-          >
+          <canvas
+            style={{
+              backgroundColor: borderColours[index].colour,
+              width: "10px",
+              height: "30px",
+              position: "absolute",
+              left: "-10px",
+            }}
+          />
+          <div style={{ width: "200px" }}>
             <p>
-              {companies.Industry} {companies.Balance} SEK
+              {companies.Industry} <IndustryBalance values={companies} /> SEK
             </p>
           </div>
         </div>
@@ -39,7 +64,6 @@ const MyHoldings = (props) => {
       );
     }
   };
-
   return (
     <div id="myHoldings" style={{ position: "relative" }}>
       <div>
@@ -47,12 +71,24 @@ const MyHoldings = (props) => {
         <LinkTo link={"/mainmenu/portfolio"} tag={"Portfolio"} />
         <p style={{ fontWeight: "lighter" }}>Senast uppdaterad: </p>
         <LastUpdate />
-        <IndustryPercentage
+        <IndustryGraph
           companyColours={companyColours}
           preferredIndustries={props.preferredIndustries}
+          remainingIndustries={props.remainingIndustries}
+          borderColours={borderColours}
+          sumOfRemaining={sumOfRemaining}
         />
         {props.preferredIndustries.map(CheckIfValuesExist)}
-        <Remaining spacedSum ={spacedSum}/>
+        <canvas
+          style={{
+            backgroundColor: borderColours[4].colour,
+            width: "10px",
+            height: "30px",
+            position: "absolute",
+            left: "-10px",
+          }}
+        />
+        <Remaining spacedSum={spacedSum} />
       </div>
     </div>
   );

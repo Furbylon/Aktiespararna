@@ -166,9 +166,3 @@ a.links {
 #profile {
   border-radius: 50%;
 }
-
-#remaining {
-  background: rgb(0, 162, 255);
-  width: 200px;
-  background-size: 20%;
-}

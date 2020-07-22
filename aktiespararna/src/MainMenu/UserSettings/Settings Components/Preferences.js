@@ -32,20 +32,30 @@ const Preferences = (props) => {
 
   let addPreferred = (e) => {
     e.preventDefault();
-
     let checkbox = document.querySelectorAll('input[name="checkbox"]:checked');
     let checkedIndustries = [];
     checkbox.forEach((checkbox) => {
       checkedIndustries.push(checkbox.value);
     });
-    console.log(checkedIndustries);
     if (checkedIndustries.length <= 4) {
-      let check = mock.filter((values) => {
+      let check = [];
+      check = mock.filter((values) => {
         return checkedIndustries.includes(values.Industry);
       });
+
+      let seen = new Set();
+      let hasDuplicates = (check) => {
+        console.log(check)
+        check.some((current) => {
+          return seen.size === seen.add(current.Industry).size;
+        });
+      };
+      console.log(hasDuplicates(check));
+
       let remaining = mock.filter((values) => {
         return !checkedIndustries.includes(values.Industry);
       });
+
       props.setPreferredIndustries(check);
       props.setRemainingIndustries(remaining);
     } else {
