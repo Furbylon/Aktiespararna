@@ -10,24 +10,38 @@ const MyHoldings = (props) => {
   props.remainingIndustries.map((values) => {
     return (sumOfRemaining += values.Balance);
   });
+  let sumOfTotal = sumOfRemaining;
+  props.preferredIndustries.map((values) => {
+    return (sumOfTotal += values.Balance);
+  });
 
-  let IndustryBalance = ({ values }) => {
+  let IndustryBalance = (values) => {
     let totalBalance = values.Balance;
     props.remainingIndustries.forEach((innerValues) => {
       if (values.Industry === innerValues.Industry) {
         return (totalBalance += innerValues.Balance);
       }
     });
-    return totalBalance.toLocaleString();
+    return totalBalance;
   };
-
+  let totalCompanies = (values) => {
+    let totalCompanies = []
+    totalCompanies.push(values.Company)
+    props.remainingIndustries.forEach((innerValues) => {
+      if(values.Industry === innerValues.Industry) {
+        totalCompanies.push(innerValues.Company)
+      }
+    })
+    return totalCompanies
+  }
+  console.log(props.preferredIndustries);
   let spacedSum = sumOfRemaining.toLocaleString();
   let companyColours = [
-    { colour: "rgba(255, 99, 132, 0.2)" },
     { colour: "rgba(54, 162, 235, 0.2)" },
     { colour: "rgba(255, 206, 86, 0.2)" },
     { colour: "rgba(75, 192, 192, 0.2)" },
     { colour: "rgba(153, 102, 255, 0.2)" },
+    { colour: "rgba(255, 99, 132, 0.2)" },
   ];
   let borderColours = [
     { colour: "rgba(54, 162, 235, 1)" },
@@ -36,10 +50,13 @@ const MyHoldings = (props) => {
     { colour: "rgba(153, 102, 255, 1)" },
     { colour: "rgba(255, 99, 132, 1)" },
   ];
-  const CheckIfValuesExist = (companies, index) => {
+  const CheckIfValuesExist = (industry, index) => {
+    let Balance = IndustryBalance(industry).toLocaleString();
+    let Companies = totalCompanies(industry).join(); 
+    console.log(Companies)
     if (props.preferredIndustries.length !== 0) {
       return (
-        <div key={companies.id}>
+        <div key={industry.id}>
           <canvas
             style={{
               backgroundColor: borderColours[index].colour,
@@ -50,9 +67,9 @@ const MyHoldings = (props) => {
             }}
           />
           <div style={{ width: "200px" }}>
-            <p>
-              {companies.Industry} <IndustryBalance values={companies} /> SEK
-            </p>
+            <p style={{fontWeight: "bold"}}>{industry.Industry}</p>
+            <p>{Companies}</p>
+            <p>{Balance} SEK</p>
           </div>
         </div>
       );
@@ -77,6 +94,8 @@ const MyHoldings = (props) => {
           remainingIndustries={props.remainingIndustries}
           borderColours={borderColours}
           sumOfRemaining={sumOfRemaining}
+          sumOfTotal={sumOfTotal}
+          IndustryBalance={IndustryBalance}
         />
         {props.preferredIndustries.map(CheckIfValuesExist)}
         <canvas

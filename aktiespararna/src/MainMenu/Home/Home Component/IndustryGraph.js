@@ -1,29 +1,33 @@
 import React, { useState } from "react";
-import { HorizontalBar } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
 const PercentageBar = (props) => {
-  console.log(props.companyColours);
-  console.log(props.borderColours);
-  console.log(props.remainingIndustries);
-  console.log(props.preferredIndustries);
-  console.log(props.sumOfRemaining);
-
   let industryName = props.preferredIndustries.map((values) => {
     return values.Industry;
   });
+  industryName.push("Övrigt");
+
   let colours = props.companyColours.map((values) => {
+    console.log(values.colour);
     return values.colour;
   });
+  colours.push();
+
   let percentage = props.preferredIndustries.map((values) => {
-    return values.Balance / props.sumOfRemaining * 100;
+    return (props.IndustryBalance(values) / props.sumOfTotal) * 100;
   });
-  console.log(colours);
-  const [data, setData] = useState({
+
+  percentage.push((props.sumOfRemaining / props.sumOfTotal) * 100);
+
+  console.log(percentage);
+
+  const [data] = useState({
     labels: industryName,
     datasets: [
       {
         data: percentage,
         backgroundColor: colours,
+        hoverBorderColor: "gray",
         borderWidth: 1,
       },
     ],
@@ -32,17 +36,16 @@ const PercentageBar = (props) => {
   return (
     <div className="App">
       <div>
-        <HorizontalBar
+        <Pie
           data={data}
           options={{
-            scales: {
-              scaleShowLabels: "false",
-              xAxes: [{stacked: true}],
-              yAxes: [{stacked: true}]
-            }
-          }}
-          legend={{
-            display: false
+            legend: {
+              display: false,
+            },
+            title: {
+              display: true,
+              text: "Föredragna industrier",
+            },
           }}
         />
       </div>

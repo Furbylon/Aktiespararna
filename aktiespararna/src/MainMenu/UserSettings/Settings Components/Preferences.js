@@ -43,20 +43,20 @@ const Preferences = (props) => {
         return checkedIndustries.includes(values.Industry);
       });
 
-      let seen = new Set();
-      let hasDuplicates = (check) => {
-        console.log(check)
-        check.some((current) => {
-          return seen.size === seen.add(current.Industry).size;
-        });
-      };
-      console.log(hasDuplicates(check));
+      console.log(check);
+
+      const uniqueIndustry = Array.from(
+        new Set(check.map((a) => a.Industry))
+      ).map((Industry) => {
+        return check.find((a) => a.Industry === Industry);
+      });
+
+      console.log(uniqueIndustry);
 
       let remaining = mock.filter((values) => {
         return !checkedIndustries.includes(values.Industry);
       });
-
-      props.setPreferredIndustries(check);
+      props.setPreferredIndustries(uniqueIndustry);
       props.setRemainingIndustries(remaining);
     } else {
       return alert("Kan bara ha max 4 prefererade industrier i taget");
