@@ -72,7 +72,7 @@ const Preferences = (props) => {
         </button>
         {industries.map(currentlyShown)}
         <br />
-        <Link onClick={ImplementBank} to={"/"} style={{ color: "blue" }}>
+        <Link onClick={ImplementBank} style={{ color: "blue" }}>
           Integrera bank
         </Link>
         <br />

@@ -63,7 +63,6 @@ const MyHoldings = (props) => {
     let remaining = unlistedCompanies(industry);
 
     let colour = borderColours();
-
     console.log(colour);
     if (props.preferredIndustries.length !== 0) {
       return (

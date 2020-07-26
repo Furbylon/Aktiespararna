@@ -1,25 +1,30 @@
-import React, { useState } from "react";
-import UserInformation from "../../../data/JSON/profil.json";
+import React from "react";
 import LastUpdate from "../../Components/LastUpdate";
+import mock from "../../../data/JSON/mock.json"
 
-const WelcomeMessage = () => {
-  const [name] = useState(UserInformation.slice(0, 1));
-
-  const addName = (name) => {
+const WelcomeMessage = (props) => {
+  let data = mock.map((val) => {
+    return val
+  })
+  if(data.length > 0) {
     return (
-      <div key={name.id}>
-        <p>
-          Välkommen {name.firstName} {name.lastName}! Ditt innehav blev senast uppdaterat: 
-        </p>
-        <LastUpdate />
+      <div id="welcomeMessage">
+      <p>
+      Välkommen {props.profile.firstName} {props.profile.lastName}! Ditt innehav blev senast uppdaterat: 
+    </p>
+    <LastUpdate />
       </div>
     );
-  };
-  return (
-    <div id="welcomMessage">
-      <div>{name.map(addName)}</div>
-    </div>
-  );
+  }
+  else {
+    return (
+      <div id="welcomeMessage">
+      <p>
+      Välkommen {props.profile.firstName} {props.profile.lastName}! Du har inget innehav tillagt ännu. Du får ett mail såfort det är uppdaterat! 
+    </p>
+      </div>
+    );
+  }
 };
 
 export default WelcomeMessage;

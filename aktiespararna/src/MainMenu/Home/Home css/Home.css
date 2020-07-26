@@ -22,7 +22,7 @@
   );
 }
 
-#welcomMessage {
+#welcomeMessage {
   border-bottom: rgba(128, 128, 128, 0.541);
   border-bottom-width: 5px;
   border-bottom-style: solid;

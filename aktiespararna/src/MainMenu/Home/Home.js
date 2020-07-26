@@ -6,13 +6,12 @@ import Header from "../Components/Header";
 import "./Home css/Home.css";
 
 const Hem = (props) => {
-  console.log(props.profile)
   return (
     <div id="home">
       <div id="homeHeader">
         <Header head={"Aktiespararna - Ditt aktivitetsverktyg"} />
       </div>
-      <WelcomeMessage />
+      <WelcomeMessage profile={props.profile} />
       <div id="profileAndHoldings">
         <HomeProfile
           profile={props.profile}

@@ -4,7 +4,6 @@ import Header from "../../Components/Header";
 import LinkTo from "./LinkTo";
 
 const HomeProfile = (props) => {
-  console.log(props.profile.profilePicture)
   const showProfile = () => {
     return (
       <ProfileValues
