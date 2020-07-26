@@ -5,16 +5,17 @@ const ProfileValues = ({
   firstName,
   lastName,
   personalNumber,
-  industry1,
-  industry2,
-  industry3,
-  industry4,
+  industry,
   telephoneNumber,
   email,
   address,
   postNumber,
   postTown,
 }) => {
+  let industries = industry.map((val) => {
+    return(val.Industry)
+  })
+
   return (
     <div>
       <div>
@@ -32,13 +33,8 @@ const ProfileValues = ({
       </div>
       <div>
         <h4>Föredragna industrier:</h4>
-        {industry1}
+        {industries.join("  :  ")}
         <br/>
-        {industry2}
-        <br/>
-        {industry3}
-        <br/>
-        {industry4}
       </div>
       <div>
         <br />

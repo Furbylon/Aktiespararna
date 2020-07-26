@@ -5,13 +5,13 @@ const PercentageBar = (props) => {
   let industryName = props.preferredIndustries.map((values) => {
     return values.Industry;
   });
+  
   industryName.push("Övrigt");
-
-  let colours = props.companyColours.map((values) => {
+  console.log(props.companyColours());
+  let colours = props.companyColours().map((values) => {
     console.log(values.colour);
     return values.colour;
   });
-  colours.push();
 
   let percentage = props.preferredIndustries.map((values) => {
     return (props.IndustryBalance(values) / props.sumOfTotal) * 100;

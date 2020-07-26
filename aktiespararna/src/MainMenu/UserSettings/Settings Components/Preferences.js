@@ -59,7 +59,7 @@ const Preferences = (props) => {
       props.setPreferredIndustries(uniqueIndustry);
       props.setRemainingIndustries(remaining);
     } else {
-      return alert("Kan bara ha max 4 prefererade industrier i taget");
+      return alert("Det kan endast finnas max fyra prefererade företag ");
     }
   };
 

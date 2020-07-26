@@ -13,10 +13,7 @@ const homeProfile = (props) => {
         firstName={profile.firstName}
         lastName={profile.lastName}
         personalNumber={profile.personalNumber}
-        industry1={props.preferredIndustries[0].Industry}
-        industry2={props.preferredIndustries[1].Industry}
-        industry3={props.preferredIndustries[2].Industry}
-        industry4={props.preferredIndustries[3].Industry}
+        industry={props.preferredIndustries}
         telephoneNumber={profile.telephone}
         email={profile.email}
         address={profile.address}

@@ -3,13 +3,15 @@ import IndustryGraph from "./IndustryGraph";
 import Header from "../../Components/Header";
 import LastUpdate from "../../Components/LastUpdate";
 import LinkTo from "./LinkTo";
-import Remaining from "./RemainingSum";
+import Remaining from "./RemainingIndustries";
+import { companyColours, borderColours, randomColour } from "./GetColour";
 
 const MyHoldings = (props) => {
   let sumOfRemaining = 0;
   props.remainingIndustries.map((values) => {
     return (sumOfRemaining += values.Balance);
   });
+
   let sumOfTotal = sumOfRemaining;
   props.preferredIndustries.map((values) => {
     return (sumOfTotal += values.Balance);
@@ -24,42 +26,51 @@ const MyHoldings = (props) => {
     });
     return totalBalance;
   };
+
   let totalCompanies = (values) => {
-    let totalCompanies = []
-    totalCompanies.push(values.Company)
+    let totalCompanies = [];
+    totalCompanies.push(values.Company);
     props.remainingIndustries.forEach((innerValues) => {
-      if(values.Industry === innerValues.Industry) {
-        totalCompanies.push(innerValues.Company)
+      if (values.Industry === innerValues.Industry) {
+        totalCompanies.push(innerValues.Company);
       }
-    })
-    return totalCompanies
-  }
-  console.log(props.preferredIndustries);
+    });
+    return totalCompanies;
+  };
+
+  let unlistedCompanies = (values) => {
+    let totalCompanies = [];
+    totalCompanies.push(values.Company);
+    props.remainingIndustries.forEach((innerValues) => {
+      if (values.Industry === innerValues.Industry) {
+        totalCompanies.push(innerValues.Company);
+      }
+    });
+    if (totalCompanies.length - 2 >= 1) {
+      let remain = totalCompanies.length - 2;
+      remain.toString();
+
+      return "+" + remain;
+    }
+  };
+
   let spacedSum = sumOfRemaining.toLocaleString();
-  let companyColours = [
-    { colour: "rgba(54, 162, 235, 0.2)" },
-    { colour: "rgba(255, 206, 86, 0.2)" },
-    { colour: "rgba(75, 192, 192, 0.2)" },
-    { colour: "rgba(153, 102, 255, 0.2)" },
-    { colour: "rgba(255, 99, 132, 0.2)" },
-  ];
-  let borderColours = [
-    { colour: "rgba(54, 162, 235, 1)" },
-    { colour: "rgba(255, 206, 86, 1)" },
-    { colour: "rgba(75, 192, 192, 1)" },
-    { colour: "rgba(153, 102, 255, 1)" },
-    { colour: "rgba(255, 99, 132, 1)" },
-  ];
+
   const CheckIfValuesExist = (industry, index) => {
     let Balance = IndustryBalance(industry).toLocaleString();
-    let Companies = totalCompanies(industry).join(); 
-    console.log(Companies)
+    let CompanyOne = totalCompanies(industry)[0];
+    let CompanyTwo = totalCompanies(industry)[1];
+    let remaining = unlistedCompanies(industry);
+
+    let colour = borderColours();
+
+    console.log(colour);
     if (props.preferredIndustries.length !== 0) {
       return (
         <div key={industry.id}>
           <canvas
             style={{
-              backgroundColor: borderColours[index].colour,
+              backgroundColor: colour[index].colour,
               width: "10px",
               height: "30px",
               position: "absolute",
@@ -67,9 +78,11 @@ const MyHoldings = (props) => {
             }}
           />
           <div style={{ width: "200px" }}>
-            <p style={{fontWeight: "bold"}}>{industry.Industry}</p>
-            <p>{Companies}</p>
-            <p>{Balance} SEK</p>
+            <p style={{ fontWeight: "bold" }}>{industry.Industry}</p>
+            <p>
+              Företag: {CompanyOne}, {CompanyTwo} {remaining}
+            </p>
+            <p>Innehav: {Balance} SEK</p>
           </div>
         </div>
       );
@@ -81,6 +94,7 @@ const MyHoldings = (props) => {
       );
     }
   };
+  let lastColour = borderColours().length - 1;
   return (
     <div id="myHoldings" style={{ position: "relative" }}>
       <div>
@@ -96,18 +110,22 @@ const MyHoldings = (props) => {
           sumOfRemaining={sumOfRemaining}
           sumOfTotal={sumOfTotal}
           IndustryBalance={IndustryBalance}
+          randomColour={randomColour}
         />
         {props.preferredIndustries.map(CheckIfValuesExist)}
         <canvas
           style={{
-            backgroundColor: borderColours[4].colour,
+            backgroundColor: borderColours()[lastColour].colour,
             width: "10px",
             height: "30px",
             position: "absolute",
             left: "-10px",
           }}
         />
-        <Remaining spacedSum={spacedSum} />
+        <Remaining
+          spacedSum={spacedSum}
+          remainingIndustries={props.remainingIndustries}
+        />
       </div>
     </div>
   );
