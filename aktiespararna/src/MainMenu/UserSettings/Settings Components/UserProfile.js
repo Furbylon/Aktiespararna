@@ -16,18 +16,15 @@ const Profile = (props) => {
       email: e.target.elements.emailInput.value,
     });
   };
-  const inpFile = document.getElementById("profilePictureInput");
-  const previewContainer = document.getElementById("imagePreview");
-  console.log(previewContainer);
-  const previewImage = previewContainer.querySelector(".image-preview__image");
-  const previewDefaultText = previewContainer.querySelector(
-    ".image-preview__default-text"
-  );
-  inpFile.addEventListener("change", () => {
-    const file = this.files[0];
 
-    console.log(file);
-  });
+  let showPreview = (e) => {
+    if (e.target.files.length > 0) {
+      let src = URL.createObjectURL(e.target.files[0]);
+      let preview = document.getElementById("preview");
+      preview.src = src;
+      preview.style.display = "block";
+    }
+  };
   return (
     <div>
       <form id="profileForm" onSubmit={updateProfile}>
@@ -38,9 +35,10 @@ const Profile = (props) => {
           name="profilePictureInput"
           id="profilePictureInput"
           accept="image/"
-          onChange="showPreview(event);"
+          onChange={showPreview}
         />
-        <div class="preview"></div>
+        <div className="preview"></div>
+        <img style={{ width: "100px" }} id="preview" alt="Förhandsvisning" />
         <br />
         Förnamn
         <input
