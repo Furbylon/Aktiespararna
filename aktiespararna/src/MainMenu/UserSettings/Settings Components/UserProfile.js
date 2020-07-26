@@ -5,7 +5,9 @@ const Profile = (props) => {
   let updateProfile = (e) => {
     e.preventDefault();
     props.setProfile({
-      profilePicture: e.target.value.profilePictureInput.value,
+      profilePicture: URL.createObjectURL(
+        e.target.elements.profilePictureInput.files[0]
+      ),
       firstName: e.target.elements.firstNameInput.value,
       lastName: e.target.elements.lastNameInput.value,
       personalNumber: e.target.elements.personalNumberInput.value,
@@ -16,7 +18,7 @@ const Profile = (props) => {
       email: e.target.elements.emailInput.value,
     });
   };
-
+  console.log(props.profile)
   let showPreview = (e) => {
     if (e.target.files.length > 0) {
       let src = URL.createObjectURL(e.target.files[0]);
@@ -38,9 +40,10 @@ const Profile = (props) => {
           onChange={showPreview}
         />
         <div className="preview"></div>
-        <img style={{ width: "100px" }} id="preview" alt="Förhandsvisning" />
+        <img style={{ width: "100px" }} id="preview" alt="" />
         <br />
         Förnamn
+        <br />
         <input
           type="text"
           id="firstNameInput"
@@ -49,6 +52,7 @@ const Profile = (props) => {
         />
         <br />
         Efternamn
+        <br />
         <input
           type="text"
           placeholder={props.profile.lastName}
@@ -57,6 +61,7 @@ const Profile = (props) => {
         />
         <br />
         Personnummer
+        <br />
         <input
           type="text"
           placeholder={props.profile.personalNumber}
@@ -65,6 +70,7 @@ const Profile = (props) => {
         />
         <br />
         Adress
+        <br />
         <input
           type="text"
           placeholder={props.profile.address}
@@ -73,6 +79,7 @@ const Profile = (props) => {
         />
         <br />
         Postort
+        <br />
         <input
           type="text"
           placeholder={props.profile.postTown}
@@ -81,6 +88,7 @@ const Profile = (props) => {
         />
         <br />
         Postnummer
+        <br />
         <input
           type="text"
           placeholder={props.profile.postNumber}
@@ -89,6 +97,7 @@ const Profile = (props) => {
         />
         <br />
         Telefonnummer
+        <br />
         <input
           type="text"
           placeholder={props.profile.phoneNumber}
@@ -97,6 +106,7 @@ const Profile = (props) => {
         />
         <br />
         Email
+        <br />
         <input
           type="text"
           placeholder={props.profile.email}
@@ -104,6 +114,7 @@ const Profile = (props) => {
           required
         />
         <br />
+        <input type="submit" id="profileSaveButton" value="Spara" />
       </form>
     </div>
   );

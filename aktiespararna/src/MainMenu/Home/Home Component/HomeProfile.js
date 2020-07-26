@@ -4,11 +4,11 @@ import Header from "../../Components/Header";
 import LinkTo from "./LinkTo";
 
 const HomeProfile = (props) => {
-  console.log(props.profile)
+  console.log(props.profile.profilePicture)
   const showProfile = () => {
     return (
       <ProfileValues
-        picture={props.pictureURL}
+        picture={props.profile.profilePicture}
         firstName={props.profile.firstName}
         lastName={props.profile.lastName}
         personalNumber={props.profile.personalNumber}
