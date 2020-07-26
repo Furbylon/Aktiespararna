@@ -3,22 +3,21 @@ import ProfileValues from "./ProfileValues";
 import Header from "../../Components/Header";
 import LinkTo from "./LinkTo";
 
-const homeProfile = (props) => {
-  const showProfile = (profile) => {
-
+const HomeProfile = (props) => {
+  console.log(props.profile)
+  const showProfile = () => {
     return (
       <ProfileValues
-        key={profile.id}
-        picture={profile.pictureURL}
-        firstName={profile.firstName}
-        lastName={profile.lastName}
-        personalNumber={profile.personalNumber}
+        picture={props.pictureURL}
+        firstName={props.profile.firstName}
+        lastName={props.profile.lastName}
+        personalNumber={props.profile.personalNumber}
         industry={props.preferredIndustries}
-        telephoneNumber={profile.telephone}
-        email={profile.email}
-        address={profile.address}
-        postNumber={profile.postNumber}
-        postTown={profile.postTown}
+        telephoneNumber={props.profile.phoneNumber}
+        email={props.profile.email}
+        address={props.profile.address}
+        postNumber={props.profile.postNumber}
+        postTown={props.profile.postTown}
       />
     );
   };
@@ -27,8 +26,8 @@ const homeProfile = (props) => {
       <LinkTo link={"/mainmenu/settings/profile"} tag={"Redigera"} />
       <Header head={"Min Profil"} />
 
-      <div id="profileInformation">{props.profile.map(showProfile)}</div>
+      <div id="profileInformation">{showProfile()}</div>
     </div>
   );
 };
-export default homeProfile;
+export default HomeProfile;

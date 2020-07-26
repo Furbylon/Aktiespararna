@@ -4,14 +4,39 @@ import Portfolio from "./Portfolio/Portfolio";
 import Settings from "./UserSettings/Settings";
 import { Route } from "react-router-dom";
 import Sidebar from "../MainMenu/Components/SideBar";
-import data from "../data/JSON/profil.json";
 import companies from "../data/JSON/mock.json";
 
 const MainMenu = (props) => {
   let max = companies.length;
-  let [profile, setProfile] = useState(data.slice(0, 1));
-  let [preferredIndustries, setPreferredIndustries] = useState(companies.slice(0, 4));
-  let [remainingIndustries, setRemainingIndustries] = useState(companies.slice(5, max));
+  let profilePicture
+  let firstName;
+  let lastName;
+  let personalNumber;
+  let address;
+  let postTown;
+  let postNumber;
+  let phoneNumber;
+  let email;
+
+  let [profile, setProfile] = useState([
+    {
+      profilePicture,
+      firstName,
+      lastName,
+      personalNumber,
+      address,
+      postTown,
+      postNumber,
+      phoneNumber,
+      email,
+    },
+  ]);
+  let [preferredIndustries, setPreferredIndustries] = useState(
+    companies.slice(0, 4)
+  );
+  let [remainingIndustries, setRemainingIndustries] = useState(
+    companies.slice(5, max)
+  );
 
   return (
     <div id="mainMenu">
@@ -31,14 +56,14 @@ const MainMenu = (props) => {
         path="/mainMenu/settings"
         render={() => (
           <Settings
-            profile={profile}
-            setProfile={setProfile}
             preferredIndustries={preferredIndustries}
             setPreferredIndustries={setPreferredIndustries}
             remainingIndustries={remainingIndustries}
             setRemainingIndustries={setRemainingIndustries}
             password={props.password}
             setPassword={props.setPassword}
+            profile={profile}
+            setProfile={setProfile}
           />
         )}
       />
