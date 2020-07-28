@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import mock from "../../../data/JSON/mock.json";
-import { Link } from "react-router-dom";
 
 const Preferences = (props) => {
   let IndustryArr = [];
@@ -13,8 +12,7 @@ const Preferences = (props) => {
   let ImplementBank = () => {
     alert("Integrera Bank");
   };
-
-  const ShowMore = (e) => {
+  const showMore = (e) => {
     let value = parseInt(e.target.value);
     setMax(value);
     setIndustries(uniqueIndustryArr.slice(0, max));
@@ -37,7 +35,7 @@ const Preferences = (props) => {
     checkbox.forEach((checkbox) => {
       checkedIndustries.push(checkbox.value);
     });
-    if (checkedIndustries.length <= 4) {
+    if (checkedIndustries.length <= 4 && checkedIndustries.length > 0) {
       let check = [];
       check = mock.filter((values) => {
         return checkedIndustries.includes(values.Industry);
@@ -53,13 +51,20 @@ const Preferences = (props) => {
 
       console.log(uniqueIndustry);
 
-      let remaining = mock.filter((values) => {
+      const remaining = mock.filter((values) => {
         return !checkedIndustries.includes(values.Industry);
       });
+
+      console.log(remaining);
       props.setPreferredIndustries(uniqueIndustry);
       props.setRemainingIndustries(remaining);
     } else {
-      return alert("Det kan endast finnas max fyra prefererade företag ");
+      let newLine = "\r\n";
+      let msg = "- Måste anges minst 1 industri";
+      msg += newLine
+      msg += "- Kan endast ange max 4 industrier"
+
+      return alert(msg);
     }
   };
 
@@ -67,15 +72,14 @@ const Preferences = (props) => {
     <div>
       <form onSubmit={addPreferred}>
         <p>Mina prefererade industrier att investera inom:</p>
-        <button id={"add"} type={"button"} value={max + 5} onClick={ShowMore}>
+        <button id={"add"} type={"button"} value={max + 5} onClick={showMore}>
           Visa fler industrier
         </button>
         {industries.map(currentlyShown)}
         <br />
-        <Link onClick={ImplementBank} style={{ color: "blue" }}>
+        <button onClick={ImplementBank} style={{ color: "blue" }}>
           Integrera bank
-        </Link>
-        <br />
+        </button>
         <input type="submit" value="Spara"></input>
       </form>
     </div>

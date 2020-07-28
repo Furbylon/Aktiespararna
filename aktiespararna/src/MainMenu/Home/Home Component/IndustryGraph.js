@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Pie } from "react-chartjs-2";
+import { HorizontalBar } from "react-chartjs-2";
 
 const PercentageBar = (props) => {
   let industryName = props.preferredIndustries.map((values) => {
@@ -7,9 +7,7 @@ const PercentageBar = (props) => {
   });
   
   industryName.push("Övrigt");
-  console.log(props.companyColours());
   let colours = props.companyColours().map((values) => {
-    console.log(values.colour);
     return values.colour;
   });
 
@@ -18,8 +16,6 @@ const PercentageBar = (props) => {
   });
 
   percentage.push((props.sumOfRemaining / props.sumOfTotal) * 100);
-
-  console.log(percentage);
 
   const [data] = useState({
     labels: industryName,
@@ -35,8 +31,8 @@ const PercentageBar = (props) => {
 
   return (
     <div className="App">
-      <div>
-        <Pie
+      <div style={{width: "500px"}}>
+        <HorizontalBar
           data={data}
           options={{
             legend: {

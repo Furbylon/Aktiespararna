@@ -32,10 +32,9 @@ const MainMenu = (props) => {
     },
   ]);
   let [preferredIndustries, setPreferredIndustries] = useState(
-    companies.slice(0, 4)
   );
   let [remainingIndustries, setRemainingIndustries] = useState(
-    companies.slice(5, max)
+    companies.slice(0, max)
   );
 
   return (

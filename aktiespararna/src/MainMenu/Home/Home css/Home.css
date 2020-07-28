@@ -40,19 +40,19 @@
   border-radius: 2px;
   background-color: white;
   float: left;
-  position: sticky;
-  margin-bottom: 50px;
+  margin-bottom: 400px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee;
   margin-left: 5px;
+  height: 1200px;
 }
 
 #myHoldings {
   border-radius: 2px;
   background-color: white;
   float: left;
-  position: sticky;
   margin-bottom: 200px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee;
+  height: 1200px;
 }
 #profilePic {
   position: relative;

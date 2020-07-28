@@ -22,9 +22,9 @@ const HomeProfile = (props) => {
   };
   return (
     <div id="homeProfile" style={{ position: "relative" }}>
+      <Header head={"Min Profil"}> </Header>
       <LinkTo link={"/mainmenu/settings/profile"} tag={"Redigera"} />
-      <Header head={"Min Profil"} />
-
+      <hr/>
       <div id="profileInformation">{showProfile()}</div>
     </div>
   );

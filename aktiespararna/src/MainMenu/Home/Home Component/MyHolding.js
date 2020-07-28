@@ -4,17 +4,21 @@ import Header from "../../Components/Header";
 import LastUpdate from "../../Components/LastUpdate";
 import LinkTo from "./LinkTo";
 import Remaining from "./RemainingIndustries";
+import mock from "../../../data/JSON/mock.json";
 import { companyColours, borderColours, randomColour } from "./GetColour";
 
 const MyHoldings = (props) => {
   let sumOfRemaining = 0;
-  props.remainingIndustries.map((values) => {
-    return (sumOfRemaining += values.Balance);
-  });
+  if (props.remainingIndustries !== undefined) {
+    props.remainingIndustries.map((values) => {
+      console.log(values.Industry);
+      return (sumOfRemaining += values.Balance);
+    });
+  }
 
-  let sumOfTotal = sumOfRemaining;
-  props.preferredIndustries.map((values) => {
-    return (sumOfTotal += values.Balance);
+  let total = 0;
+  mock.map((values) => {
+    return (total += values.Balance);
   });
 
   let IndustryBalance = (values) => {
@@ -63,7 +67,6 @@ const MyHoldings = (props) => {
     let remaining = unlistedCompanies(industry);
 
     let colour = borderColours();
-    console.log(colour);
     if (props.preferredIndustries.length !== 0) {
       return (
         <div key={industry.id}>
@@ -93,41 +96,74 @@ const MyHoldings = (props) => {
       );
     }
   };
-  let lastColour = borderColours().length - 1;
-  return (
-    <div id="myHoldings" style={{ position: "relative" }}>
-      <div>
-        <Header head={"Mitt Innehav"} />
-        <LinkTo link={"/mainmenu/portfolio"} tag={"Portfolio"} />
-        <p style={{ fontWeight: "lighter" }}>Senast uppdaterad: </p>
-        <LastUpdate />
-        <IndustryGraph
-          companyColours={companyColours}
-          preferredIndustries={props.preferredIndustries}
-          remainingIndustries={props.remainingIndustries}
-          borderColours={borderColours}
-          sumOfRemaining={sumOfRemaining}
-          sumOfTotal={sumOfTotal}
-          IndustryBalance={IndustryBalance}
-          randomColour={randomColour}
-        />
-        {props.preferredIndustries.map(CheckIfValuesExist)}
-        <canvas
-          style={{
-            backgroundColor: borderColours()[lastColour].colour,
-            width: "10px",
-            height: "30px",
-            position: "absolute",
-            left: "-10px",
-          }}
-        />
-        <Remaining
+  let otherColour;
+  if (props.preferredIndustries !== undefined) {
+    otherColour = props.preferredIndustries.length;
+  } else {
+    otherColour = 0;
+  }
+  if (props.preferredIndustries !== undefined) {
+    return (
+      <div id="myHoldings" style={{ position: "relative" }}>
+        <div>
+          <div>
+            <Header head={"Mitt Innehav"}> </Header>
+            <LinkTo link={"/mainmenu/portfolio"} tag={"Portfolio"} />
+          </div>
+          <hr />
+          <p style={{ fontWeight: "bold", fontSize: "20px" }}>
+            {total.toLocaleString()} SEK
+          </p>
+          <p style={{ fontWeight: "lighter" }}>Senast uppdaterad: </p>
+          <LastUpdate />
+          <IndustryGraph
+            companyColours={companyColours}
+            preferredIndustries={props.preferredIndustries}
+            remainingIndustries={props.remainingIndustries}
+            borderColours={borderColours}
+            sumOfRemaining={sumOfRemaining}
+            sumOfTotal={total}
+            IndustryBalance={IndustryBalance}
+            randomColour={randomColour}
+          />
+          {props.preferredIndustries.map(CheckIfValuesExist)}
+          <canvas
+            style={{
+              backgroundColor: borderColours()[otherColour].colour,
+              width: "10px",
+              height: "30px",
+              position: "absolute",
+              left: "-10px",
+            }}
+          />
+          <Remaining
+            spacedSum={spacedSum}
+            remainingIndustries={props.remainingIndustries}
+          />
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div id="myHoldings" style={{ position: "relative" }}>
+        <div>
+          <div>
+            <Header head={"Mitt Innehav"}> </Header>
+            <LinkTo link={"/mainmenu/portfolio"} tag={"Portfolio"} />
+          </div>
+          <hr />
+          <p style={{ fontWeight: "bold", fontSize: "20px" }}>
+          {total.toLocaleString()} SEK
+        </p>
+          <p>Uppdatera dina preferenser i Inställningar</p>
+          <Remaining
           spacedSum={spacedSum}
           remainingIndustries={props.remainingIndustries}
         />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default MyHoldings;
