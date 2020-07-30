@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
-const LastUpdate = (element) => {
-  let x = document.lastModified;
-  return <p>{x}</p>;
+const LastUpdate = () => {
+  let [lastModified, setNewModified] = useState (document.lastModified);
+  return <p>Senast Uppdaterad {lastModified}</p>;
 };
 
 export default LastUpdate;

@@ -4,20 +4,34 @@ import "../UserSettings css/UserProfile.css";
 const Profile = (props) => {
   let updateProfile = (e) => {
     e.preventDefault();
-    props.setProfile({
-      profilePicture: URL.createObjectURL(
-        e.target.elements.profilePictureInput.files[0]
-      ),
-      firstName: e.target.elements.firstNameInput.value,
-      lastName: e.target.elements.lastNameInput.value,
-      personalNumber: e.target.elements.personalNumberInput.value,
-      address: e.target.elements.adressInput.value,
-      postTown: e.target.elements.postTownInput.value,
-      postNumber: e.target.elements.postNumberInput.value,
-      phoneNumber: e.target.elements.telephoneNumberInput.value,
-      email: e.target.elements.emailInput.value,
-    });
+    if (e.target.elements.profilePictureInput.files.length !== 0) {
+      props.setProfile({
+        profilePicture: URL.createObjectURL(
+          e.target.elements.profilePictureInput.files[0]
+        ),
+        firstName: e.target.elements.firstNameInput.value,
+        lastName: e.target.elements.lastNameInput.value,
+        personalNumber: e.target.elements.personalNumberInput.value,
+        address: e.target.elements.adressInput.value,
+        postTown: e.target.elements.postTownInput.value,
+        postNumber: e.target.elements.postNumberInput.value,
+        phoneNumber: e.target.elements.telephoneNumberInput.value,
+        email: e.target.elements.emailInput.value,
+      });
+    } else {
+      props.setProfile({
+        firstName: e.target.elements.firstNameInput.value,
+        lastName: e.target.elements.lastNameInput.value,
+        personalNumber: e.target.elements.personalNumberInput.value,
+        address: e.target.elements.adressInput.value,
+        postTown: e.target.elements.postTownInput.value,
+        postNumber: e.target.elements.postNumberInput.value,
+        phoneNumber: e.target.elements.telephoneNumberInput.value,
+        email: e.target.elements.emailInput.value,
+      });
+    }
   };
+ 
   let showPreview = (e) => {
     if (e.target.files.length > 0) {
       let src = URL.createObjectURL(e.target.files[0]);
@@ -26,6 +40,7 @@ const Profile = (props) => {
       preview.style.display = "block";
     }
   };
+  
   return (
     <div>
       <form id="profileForm" onSubmit={updateProfile}>
@@ -51,73 +66,49 @@ const Profile = (props) => {
         <input
           type="text"
           id="firstNameInput"
-          value={props.profile.firstName}
-          required
+          placeholder={props.profile.firstName}
         />
         <br />
         Efternamn
         <br />
-        <input
-          type="text"
-          value={props.profile.lastName}
-          id="lastNameInput"
-          required
-        />
+        <input type="text" placeholder={props.profile.lastName} id="lastNameInput" />
         <br />
         Personnummer
         <br />
         <input
           type="text"
-          value={props.profile.personalNumber}
+          placeholder={props.profile.personalNumber}
           id="personalNumberInput"
-          required
         />
         <br />
         Adress
         <br />
-        <input
-          type="text"
-          value={props.profile.address}
-          id="adressInput"
-          required
-        />
+        <input type="text" placeholder={props.profile.address} id="adressInput" />
         <br />
         Postort
         <br />
-        <input
-          type="text"
-          value={props.profile.postTown}
-          id="postTownInput"
-          required
-        />
+        <input type="text" placeholder={props.profile.postTown} id="postTownInput" />
         <br />
         Postnummer
         <br />
         <input
           type="text"
-          value={props.profile.postNumber}
+          placeholder={props.profile.postNumber}
           id="postNumberInput"
-          required
         />
         <br />
         Telefonnummer
         <br />
         <input
           type="text"
-          value={props.profile.phoneNumber}
+          placeholder={props.profile.phoneNumber}
           id="telephoneNumberInput"
-          required
         />
         <br />
         Email
         <br />
-        <input
-          type="text"
-          value={props.profile.email}
-          id="emailInput"
-          required
-        />
-        <input type="submit" id="profileSaveButton" value="Spara" />
+        <input type="text" placeholder={props.profile.email} id="emailInput" />
+        <input type="submit" id="profileSaveButton" placeholder="Spara" />
       </form>
     </div>
   );

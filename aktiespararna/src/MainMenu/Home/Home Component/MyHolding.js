@@ -1,17 +1,13 @@
 import React from "react";
-import IndustryGraph from "./IndustryGraph";
-import Header from "../../Components/Header";
-import LastUpdate from "../../Components/LastUpdate";
-import LinkTo from "./LinkTo";
-import Remaining from "./RemainingIndustries";
 import mock from "../../../data/JSON/mock.json";
-import { companyColours, borderColours, randomColour } from "./GetColour";
+import NoPreferencesSelected from "./NoPreferencesSelected";
+import PreferencesSelected from "./PreferencesSelected";
 
 const MyHoldings = (props) => {
   let sumOfRemaining = 0;
   if (props.remainingIndustries !== undefined) {
+    console.log(props.remainingIndustries);
     props.remainingIndustries.map((values) => {
-      console.log(values.Industry);
       return (sumOfRemaining += values.Balance);
     });
   }
@@ -23,7 +19,7 @@ const MyHoldings = (props) => {
 
   let IndustryBalance = (values) => {
     let totalBalance = values.Balance;
-    props.remainingIndustries.forEach((innerValues) => {
+    mock.forEach((innerValues) => {
       if (values.Industry === innerValues.Industry) {
         return (totalBalance += innerValues.Balance);
       }
@@ -31,71 +27,8 @@ const MyHoldings = (props) => {
     return totalBalance;
   };
 
-  let totalCompanies = (values) => {
-    let totalCompanies = [];
-    totalCompanies.push(values.Company);
-    props.remainingIndustries.forEach((innerValues) => {
-      if (values.Industry === innerValues.Industry) {
-        totalCompanies.push(innerValues.Company);
-      }
-    });
-    return totalCompanies;
-  };
-
-  let unlistedCompanies = (values) => {
-    let totalCompanies = [];
-    totalCompanies.push(values.Company);
-    props.remainingIndustries.forEach((innerValues) => {
-      if (values.Industry === innerValues.Industry) {
-        totalCompanies.push(innerValues.Company);
-      }
-    });
-    if (totalCompanies.length - 2 >= 1) {
-      let remain = totalCompanies.length - 2;
-      remain.toString();
-
-      return "+" + remain;
-    }
-  };
-
   let spacedSum = sumOfRemaining.toLocaleString();
 
-  const CheckIfValuesExist = (industry, index) => {
-    let Balance = IndustryBalance(industry).toLocaleString();
-    let CompanyOne = totalCompanies(industry)[0];
-    let CompanyTwo = totalCompanies(industry)[1];
-    let remaining = unlistedCompanies(industry);
-
-    let colour = borderColours();
-    if (props.preferredIndustries.length !== 0) {
-      return (
-        <div key={industry.id}>
-          <canvas
-            style={{
-              backgroundColor: colour[index].colour,
-              width: "10px",
-              height: "30px",
-              position: "absolute",
-              left: "-10px",
-            }}
-          />
-          <div style={{ width: "200px" }}>
-            <p style={{ fontWeight: "bold" }}>{industry.Industry}</p>
-            <p>
-              Företag: {CompanyOne}, {CompanyTwo} {remaining}
-            </p>
-            <p>Innehav: {Balance} SEK</p>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <h2>inget innehav tillagt ännu </h2>
-        </div>
-      );
-    }
-  };
   let otherColour;
   if (props.preferredIndustries !== undefined) {
     otherColour = props.preferredIndustries.length;
@@ -104,74 +37,27 @@ const MyHoldings = (props) => {
   }
   if (props.preferredIndustries !== undefined) {
     return (
-      <div id="myHoldings" style={{ position: "relative" }}>
-        <div>
-          <div>
-            <Header head={"Mitt Innehav"}> </Header>
-            <LinkTo link={"/mainmenu/portfolio"} tag={"Portfolio"} />
-          </div>
-          <hr />
-          <p style={{ fontWeight: "bold", fontSize: "20px" }}>
-            {total.toLocaleString()} SEK
-          </p>
-          <p style={{ fontWeight: "lighter" }}>Senast uppdaterad: </p>
-          <LastUpdate />
-          <IndustryGraph
-            companyColours={companyColours}
-            preferredIndustries={props.preferredIndustries}
-            remainingIndustries={props.remainingIndustries}
-            borderColours={borderColours}
-            sumOfRemaining={sumOfRemaining}
-            sumOfTotal={total}
-            IndustryBalance={IndustryBalance}
-            randomColour={randomColour}
-          />
-          {props.preferredIndustries.map(CheckIfValuesExist)}
-          <canvas
-            style={{
-              backgroundColor: borderColours()[otherColour].colour,
-              width: "10px",
-              height: "30px",
-              position: "absolute",
-              left: "-10px",
-            }}
-          />
-          <Remaining
-            spacedSum={spacedSum}
-            remainingIndustries={props.remainingIndustries}
-          />
-        </div>
-      </div>
+      <PreferencesSelected
+        total={total}
+        preferredIndustries={props.preferredIndustries}
+        remainingIndustries={props.remainingIndustries}
+        sumOfRemaining={sumOfRemaining}
+        IndustryBalance={IndustryBalance}
+        spacedSum={spacedSum}
+        otherColour={otherColour}
+      />
     );
   } else {
     return (
-      <div id="myHoldings" style={{ position: "relative" }}>
-        <div>
-          <div>
-            <Header head={"Mitt Innehav"}> </Header>
-            <LinkTo link={"/mainmenu/portfolio"} tag={"Portfolio"} />
-          </div>
-          <hr />
-          <p style={{ fontWeight: "bold", fontSize: "20px" }}>
-          {total.toLocaleString()} SEK
-        </p>
-        <IndustryGraph
-        companyColours={companyColours}
+      <NoPreferencesSelected
+        total={total}
         preferredIndustries={props.preferredIndustries}
         remainingIndustries={props.remainingIndustries}
-        borderColours={borderColours}
         sumOfRemaining={sumOfRemaining}
-        sumOfTotal={total}
         IndustryBalance={IndustryBalance}
-        randomColour={randomColour}
+        spacedSum={spacedSum}
+        otherColour={otherColour}
       />
-          <p>Uppdatera dina preferenser i Inställningar</p>
-          <Remaining
-          spacedSum={spacedSum}
-          remainingIndustries={props.remainingIndustries}
-        />
-        </div>
-      </div>
     );
   }
 };

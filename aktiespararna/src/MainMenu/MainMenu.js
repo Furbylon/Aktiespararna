@@ -33,6 +33,7 @@ const MainMenu = (props) => {
   ]);
   let [preferredIndustries, setPreferredIndustries] = useState(
   );
+  console.log(preferredIndustries)
   let [remainingIndustries, setRemainingIndustries] = useState(
     companies.slice(0, max)
   );

@@ -1,12 +1,3 @@
-let randomColour = () => {
-  let red = Math.floor(Math.random() * 256).toString();
-  let green = Math.floor(Math.random() * 256).toString();
-  let blue = Math.floor(Math.random() * 256).toString();
-  let colour = `rgb(${red}, ${green}, ${blue})`;
-  console.log(colour)
-  return colour;
-};
-
 let companyColours = () => {
   return [
     { colour: "rgba(54, 162, 235, 0.2)" },
@@ -28,4 +19,4 @@ let borderColours = () => {
   ];
 };
 
-export { companyColours, borderColours, randomColour };
+export { companyColours, borderColours };

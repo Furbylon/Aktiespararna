@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import mock from "../../../data/JSON/mock.json";
+import ShowMore from "./ShowMoreCompaniesButton";
 
 const Preferences = (props) => {
   let IndustryArr = [];
@@ -12,11 +13,6 @@ const Preferences = (props) => {
   let ImplementBank = () => {
     alert("Integrera Bank");
   };
-  const showMore = (e) => {
-    let value = parseInt(e.target.value);
-    setMax(value);
-    setIndustries(uniqueIndustryArr.slice(0, max));
-  };
 
   let currentlyShown = (companies, index) => {
     return (
@@ -28,7 +24,7 @@ const Preferences = (props) => {
     );
   };
 
-  let addPreferred = (e) => {
+  let addPreferences = (e) => {
     e.preventDefault();
     let checkbox = document.querySelectorAll('input[name="checkbox"]:checked');
     let checkedIndustries = [];
@@ -61,8 +57,8 @@ const Preferences = (props) => {
     } else {
       let newLine = "\r\n";
       let msg = "- Måste anges minst 1 industri";
-      msg += newLine
-      msg += "- Kan endast ange max 4 industrier"
+      msg += newLine;
+      msg += "- Kan endast ange max 4 industrier";
 
       return alert(msg);
     }
@@ -70,11 +66,14 @@ const Preferences = (props) => {
 
   return (
     <div>
-      <form onSubmit={addPreferred}>
+      <form onSubmit={addPreferences}>
         <p>Mina prefererade industrier att investera inom:</p>
-        <button id={"add"} type={"button"} value={max + 5} onClick={showMore}>
-          Visa fler industrier
-        </button>
+        <ShowMore
+          setMax={setMax}
+          setIndustries={setIndustries}
+          uniqueIndustryArr={uniqueIndustryArr}
+          max={max}
+        />
         {industries.map(currentlyShown)}
         <br />
         <button onClick={ImplementBank} style={{ color: "blue" }}>
