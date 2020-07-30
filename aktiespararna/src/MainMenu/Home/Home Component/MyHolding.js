@@ -155,6 +155,16 @@ const MyHoldings = (props) => {
           <p style={{ fontWeight: "bold", fontSize: "20px" }}>
           {total.toLocaleString()} SEK
         </p>
+        <IndustryGraph
+        companyColours={companyColours}
+        preferredIndustries={props.preferredIndustries}
+        remainingIndustries={props.remainingIndustries}
+        borderColours={borderColours}
+        sumOfRemaining={sumOfRemaining}
+        sumOfTotal={total}
+        IndustryBalance={IndustryBalance}
+        randomColour={randomColour}
+      />
           <p>Uppdatera dina preferenser i Inställningar</p>
           <Remaining
           spacedSum={spacedSum}
