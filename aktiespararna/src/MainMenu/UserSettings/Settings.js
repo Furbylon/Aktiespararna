@@ -19,6 +19,7 @@ const Settings = (props) => {
             setRemainingIndustries={props.setRemainingIndustries}
             profile={props.profile}
             setProfile={props.setProfile}
+            setTime={props.setTime}
           />
         )}
       />

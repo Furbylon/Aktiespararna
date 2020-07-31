@@ -54,6 +54,8 @@ const Preferences = (props) => {
       console.log(remaining);
       props.setPreferredIndustries(uniqueIndustry);
       props.setRemainingIndustries(remaining);
+      let newDate = new Date();
+      props.setTime(newDate.toLocaleDateString());
     } else {
       let newLine = "\r\n";
       let msg = "- Måste anges minst 1 industri";

@@ -12,7 +12,7 @@ const WelcomeMessage = (props) => {
       <p>
       Välkommen {props.profile.firstName} {props.profile.lastName}! Ditt innehav blev senast uppdaterat: 
     </p>
-    <LastUpdate />
+    <LastUpdate time={props.time} />
       </div>
     );
   }

@@ -24,7 +24,9 @@ let DefaultHoldings = (props) => {
         <p style={{ fontWeight: "bold", fontSize: "20px" }}>
           {props.total.toLocaleString()} SEK
         </p>
-        <LastUpdate />
+        <p style={{ fontWeight: "lighter" }}>Senast uppdaterad: </p>
+          <LastUpdate time={props.time} />
+
         <IndustryGraph
           companyColours={companyColours}
           preferredIndustries={props.preferredIndustries}

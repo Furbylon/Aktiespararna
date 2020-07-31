@@ -8,7 +8,7 @@ import companies from "../data/JSON/mock.json";
 
 const MainMenu = (props) => {
   let max = companies.length;
-  let profilePicture
+  let profilePicture;
   let firstName;
   let lastName;
   let personalNumber;
@@ -31,9 +31,11 @@ const MainMenu = (props) => {
       email,
     },
   ]);
-  let [preferredIndustries, setPreferredIndustries] = useState(
-  );
-  console.log(preferredIndustries)
+  const date = new Date();
+  let [time, setTime] = useState("Inga uppdateringar har gjorts tidigare");
+
+  let [preferredIndustries, setPreferredIndustries] = useState();
+  console.log(preferredIndustries);
   let [remainingIndustries, setRemainingIndustries] = useState(
     companies.slice(0, max)
   );
@@ -48,10 +50,14 @@ const MainMenu = (props) => {
             profile={profile}
             preferredIndustries={preferredIndustries}
             remainingIndustries={remainingIndustries}
+            time={time}
           />
         )}
       />
-      <Route path="/mainMenu/portfolio" component={Portfolio} />
+      <Route
+        path="/mainMenu/portfolio"
+        render={() => <Portfolio time={time} />}
+      />
       <Route
         path="/mainMenu/settings"
         render={() => (
@@ -64,6 +70,7 @@ const MainMenu = (props) => {
             setPassword={props.setPassword}
             profile={profile}
             setProfile={setProfile}
+            setTime={setTime}
           />
         )}
       />
