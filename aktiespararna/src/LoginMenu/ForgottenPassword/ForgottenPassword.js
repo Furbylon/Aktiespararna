@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./ForgottenPassword.css";
 
 const ForgottenPassword = (props) => {
+  
   const checkPassword = (e) => {
     console.log(e.target.elements.email.value);
     console.log(props.email);
@@ -27,7 +28,7 @@ const ForgottenPassword = (props) => {
         <input type="text" id="email" placeholder="Email" required />
         <br />
         <div id="button">
-          <button>Hämta lösenord</button>
+          <button id="getPasswordButton">Hämta lösenord</button>
         </div>
         <br />
       </form>

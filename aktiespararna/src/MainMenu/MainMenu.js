@@ -31,7 +31,6 @@ const MainMenu = (props) => {
       email,
     },
   ]);
-  const date = new Date();
   let [time, setTime] = useState("Inga uppdateringar har gjorts tidigare");
 
   let [preferredIndustries, setPreferredIndustries] = useState();

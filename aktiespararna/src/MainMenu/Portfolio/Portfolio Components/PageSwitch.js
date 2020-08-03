@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const PageSwitch = (props) => {
   let [numberButtons, setNumberButton] = useState();
   let buttonArr = [];
+  let lastPage = props.pagesArray[props.pagesArray.length - 1]
 
   let NativeButtons = () => {
     while (props.pagesArray.length <= 5) {
@@ -11,7 +12,6 @@ const PageSwitch = (props) => {
       }
       if (!buttonArr.includes(props.currentPage / 10)) {
         buttonArr.push(props.currentPage / 10);
-        console.log(buttonArr);
       }
       numberButtons = buttonArr.map((value) => (
         <button value={props.shownData * value} id="pageButton" key={value}>
@@ -26,7 +26,6 @@ const PageSwitch = (props) => {
       }
       if (!buttonArr.includes(props.currentPage / 10)) {
         buttonArr.push(props.currentPage / 10);
-        console.log(buttonArr);
       }
       numberButtons = buttonArr.map((value) => (
         <button value={props.shownData * value} id="pageButton" key={value}>
@@ -61,6 +60,9 @@ const PageSwitch = (props) => {
     return (
       <div>
         <form onClick={UpdatePage} id={"nativePageSwitchForm"}>
+          <button id={"back"} type={"button"} value={props.pagesArray[0]}>
+            {"<<"}
+          </button>
           <button
             id={"back"}
             type={"button"}
@@ -85,6 +87,9 @@ const PageSwitch = (props) => {
           >
             {">"}
           </button>
+          <button id={"back"} type={"button"} value={lastPage}>
+            {">>"}
+          </button>
         </form>
       </div>
     );
@@ -93,6 +98,9 @@ const PageSwitch = (props) => {
       <div>
         <form />
         <form onClick={UpdatePage} id={"pageSwitchForm"}>
+          <button id={"back"} type={"button"} value={props.pagesArray[0]}>
+            {"<<"}
+          </button>
           <button
             id={"back"}
             type={"button"}
@@ -107,6 +115,9 @@ const PageSwitch = (props) => {
             value={props.currentPage + props.shownData}
           >
             {">"}
+          </button>
+          <button id={"back"} type={"button"} value={lastPage}>
+            {">>"}
           </button>
         </form>
       </div>

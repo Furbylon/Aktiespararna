@@ -1,6 +1,6 @@
 import React from "react";
 import shareLogo from "../Login/img/aktielogoo.png";
-import "./Register.css";
+import "./Registration.css";
 import { Link } from "react-router-dom";
 
 const Registration = (props) => {
@@ -34,7 +34,7 @@ const Registration = (props) => {
         <input id="confirmPassword" type="password" required />
         <br />
         <br />
-        <button>Registrera</button>
+        <button id="registrationButton">Registrera</button>
       </form>
       <div id="link">
         <Link to="/">Gå tillbaka till login</Link>
