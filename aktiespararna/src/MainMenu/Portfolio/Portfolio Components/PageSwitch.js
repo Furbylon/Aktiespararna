@@ -3,10 +3,9 @@ import React, { useState } from "react";
 const PageSwitch = (props) => {
   let [numberButtons, setNumberButton] = useState();
   let buttonArr = [];
-  let lastPage = props.pagesArray[props.pagesArray.length - 1]
-
+  let lastPage = props.pagesArray[props.pagesArray.length - 1];
   let NativeButtons = () => {
-    while (props.pagesArray.length <= 5) {
+    if (props.pagesArray.length <= 5) {
       for (let i = 1; i <= props.pagesArray.length; i++) {
         buttonArr.push(i);
       }
@@ -19,8 +18,7 @@ const PageSwitch = (props) => {
         </button>
       ));
       return numberButtons;
-    }
-    if (props.pagesArray.length > 5) {
+    } else {
       for (let i = 1; i <= 5; i++) {
         buttonArr.push(i);
       }
@@ -35,6 +33,32 @@ const PageSwitch = (props) => {
       return numberButtons;
     }
   };
+
+  let DotBackButton = () => {
+    if (props.currentPage !== props.pagesArray[0]) {
+      return (
+        <button
+          type={"button"}
+          value={props.currentPage - props.shownData}
+        >
+          ...
+        </button>
+      );
+    } else return <div />;
+  };
+  let DotForwardButton = () => {
+    if (props.currentPage !== lastPage) {
+      return (
+        <button
+          type={"button"}
+          value={props.currentPage + props.shownData}
+        >
+          ...
+        </button>
+      );
+    } else return <div />;
+  };
+
   let UpdatePage = (e) => {
     let value = parseInt(e.target.value);
     if (e.target.id === "update") {
@@ -73,13 +97,6 @@ const PageSwitch = (props) => {
           </button>
           <NativeButtons />
           <button
-            id={"update"}
-            type={"button"}
-            value={props.currentPage + props.shownData}
-          >
-            ...
-          </button>
-          <button
             id={"forward"}
             type={"button"}
             value={props.currentPage + props.shownData}
@@ -108,7 +125,9 @@ const PageSwitch = (props) => {
           >
             {"<"}
           </button>
+          <DotBackButton />
           <NativeButtons />
+          <DotForwardButton />
           <button
             id={"foward"}
             type={"button"}
