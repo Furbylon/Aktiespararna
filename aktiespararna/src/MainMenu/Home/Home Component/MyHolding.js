@@ -2,6 +2,7 @@ import React from "react";
 import mock from "../../../data/JSON/mock.json";
 import NoPreferencesSelected from "./NoPreferencesSelected";
 import PreferencesSelected from "./PreferencesSelected";
+import IndustryBalance from "./IndustryBalance"
 
 const MyHoldings = (props) => {
   let sumOfRemaining = 0;
@@ -16,16 +17,6 @@ const MyHoldings = (props) => {
   mock.map((values) => {
     return (total += values.Balance);
   });
-
-  let IndustryBalance = (values) => {
-    let totalBalance = values.Balance;
-    mock.forEach((innerValues) => {
-      if (values.Industry === innerValues.Industry) {
-        return (totalBalance += innerValues.Balance);
-      }
-    });
-    return totalBalance;
-  };
 
   let spacedSum = sumOfRemaining.toLocaleString();
 
