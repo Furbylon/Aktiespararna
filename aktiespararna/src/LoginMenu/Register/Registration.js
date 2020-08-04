@@ -1,5 +1,5 @@
 import React from "react";
-import shareLogo from "../Login/img/aktielogoo.png";
+import shareLogo from "../img/aktielogoo.png";
 import "./Registration.css";
 import { Link } from "react-router-dom";
 

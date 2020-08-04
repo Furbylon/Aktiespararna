@@ -1,5 +1,5 @@
 import React from "react";
-import shareLogo from "./img/aktielogoo.png";
+import shareLogo from "../img/aktielogoo.png";
 import { useForm } from "react-hook-form";
 import { Link, useHistory } from "react-router-dom";
 import "../Login/Login.css";

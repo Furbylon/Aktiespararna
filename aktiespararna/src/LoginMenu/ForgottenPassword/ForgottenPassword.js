@@ -1,10 +1,9 @@
 import React from "react";
-import shareLogo from "../Login/img/aktielogoo.png";
+import shareLogo from "../img/aktielogoo.png";
 import { Link } from "react-router-dom";
 import "./ForgottenPassword.css";
 
 const ForgottenPassword = (props) => {
-  
   const checkPassword = (e) => {
     console.log(e.target.elements.email.value);
     console.log(props.email);
@@ -19,7 +18,7 @@ const ForgottenPassword = (props) => {
     <div id="forgottenPasswordDiv" className="loginMenuPages">
       <img id="logo" src={shareLogo} alt="logo" />
       <form onSubmit={checkPassword}>
-        <p htmlFor="username">Username:</p>
+        <label htmlFor="username">Username:</label>
         <br />
         <input type="text" id="username" placeholder="username" required />
         <br />
