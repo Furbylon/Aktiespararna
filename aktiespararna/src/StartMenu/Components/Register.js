@@ -1,6 +1,6 @@
 import React from "react";
-import shareLogo from "../img/aktielogoo.png";
-import "./Registration.css";
+import shareLogo from "../StartMenu css/img/aktielogoo.png";
+import "../StartMenu css/Register.css";
 import { Link } from "react-router-dom";
 
 const Registration = (props) => {

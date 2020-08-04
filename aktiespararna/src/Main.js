@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import "./App.css";
-import Login from "./LoginMenu/Login/Login";
-import Registrering from "./LoginMenu/Register/Registration";
-import ForgottenPassword from "./LoginMenu/ForgottenPassword/ForgottenPassword";
-import { BrowserRouter, Route, Switch} from "react-router-dom";
+import Login from "./StartMenu/Components/Login";
+import Registrering from "./StartMenu/Components/Register";
+import ForgottenPassword from "./StartMenu/Components/ForgottenPassword";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Mainmenu from "./MainMenu/MainMenu";
 
 const Main = () => {
   let [username, setUsername] = useState();
   let [password, setPassword] = useState();
   let [email, setEmail] = useState();
-
 
   return (
     <BrowserRouter>
@@ -43,10 +42,7 @@ const Main = () => {
           )}
           exact={true}
         />
-        <Mainmenu
-          password={password}
-          setPassword={setPassword}
-        />
+        <Mainmenu password={password} setPassword={setPassword} />
       </Switch>
     </BrowserRouter>
   );

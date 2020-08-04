@@ -1,7 +1,7 @@
 import React from "react";
-import shareLogo from "../img/aktielogoo.png";
+import shareLogo from "../StartMenu css/img/aktielogoo.png";
 import { Link } from "react-router-dom";
-import "./ForgottenPassword.css";
+import "../StartMenu css/ForgottenPassword.css";
 
 const ForgottenPassword = (props) => {
   const checkPassword = (e) => {

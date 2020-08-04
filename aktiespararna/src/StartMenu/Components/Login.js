@@ -1,8 +1,8 @@
 import React from "react";
-import shareLogo from "../img/aktielogoo.png";
+import shareLogo from "../StartMenu css/img/aktielogoo.png";
 import { useForm } from "react-hook-form";
 import { Link, useHistory } from "react-router-dom";
-import "../Login/Login.css";
+import "../StartMenu css/Login.css";
 
 const Login = (props) => {
   const { register, handleSubmit } = useForm();
