@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Pie } from "react-chartjs-2";
+import IndustryGraphRender from "./IndustryGraphRender"
 
 const PercentageBar = (props) => {
   let industryName = []
@@ -16,6 +17,7 @@ const PercentageBar = (props) => {
   let colours = props.companyColours().map((values) => {
     return values.colour;
   });
+
   let percentage = []
   if (props.preferredIndustries !== undefined) {
     percentage = props.preferredIndustries.map((values) => {
@@ -40,22 +42,7 @@ const PercentageBar = (props) => {
   });
 
   return (
-    <div className="App">
-      <div style={{ width: "500px" }}>
-        <Pie
-          data={data}
-          options={{
-            legend: {
-              display: false,
-            },
-            title: {
-              display: true,
-              text: "Föredragna industrier",
-            },
-          }}
-        />
-      </div>
-    </div>
+    <IndustryGraphRender data={data}/>
   );
 };
 export default PercentageBar;

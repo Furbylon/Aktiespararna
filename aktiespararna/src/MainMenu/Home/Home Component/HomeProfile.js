@@ -1,12 +1,11 @@
 import React from "react";
-import ProfileValues from "./ProfileValues";
-import Header from "../../Components/Header";
-import LinkTo from "./LinkTo";
+import ProfileRender from "./ProfileRender";
+import Profile from "./Profile";
 
 const HomeProfile = (props) => {
   const showProfile = () => {
     return (
-      <ProfileValues
+      <ProfileRender
         picture={props.profile.profilePicture}
         firstName={props.profile.firstName}
         lastName={props.profile.lastName}
@@ -20,13 +19,6 @@ const HomeProfile = (props) => {
       />
     );
   };
-  return (
-    <div id="homeProfile" style={{ position: "relative" }}>
-      <Header head={"Min Profil"}> </Header>
-      <LinkTo link={"/mainmenu/settings/profile"} tag={"Redigera"} />
-      <hr/>
-      <div id="profileInformation">{showProfile()}</div>
-    </div>
-  );
+  return <Profile showProfile={showProfile} />;
 };
 export default HomeProfile;

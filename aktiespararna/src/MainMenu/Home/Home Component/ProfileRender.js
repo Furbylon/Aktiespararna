@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProfileValues = ({
+const ProfileRender = ({
   picture,
   firstName,
   lastName,
@@ -95,4 +95,4 @@ const ProfileValues = ({
   ) 
 }
 };
-export default ProfileValues;
+export default ProfileRender;
