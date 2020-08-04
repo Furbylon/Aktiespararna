@@ -13,9 +13,9 @@ const Registration = (props) => {
       props.setUsername(e.target.elements.username.value);
       props.setPassword(e.target.elements.password.value);
       props.setEmail(e.target.elements.email.value);
-      alert("Skapade nytt konto. Du kan nu logga in med uppgifterna");
+      alert("Nytt konto skapat. Du kan nu logga in med dina användaruppgifter");
     } else {
-      alert("Lösenord matchar inte");
+      alert("Lösernord matchar inte, försök igen.");
     }
   };
   return (
@@ -24,7 +24,7 @@ const Registration = (props) => {
       <form onSubmit={checkAccount}>
         <p> Registrera ett konto</p>
         <br />
-        <p>AnvändarNamn:</p>
+        <p>Användarnamn:</p>
         <input id="username" type="text" required />
         <p>Mail:</p>
         <input id="email" type="text" required />
@@ -37,7 +37,7 @@ const Registration = (props) => {
         <button>Registrera</button>
       </form>
       <div id="link">
-        <Link to="/">Gå tillbaka till login</Link>
+        <Link to="/">Startsida</Link>
       </div>
     </div>
   );

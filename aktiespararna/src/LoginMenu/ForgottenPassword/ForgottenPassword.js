@@ -33,7 +33,7 @@ const ForgottenPassword = (props) => {
       </form>
       <br />
       <div id="link">
-        <Link to="/">Gå tillbaka</Link>
+        <Link to="/">Startsida</Link>
       </div>
     </div>
   );
