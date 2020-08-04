@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Login from "./StartMenu/Components/Login";
-import Registrering from "./StartMenu/Components/Register";
+import Registration from "./StartMenu/Components/Registration";
 import ForgottenPassword from "./StartMenu/Components/ForgottenPassword";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Mainmenu from "./MainMenu/MainMenu";
@@ -22,7 +22,7 @@ const Main = () => {
         <Route
           path="/registration"
           render={() => (
-            <Registrering
+            <Registration
               username={username}
               setUsername={setUsername}
               setPassword={setPassword}

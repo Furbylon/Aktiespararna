@@ -1,38 +1,17 @@
 import React from "react";
 
-let NativeButtons = (props) => {
+let NumberButtons = (props) => {
+  console.log(props.currentPage);
+  props.pagesArray.map((value, index) => {
+    return props.buttonArr.push(index);
+  });
   console.log(props.buttonArr);
-  if (props.pagesArray.length <= 5) {
-    props.pagesArray.map((value, index) => {
-      return props.buttonArr.push(index);
-    });
-    if (!props.buttonArr.includes(props.currentPage / 10)) {
-      props.buttonArr.push(props.currentPage / 10);
-    }
-    props.setNumberButton(
-      props.buttonArr.map((value) => (
-        <button value={props.shownData * value} className="pageButton" key={value}>
-          {value}
-        </button>
-      ))
-    );
-    return props.numberButtons;
-  } else {
-    props.pagesArray.map((value, index) => {
-      return props.buttonArr.push(index);
-    });
-    if (!props.buttonArr.includes(props.currentPage / 10)) {
-      props.buttonArr.push(props.currentPage / 10);
-    }
-    props.setNumberButton(
-      props.buttonArr.map((value) => (
-        <button value={props.shownData * value} className="pageButton" key={value}>
-          {value}
-        </button>
-      ))
-    );
-    return props.numberButtons;
+  if (!props.buttonArr.includes(props.currentPage / 10)) {
+    props.buttonArr.push(props.currentPage / 10);
   }
+  console.log(props.buttonArr);
+  props.setNumberButtons(props.buttonArr);
+  return <div></div>;
 };
 
-export default NativeButtons;
+export default NumberButtons;
