@@ -8,12 +8,10 @@ const portfolioValues = ({
   ownership,
   votingPower,
   industry,
-  
 }) => {
-
   const downloadValue = () => {
-    alert("Laddar ner data för " + companyName)
-  } 
+    alert("Laddar ner data för " + companyName);
+  };
   return (
     <tr id="portfolioGrid">
       <td>

@@ -45,6 +45,7 @@ const MyHoldings = (props) => {
         IndustryBalance={IndustryBalance}
         spacedSum={spacedSum}
         otherColour={otherColour}
+        time={props.time}
       />
     );
   } else {
@@ -57,6 +58,7 @@ const MyHoldings = (props) => {
         IndustryBalance={IndustryBalance}
         spacedSum={spacedSum}
         otherColour={otherColour}
+        time={props.time}
       />
     );
   }

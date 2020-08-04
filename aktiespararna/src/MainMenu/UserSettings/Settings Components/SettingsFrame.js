@@ -68,6 +68,7 @@ const SettingsFrame = (props) => {
             <Preferences
             setPreferredIndustries={props.setPreferredIndustries}
             setRemainingIndustries={props.setRemainingIndustries}
+            setTime={props.setTime}
             />
           )}
         />

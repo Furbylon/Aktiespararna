@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
 import Login from "./LoginMenu/Login/Login";
-import Registrering from "./LoginMenu/Register/Register";
+import Registrering from "./LoginMenu/Register/Registration";
 import ForgottenPassword from "./LoginMenu/ForgottenPassword/ForgottenPassword";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch} from "react-router-dom";
 import Mainmenu from "./MainMenu/MainMenu";
 
 const Main = () => {
@@ -11,14 +11,6 @@ const Main = () => {
   let [password, setPassword] = useState();
   let [email, setEmail] = useState();
 
-  const MissingPage = () => (
-    <div>
-      404 -{" "}
-      <button>
-        <Link to="/">Missing page </Link>
-      </button>
-    </div>
-  );
 
   return (
     <BrowserRouter>
@@ -38,6 +30,7 @@ const Main = () => {
               setEmail={setEmail}
             />
           )}
+          exact={true}
         />
         <Route
           path="/forgotpassword"
@@ -48,9 +41,9 @@ const Main = () => {
               email={email}
             />
           )}
+          exact={true}
         />
         <Mainmenu
-          MissingPage={MissingPage}
           password={password}
           setPassword={setPassword}
         />

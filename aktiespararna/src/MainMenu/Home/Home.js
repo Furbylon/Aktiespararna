@@ -11,7 +11,7 @@ const Hem = (props) => {
       <div id="homeHeader">
         <Header head={"Aktiespararna - Ditt aktivitetsverktyg"} />
       </div>
-      <WelcomeMessage profile={props.profile} />
+      <WelcomeMessage profile={props.profile} time={props.time}/>
       <div id="profileAndHoldings">
         <HomeProfile
           profile={props.profile}
@@ -20,6 +20,7 @@ const Hem = (props) => {
         <MyHolding
           preferredIndustries={props.preferredIndustries}
           remainingIndustries={props.remainingIndustries}
+          time={props.time}
         />
       </div>
     </div>

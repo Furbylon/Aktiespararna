@@ -1,15 +1,5 @@
 /* CSS FOR MAIN HOMEPAGE */
-#home {
-  padding: 0px;
-  background: linear-gradient(
-    to left right,
-    rgb(189, 231, 255),
-    rgb(255, 255, 255)
-  );
-}
-#mainMenu {
-  transition: margin-left 0.5;
-}
+
 #homeHeader {
   text-align: center;
   border-bottom: rgba(128, 128, 128, 0.541);

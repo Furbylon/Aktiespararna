@@ -45,15 +45,14 @@ const Preferences = (props) => {
         return check.find((a) => a.Industry === Industry);
       });
 
-      console.log(uniqueIndustry);
-
       const remaining = mock.filter((values) => {
         return !checkedIndustries.includes(values.Industry);
       });
 
-      console.log(remaining);
       props.setPreferredIndustries(uniqueIndustry);
       props.setRemainingIndustries(remaining);
+      let newDate = new Date();
+      props.setTime(newDate.toLocaleDateString());
     } else {
       let newLine = "\r\n";
       let msg = "- Måste anges minst 1 industri";
