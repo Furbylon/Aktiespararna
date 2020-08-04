@@ -1,54 +1,15 @@
 import React from "react";
 import LogoutButton from "./LogoutButton";
 import SidebarButton from "./SidebarButton";
-
-import { NavLink } from "react-router-dom";
+import SidebarLinks from "./SidebarLinks"
+import closeNavigation from "./CloseNavigation"
 
 const Sidebar = () => {
-  const closeNavigation = () => {
-    document.getElementById("mySideBar").style.width = "0px";
-    document.getElementById("mainMenu").style.marginLeft = "0px";
-    document.getElementById("sidebarButton").innerHTML = "Öppna sidofält";
-  };
-  const Routes = () => (
-    <div id="sidebarButtons">
-      <li>
-        <NavLink
-          className="sideButton"
-          activeClassName="activeSideButtons"
-          to="/mainMenu/home"
-          onClick={closeNavigation}
-        >
-          Startsida
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className="sideButton"
-          activeClassName="activeSideButtons"
-          to="/mainMenu/portfolio"
-          onClick={closeNavigation}
-        >
-          Min Portfolio
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className="sideButton"
-          activeClassName="activeSideButtons"
-          to="/mainMenu/settings/profile"
-          onClick={closeNavigation}
-        >
-          Inställningar
-        </NavLink>
-      </li>
-    </div>
-  );
 
   return (
     <div>
       <div id="mySideBar">
-        <Routes />
+        <SidebarLinks closeNavigation={closeNavigation}/>
         <LogoutButton />
       </div>
       <SidebarButton />
