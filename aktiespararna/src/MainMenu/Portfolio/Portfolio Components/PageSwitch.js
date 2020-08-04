@@ -8,7 +8,6 @@ const PageSwitch = (props) => {
   let lastPage = props.pagesArray[props.pagesArray.length - 1];
 
   let NativeButtons = () => {
-    console.log(props.pagesArray.len);
     if (props.pagesArray.length <= 5) {
       props.pagesArray.map((value) => {
         return buttonArr.push(value / 10);
@@ -18,7 +17,6 @@ const PageSwitch = (props) => {
         buttonArr.push(i);
       }
     }
-    console.log(buttonArr);
     if (!buttonArr.includes(props.currentPage / 10)) {
       buttonArr.push(props.currentPage / 10);
     }
@@ -29,7 +27,6 @@ const PageSwitch = (props) => {
         </button>
       );
     });
-    console.log(numberButtons);
     return numberButtons;
   };
 
@@ -53,7 +50,6 @@ const PageSwitch = (props) => {
       props.setCurrentData(props.data.slice(value - props.shownData, value));
     }
   };
-  console.log(lastPage);
   if (lastPage <= 50) {
     return (
       <div>

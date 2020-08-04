@@ -24,11 +24,11 @@ const Login = (props) => {
       <div id="loginForm">
         <img id="logo" src={shareLogo} alt="logo" />
         <form name="userinput" onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="username">Användarnamn:</label>
           <br />
           <input type="text" name="username" ref={register} required />
           <br />
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Lösenord:</label>
           <br />
           <input type="password" name="password" ref={register} required />
           <br />

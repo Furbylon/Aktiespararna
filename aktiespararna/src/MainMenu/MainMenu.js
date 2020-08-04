@@ -34,7 +34,6 @@ const MainMenu = (props) => {
   let [time, setTime] = useState("Inga uppdateringar har tidigare gjorts.");
 
   let [preferredIndustries, setPreferredIndustries] = useState();
-  console.log(preferredIndustries);
   let [remainingIndustries, setRemainingIndustries] = useState(
     companies.slice(0, max)
   );

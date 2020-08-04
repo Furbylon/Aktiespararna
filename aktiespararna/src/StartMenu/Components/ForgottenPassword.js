@@ -5,8 +5,6 @@ import "../StartMenu css/ForgottenPassword.css";
 
 const ForgottenPassword = (props) => {
   const checkPassword = (e) => {
-    console.log(e.target.elements.email.value);
-    console.log(props.email);
     e.preventDefault();
     if (e.target.elements.email.value === props.email) {
       alert("Your Password is: " + props.password);
@@ -14,11 +12,12 @@ const ForgottenPassword = (props) => {
       alert("No username Found");
     }
   };
+  
   return (
     <div id="forgottenPasswordDiv" className="loginMenuPages">
       <img id="logo" src={shareLogo} alt="logo" />
       <form onSubmit={checkPassword}>
-        <label htmlFor="username">Username:</label>
+        <label htmlFor="username">Användarnamn:</label>
         <br />
         <input type="text" id="username" placeholder="username" required />
         <br />
