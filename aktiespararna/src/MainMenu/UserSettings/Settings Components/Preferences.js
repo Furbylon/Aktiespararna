@@ -3,10 +3,11 @@ import mock from "../../../data/JSON/mock.json";
 import ShowMore from "./ShowMoreCompaniesButton";
 
 const Preferences = (props) => {
-  let IndustryArr = [];
-  IndustryArr = mock.map((value) => {
+
+  let IndustryArr = mock.map((value) => {
     return value.Industry;
   });
+  
   let uniqueIndustryArr = Array.from(new Set(IndustryArr));
   let [max, setMax] = useState(5);
   let [industries, setIndustries] = useState(uniqueIndustryArr.slice(0, max));
@@ -37,7 +38,6 @@ const Preferences = (props) => {
         return checkedIndustries.includes(values.Industry);
       });
 
-      console.log(check);
 
       const uniqueIndustry = Array.from(
         new Set(check.map((a) => a.Industry))

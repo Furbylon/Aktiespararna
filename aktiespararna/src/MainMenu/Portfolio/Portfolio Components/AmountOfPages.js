@@ -10,5 +10,5 @@ let AmountOfPages = (props) => {
     slides = arr.map((value) => <option key={value}>{10 * value}</option>);
     return slides;
   };
-  
+
   export default AmountOfPages;

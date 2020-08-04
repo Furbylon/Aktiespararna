@@ -1,9 +1,7 @@
 import React from "react";
 import "../UserSettings css/SettingsFrame.css";
-import UserSettings from "../Settings Components/UserProfile";
-import PasswordChange from "../Settings Components/PasswordChange";
-import Preferences from "../Settings Components/Preferences";
-import { NavLink, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import SettingsRoutes from "./SettingsRoutes";
 
 const SettingsFrame = (props) => {
   const SettingsHead = () => {
@@ -36,42 +34,16 @@ const SettingsFrame = (props) => {
           </NavLink>
         </div>
         <div>
-          <Routes />
-        </div>
-      </div>
-    );
-  };
-  const Routes = () => {
-    return (
-      <div>
-        <Route
-          path="/mainMenu/settings/profile"
-          render={() => (
-            <UserSettings
-              profile={props.profile}
-              setProfile={props.setProfile}
-            />
-          )}
-        />
-        <Route
-          path="/mainMenu/settings/passwordchange"
-          render={() => (
-            <PasswordChange
-              password={props.password}
-              setPassword={props.setPassword}
-            />
-          )}
-        />
-        <Route
-          path="/mainMenu/settings/preferences"
-          render={() => (
-            <Preferences
+          <SettingsRoutes
+            profile={props.profile}
+            setProfile={props.setProfile}
+            password={props.password}
+            setPassword={props.setPassword}
             setPreferredIndustries={props.setPreferredIndustries}
             setRemainingIndustries={props.setRemainingIndustries}
             setTime={props.setTime}
-            />
-          )}
-        />
+          />
+        </div>
       </div>
     );
   };
