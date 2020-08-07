@@ -1,4 +1,3 @@
-import React from "react";
 
 const CloseNavigation = () => {
     document.getElementById("mySideBar").style.width = "0px";

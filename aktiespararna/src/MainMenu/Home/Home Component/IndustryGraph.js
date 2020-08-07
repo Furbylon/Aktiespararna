@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Pie } from "react-chartjs-2";
 import IndustryGraphRender from "./IndustryGraphRender"
 
 const PercentageBar = (props) => {
