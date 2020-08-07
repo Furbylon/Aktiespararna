@@ -1,29 +1,17 @@
 import React, { useState } from "react";
 import mock from "../../../data/JSON/mock.json";
-import ShowMore from "./ShowMoreCompaniesButton";
+import ShowMore from "./ShowMoreIndustriesButton";
+import currentlyShown from "./CurrentlyShownIndustries";
+import ImplementBankButton from "./ImplementBank";
 
 const Preferences = (props) => {
-
   let IndustryArr = mock.map((value) => {
     return value.Industry;
   });
-  
+
   let uniqueIndustryArr = Array.from(new Set(IndustryArr));
   let [max, setMax] = useState(5);
   let [industries, setIndustries] = useState(uniqueIndustryArr.slice(0, max));
-  let ImplementBank = () => {
-    alert("Integrera Bank");
-  };
-
-  let currentlyShown = (companies, index) => {
-    return (
-      <div id={index} key={index}>
-        <input type="checkbox" name="checkbox" value={companies} />
-        <label>{companies}</label>
-        <br />
-      </div>
-    );
-  };
 
   let addPreferences = (e) => {
     e.preventDefault();
@@ -37,7 +25,6 @@ const Preferences = (props) => {
       check = mock.filter((values) => {
         return checkedIndustries.includes(values.Industry);
       });
-
 
       const uniqueIndustry = Array.from(
         new Set(check.map((a) => a.Industry))
@@ -75,9 +62,7 @@ const Preferences = (props) => {
         />
         {industries.map(currentlyShown)}
         <br />
-        <button onClick={ImplementBank} style={{ color: "blue" }}>
-          Integrera bank
-        </button>
+        <ImplementBankButton />
         <input type="submit" value="Spara"></input>
       </form>
     </div>

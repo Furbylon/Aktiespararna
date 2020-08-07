@@ -1,4 +1,5 @@
 import React from "react";
+import PasswordChangeForm from "./PasswordChangeForm";
 
 const PasswordChange = (props) => {
   const changePassword = (e) => {
@@ -16,18 +17,6 @@ const PasswordChange = (props) => {
       alert("Incorrect Password");
     }
   };
-  return (
-    <div id="passwordChange">
-      <form onSubmit={changePassword}>
-        <p>Nuvarande lösenord</p>
-        <input id="currentPassword" type="text" required />
-        <p>Nytt lösenord</p>
-        <input id="newPassword" type="text" required />
-        <p>Bekräfta nytt lösenord</p>
-        <input id="confirmPassword" type="text" required />
-        <button id="savePasswordChange">Spara</button>
-      </form>
-    </div>
-  );
+  return <PasswordChangeForm changePassword={changePassword} />;
 };
 export default PasswordChange;
