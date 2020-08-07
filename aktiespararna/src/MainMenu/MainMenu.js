@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import Home from "./Home/Home";
-import Portfolio from "./Portfolio/Portfolio";
-import Settings from "./UserSettings/Settings";
-import { Route } from "react-router-dom";
-import Sidebar from "../MainMenu/Components/SideBar";
 import companies from "../data/JSON/mock.json";
+import MainMenuRoutes from "./MainMenuRoutes";
 
 const MainMenu = (props) => {
   let max = companies.length;
@@ -39,40 +35,18 @@ const MainMenu = (props) => {
   );
 
   return (
-    <div id="mainMenu">
-      <Route path="/mainMenu" component={Sidebar} />
-      <Route
-        path="/mainMenu/home"
-        render={() => (
-          <Home
-            profile={profile}
-            preferredIndustries={preferredIndustries}
-            remainingIndustries={remainingIndustries}
-            time={time}
-          />
-        )}
-      />
-      <Route
-        path="/mainMenu/portfolio"
-        render={() => <Portfolio time={time} />}
-      />
-      <Route
-        path="/mainMenu/settings"
-        render={() => (
-          <Settings
-            preferredIndustries={preferredIndustries}
-            setPreferredIndustries={setPreferredIndustries}
-            remainingIndustries={remainingIndustries}
-            setRemainingIndustries={setRemainingIndustries}
-            password={props.password}
-            setPassword={props.setPassword}
-            profile={profile}
-            setProfile={setProfile}
-            setTime={setTime}
-          />
-        )}
-      />
-    </div>
+    <MainMenuRoutes
+      profile={profile}
+      setProfile={setProfile}
+      time={time}
+      setTime={setTime}
+      preferredIndustries={preferredIndustries}
+      setPreferredIndustries={setPreferredIndustries}
+      remainingIndustries={remainingIndustries}
+      setRemainingIndustries={setRemainingIndustries}
+      password={props.password}
+      setPassword={props.setPassword}
+    />
   );
 };
 

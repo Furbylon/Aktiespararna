@@ -26,7 +26,7 @@ let addPreferences = (
     const remaining = mock.filter((values) => {
       return !checkedIndustries.includes(values.Industry);
     });
-
+    alert("Nya industrier har lagts till som preferens")
     setPreferredIndustries(uniqueIndustry);
     setRemainingIndustries(remaining);
     let newDate = new Date();

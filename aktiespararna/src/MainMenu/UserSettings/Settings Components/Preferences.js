@@ -16,16 +16,6 @@ const Preferences = (props) => {
 
   return (
     <div>
-      <form
-        onSubmit={(e) => {
-          addPreferences(
-            e,
-            props.setPreferredIndustries,
-            props.setRemainingIndustries,
-            props.setTime
-          );
-        }}
-      >
         <p>Mina prefererade industrier att investera inom:</p>
         <ShowMore
           setMax={setMax}
@@ -35,9 +25,19 @@ const Preferences = (props) => {
         />
         {industries.map(currentlyShown)}
         <br />
+        <input
+          type="submit"
+          value="Spara"
+          onClick={(e) => {
+            addPreferences(
+              e,
+              props.setPreferredIndustries,
+              props.setRemainingIndustries,
+              props.setTime
+            );
+          }}
+        ></input>
         <ImplementBankButton />
-        <input type="submit" value="Spara"></input>
-      </form>
     </div>
   );
 };

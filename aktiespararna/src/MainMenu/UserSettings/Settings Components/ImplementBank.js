@@ -5,7 +5,7 @@ let ImplementBank = () => {
 };
 let ImplementBankButton = () => {
   return (
-    <button onClick={ImplementBank} style={{ color: "blue" }}>
+    <button onClick={ImplementBank}>
       Integrera bank
     </button>
   );
