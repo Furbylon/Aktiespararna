@@ -5,6 +5,7 @@ import UserProfile from "./UserProfile"
 const Profile = (props) => {
   let updateProfile = (e) => {
     e.preventDefault();
+    alert("Profil har uppdaterats")
     if (e.target.elements.profilePictureInput.files.length !== 0) {
       props.setProfile({
         profilePicture: URL.createObjectURL(

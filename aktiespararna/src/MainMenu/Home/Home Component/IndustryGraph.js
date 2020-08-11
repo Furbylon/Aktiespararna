@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import IndustryGraphRender from "./IndustryGraphRender"
 
-const PercentageBar = (props) => {
+const PercentageGraph = (props) => {
   let industryName = []
   if (props.preferredIndustries !== undefined) {
     industryName = props.preferredIndustries.map((values) => {
@@ -34,7 +34,7 @@ const PercentageBar = (props) => {
       {
         data: percentage,
         backgroundColor: colours,
-        hoverBorderColor: "gray",
+        hoverBorderColor: "wheat",
         borderWidth: 1,
       },
     ],
@@ -44,4 +44,4 @@ const PercentageBar = (props) => {
     <IndustryGraphRender data={data}/>
   );
 };
-export default PercentageBar;
+export default PercentageGraph;

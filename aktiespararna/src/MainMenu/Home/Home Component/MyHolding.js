@@ -2,6 +2,10 @@ import React from "react";
 import mock from "../../../data/JSON/mock.json";
 import MyHoldingsRender from "./MyHoldingsRender";
 import IndustryBalance from "./IndustryBalance";
+import { totalCompanies } from "./TotalCompanies";
+import { unlistedCompanies } from "./UnlistedCompanies";
+import { companyColours, borderColours } from "./GetColour";
+
 
 const MyHoldings = (props) => {
   
@@ -26,6 +30,42 @@ const MyHoldings = (props) => {
   } else {
     otherColour = 0;
   }
+  const checkifDataExists = (industry, index) => {
+    let Balance = IndustryBalance(industry).toLocaleString();
+    let CompanyOne = totalCompanies(industry)[0];
+    let CompanyTwo = totalCompanies(industry)[1];
+    let remaining = unlistedCompanies(industry);
+
+    let colour = borderColours();
+    if (props.preferredIndustries.length !== 0) {
+      return (
+        <div key={industry.id}>
+          <canvas
+            style={{
+              backgroundColor: colour[index].colour,
+              width: "10px",
+              height: "30px",
+              position: "absolute",
+              left: "-10px",
+            }}
+          />
+          <div style={{ width: "200px" }}>
+            <p style={{ fontWeight: "bold" }}>{industry.Industry}</p>
+            <p>
+              Företag: {CompanyOne}, {CompanyTwo} {remaining}
+            </p>
+            <p>Innehav: {Balance} SEK</p>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h2>inget innehav tillagt ännu </h2>
+        </div>
+      );
+    }
+  };
 
   return (
     <MyHoldingsRender
@@ -37,6 +77,7 @@ const MyHoldings = (props) => {
       spacedSum={spacedSum}
       otherColour={otherColour}
       time={props.time}
+      checkifDataExists={checkifDataExists}
     />
   );
 };

@@ -77,7 +77,7 @@ let HoldingsRender = (props) => {
             IndustryBalance={props.IndustryBalance}
             randomColour={props.randomColour}
           />
-          {props.preferredIndustries.map(checkifDataExists)}
+          {props.preferredIndustries.map(props.checkifDataExists)}
           <canvas
             style={{
               backgroundColor: borderColours()[props.otherColour].colour,
@@ -114,30 +114,7 @@ let HoldingsRender = (props) => {
           </p>
           <p style={{ fontWeight: "lighter" }}>Senast uppdaterad: </p>
           <LastUpdate time={props.time} />
-          <IndustryGraph
-            companyColours={companyColours}
-            preferredIndustries={props.preferredIndustries}
-            remainingIndustries={props.propremainingIndustries}
-            borderColours={borderColours}
-            sumOfRemaining={props.sumOfRemaining}
-            sumOfTotal={props.total}
-            IndustryBalance={props.IndustryBalance}
-            randomColour={props.randomColour}
-          />
-          <p>Uppdatera dina preferenser i Inställningar</p>
-          <canvas
-            style={{
-              backgroundColor: borderColours()[props.otherColour].colour,
-              width: "10px",
-              height: "30px",
-              position: "absolute",
-              left: "-10px",
-            }}
-          />
-          <Remaining
-            spacedSum={props.spacedSum}
-            remainingIndustries={props.remainingIndustries}
-          />
+          <p>För att se uppgifter lägg till nya industrier i Preferenser i Inställningar</p>
         </div>
       </div>
     );

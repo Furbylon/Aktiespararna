@@ -23,31 +23,31 @@ const PortfolioFrame = () => {
     return (
       <div>
         <PageShownMsg currentPage={currentPage} totalData={totalData} />
+        <div id="pageSwitch">
+        <PageSwitch
+          shownData={shownData}
+          totalData={totalData}
+          currentData={currentData}
+          setCurrentData={setCurrentData}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          data={data}
+          pagesArray={pagesArray}
+        />
+        <SelectBox
+          totalData={totalData}
+          currentData={currentData}
+          setCurrentData={setCurrentData}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          data={data}
+        />
+      </div>
         <div className="portfolioFrames">
           <table className="portfolioTable" style={{ position: "relative" }}>
             <PorttHead />
             <PorttBody currentData={currentData} />
           </table>
-          <div id="pageSwitch">
-            <PageSwitch
-              shownData={shownData}
-              totalData={totalData}
-              currentData={currentData}
-              setCurrentData={setCurrentData}
-              currentPage={currentPage}
-              setCurrentPage={setCurrentPage}
-              data={data}
-              pagesArray={pagesArray}
-            />
-            <SelectBox
-              totalData={totalData}
-              currentData={currentData}
-              setCurrentData={setCurrentData}
-              currentPage={currentPage}
-              setCurrentPage={setCurrentPage}
-              data={data}
-            />
-          </div>
         </div>
       </div>
     );
